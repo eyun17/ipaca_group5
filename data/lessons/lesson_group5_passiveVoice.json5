@@ -16,7 +16,7 @@
         type: "GS",
         interaction: "GAP",
         primary: true,
-        show_lesson_text: false,
+        show_lesson_text: true,
         question: "<p>Choose the optiona that applies:</p>\
         <p>If you can read this you entered _1_ .</p>",
         gaps: {
