@@ -156,7 +156,7 @@ class Task(models.Model):
     show_lesson_text = models.BooleanField(default=True)
     question = models.TextField()
     content = models.JSONField()
-    
+    difficulty = models.CharField(max_length = 2)  # difficulty of task for task selection
 
     @classmethod
     def check_json5(cls, task_json5, task_num=0):
@@ -166,7 +166,8 @@ class Task(models.Model):
                            ("interaction", TaskTypeFactory.shortcuts(), ','.join(TaskTypeFactory.shortcuts())),
                            ("primary", bool, "true or false"),
                            ("show_lesson_text", bool, "true or false"),
-                           ("question", str, "a string")]: 
+                           ("question", str, "a string")
+                           ("difficulty", int, "1, 2, 3, 4")]:  # ?????
             if task_field[0] not in task_json5:
                 raise Json5ParseException(
                     'Field "{}" is missing for task {}'.format(task_field[0], task_num))
@@ -193,7 +194,8 @@ class Task(models.Model):
                  show_lesson_text=task["show_lesson_text"],
                  question=task["question"],
                  content=content,
-                 lesson=lesson
+                 lesson=lesson,
+                 difficulty=task["difficulty"]
                  )
         t.save()
         return t

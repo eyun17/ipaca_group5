@@ -8,7 +8,6 @@ We deal with 2 different approaches:
 2) The passive voice group will just get 4 different difficulty levels. Here we will update our beliefs
 """
 from learning_environment.models import Task
-import math
 
 
 class TaskTree:
@@ -66,42 +65,8 @@ class Domainmodel:
         self.tree = tree
     
     # some funtion for building a tree
-    def build_tree(self, tasklist:list = []):
-        root = TaskTree(data = "root")
-
-        # set difficulty levels as children
-        for i in range(4):
-            root.add_child(TaskTree(parent=root, data=i))
-        
-        # divide tasklist equaly
-        len = len(tasklist)
-        quater = len/4
-        ceil = math.ceil(quater)
-        floor = math.floor(quater)
 
 
-        if len % 4 == 0:
-            divider = [quater, quater*2, quater*3, quater*4]
-
-        if len % 4 == 1:
-            # 1. len%4 == 1  -> 1x ceil, 3x floor
-            divider = [ceil, ceil + floor, ceil + 2*floor, ceil + 3*floor]
-
-        if len % 4 == 2:
-            # 2. len%4 == 2  -> 2x ceil, 2x floor
-            divider = [ceil, 2*ceil, 2*ceil + floor, 2*ceil + 2*floor]
-
-        if len % 4 == 3:
-            # 3. len%4 == 3  -> 3x ceil, 1x floor
-            divider = [ceil, 2*ceil, 3*ceil, 3*ceil + floor]
-        
-        #for div in range(4):
-            # root get children, data == div, set child with data = tasklist[divider[div]:divider[div+1]]
-
- 
-    def build_tree(self, dict:dict = None):
-        return None         #TODO: build a tree from dict
-
-    # some function for updating a tree    
-    def update_tree(self, task, difficulty):
-        return None        # TODO: update tree
+    # some function for updating a tree
+    
+    

@@ -1,0 +1,163 @@
+{
+  name: "Main Tenses",  // the name that's also shown to the users
+  id: "lesson-group5-001",        // an internal id, will never be shown, but important to identify the lesson
+  series: 'Grammar',
+  author: "Group 5",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "<p> This is the Grammar Lesson for Main Tenses. Here we want to test our intelligent tutoring system.</p>",
+  text_source: "Carolina Ziegler",
+  text_licence: "CC0",
+  text_url: "https://www.uni-osnabrueck.de/startseite/",
+    
+  tasks: [  // the list of tasks for this lesson
+      {
+        // test task
+        name: "Test",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: true,
+        question: "<p>Choose the option that applies:</p>\
+        <p>Here you have to choose a _1_ to fill the gaps.</p>\
+        <p>But you can also fill in _2_ .</p>\
+        <p>You can also write an example sentence here. The correct rule is _3_ . </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'word',
+              correct: true,
+              feedback: 'This is correct'
+            },
+            {
+              text: 'sentence',
+              correct: false,
+              feedback: 'Think about it again. Filling a whole sentence in this little gap. Seems impossible ...'
+            },
+            {
+              text: 'nothing',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+          _2_: [
+            {
+              text: 'cement',
+              correct: false,
+              feedback: 'Why would you do this?'
+            },
+            {
+              text: 'several words',
+              correct: true,
+              feedback: 'Congratulations, you choose the right answer'
+            },
+            {
+              text: 'nothing',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+          _3_: [
+            {
+              text: 'one',
+              correct: true,
+              feedback: 'This is correct'
+            },
+            {
+              text: 'two',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'three',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'four',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+
+        },
+      },
+      {
+        name: "Single Choice",       // give your task a name
+        type: "GS",
+        interaction: "SC", 
+        primary: false, 
+        show_lesson_text: false, 
+        question: "What would you choose for dinner?",      // write your text or question here
+        choices: [  
+           {text: "pasta", // this is the text the student will see
+            correct: true, // is it correct (false, true)
+            feedback: "pasta is always a good choice" 
+            },
+            { text: "bread", 
+            correct: false, 
+            feedback: "no that is not a good choice" 
+            },
+            { text: "potatos", 
+            correct: false, 
+            feedback: "why choose potatos when you can have pasta?" 
+            }
+         
+        ],
+      },
+      { 
+        name: "Multiple Choice",       // give your task a name
+        type: "GS",
+        interaction: "MC",
+        primary: false,
+        show_lesson_text: false, 
+        question: "<p>This is a short Text!</p>\
+        <p>You have to indicate in which sentences I used the word this.</p>\
+        <p>If you are correct you get a nice message</p>",   // write your text or question here
+        choices: [
+          {
+            text: "1",   // the text the student will see
+            correct: true,  // is it correct (false, true)
+            feedback: "nice"  
+          },
+          {
+            text: "2",
+            correct: true,
+            feedback: "nice"
+          },
+          {
+            text: "3",
+            correct: false,
+            feedback: "not so nice"
+          }
+        ] 
+      },
+      {  
+        name: "Mark the words",       // give your task a name
+        type: "GS",
+        interaction: "MARK",
+        primary: false,
+        show_lesson_text: false,
+        question: "Mark the following things in the text:",           //write your question here
+        marktext: "<p>To #2#be a #1#dog can #2#be nice.</p>\
+        <p>You can sleep the whole day, lay in the sun and eat food.</p>\
+        <p>#2#Being a #1#dog seems so much fun.</p>\
+        <p>But if you #2#are a #3#cat you can have as much fun as a #1#dog.<p>",  // write the text here, mark the words you want the student to mark with #1# in front of the word
+        markers: {
+            // here you can write what should be marked
+          '1': {
+            description: 'dog',
+          },
+          '2': {
+            description: 'forms of to be',
+          },
+          '3': {
+            description: 'cat',
+          }
+        } 
+      }
+
+        
+    ] 
+
+} // end of lesson

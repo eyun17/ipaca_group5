@@ -10,152 +10,183 @@
   text_url: "https://www.uni-osnabrueck.de/startseite/",
     
   tasks: [  // the list of tasks for this lesson
-      {
-        // test task
-        name: "Test",
-        type: "GS",
-        interaction: "GAP",
-        primary: true,
-        show_lesson_text: true,
-        question: "<p>Choose the option that applies:</p>\
-        <p>Here you have to choose a _1_ to fill the gaps.</p>\
-        <p>But you can also fill in _2_ .</p>\
-        <p>You can also write an example sentence here. The correct rule is _3_ . </p>",
-        gaps: {
-          mode: 'select',
-          _1_: [
-            {
-              text: 'word',
-              correct: true,
-              feedback: 'This is correct'
-            },
-            {
-              text: 'sentence',
-              correct: false,
-              feedback: 'Think about it again. Filling a whole sentence in this little gap. Seems impossible ...'
-            },
-            {
-              text: 'nothing',
-              correct: false,
-              feedback: 'No, that\'s not correct.'
-            }
-          ],
-          _2_: [
-            {
-              text: 'cement',
-              correct: false,
-              feedback: 'Why would you do this?'
-            },
-            {
-              text: 'several words',
-              correct: true,
-              feedback: 'Congratulations, you choose the right answer'
-            },
-            {
-              text: 'nothing',
-              correct: false,
-              feedback: 'No, that\'s not correct.'
-            },
-          ],
-          _3_: [
-            {
-              text: 'one',
-              correct: true,
-              feedback: 'This is correct'
-            },
-            {
-              text: 'two',
-              correct: false,
-              feedback: 'No, that\'s not correct.'
-            },
-            {
-              text: 'three',
-              correct: false,
-              feedback: 'No, that\'s not correct.'
-            },
-            {
-              text: 'four',
-              correct: false,
-              feedback: 'No, that\'s not correct.'
-            }
-          ],
-
-        },
-      },
-      {
-        name: "Single Choice",       // give your task a name
-        type: "GS",
-        interaction: "SC", 
-        primary: false, 
-        show_lesson_text: false, 
-        question: "What would you choose for dinner?",      // write your text or question here
-        choices: [  
-           {text: "pasta", // this is the text the student will see
-            correct: true, // is it correct (false, true)
-            feedback: "pasta is always a good choice" 
-            },
-            { text: "bread", 
-            correct: false, 
-            feedback: "no that is not a good choice" 
-            },
-            { text: "potatos", 
-            correct: false, 
-            feedback: "why choose potatos when you can have pasta?" 
-            }
-         
-        ],
-      },
-      { 
-        name: "Multiple Choice",       // give your task a name
-        type: "GS",
-        interaction: "MC",
-        primary: false,
-        show_lesson_text: false, 
-        question: "<p>This is a short Text!</p>\
-        <p>You have to indicate in which sentences I used the word this.</p>\
-        <p>If you are correct you get a nice message</p>",   // write your text or question here
-        choices: [
-          {
-            text: "1",   // the text the student will see
-            correct: true,  // is it correct (false, true)
-            feedback: "nice"  
-          },
-          {
-            text: "2",
-            correct: true,
-            feedback: "nice"
-          },
-          {
-            text: "3",
-            correct: false,
-            feedback: "not so nice"
-          }
-        ] 
-      },
       {  
-        name: "Mark the words",       // give your task a name
+        name: "Theoretical task for Present Simple and Present Continuous",       // give your task a name
         type: "GS",
         interaction: "MARK",
         primary: false,
         show_lesson_text: false,
-        question: "Mark the following things in the text:",           //write your question here
-        marktext: "<p>To #2#be a #1#dog can #2#be nice.</p>\
-        <p>You can sleep the whole day, lay in the sun and eat food.</p>\
-        <p>#2#Being a #1#dog seems so much fun.</p>\
-        <p>But if you #2#are a #3#cat you can have as much fun as a #1#dog.<p>",  // write the text here, mark the words you want the student to mark with #1# in front of the word
+        question: "<p>Find the appropriate explanation for the usage of Present Simple and Present Continuous for every sentence.</p>",           
+        marktext: "<p>First, you #5#open a text editor or word processor, #5#create the HTML content and #5#choose the folder in which to save the Web page.
+        The brain #4#weighs about three pounds.
+        Noam Chomsky #6#explains that we're all born with an innate understanding of the way language works.
+        The Alchemist by Paulo Coelho #7#tells the mystical story of Santiago, an Andalusian shepherd boy who #7#yearns to travel in search of a worldly treasure.
+        As everybody #3#knows, vocabulary is an important part of language, just like bricks in a building.
+        With the advent of the Internet, the world #1#is #1#shrinking.
+        William #2#is #2#advertising for a new CEO, after Smith\’s sudden resignation.</p> ",  // write the text here, mark the words you want the student to mark with #1# in front of the word
         markers: {
             // here you can write what should be marked
           '1': {
-            description: 'dog',
+            description: 'changing and developing situations, trends in society or the world around us',
           },
           '2': {
-            description: 'forms of to be',
+            description: 'events or actions that are happening at the moment',
           },
           '3': {
-            description: 'cat',
+            description: 'with stative verbs of physical perception, mental states, emotions, possession and others',
+          },
+          '4': {
+            description: 'factual description',
+          },
+          '5': {
+            description: 'description of processes, instructions'
+          },
+          '6': {
+            description: 'summarization of the main arguments of other academics'
+          },
+          '7': {
+            description: 'plots of books, films, etc.'
           }
         } 
-      }
+      },
+      {
+        name: "Reproductive exercises for Present Simple and Present Continuous",           // give your task a name
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        // here you have to write your question and your text
+        question: "<p>Choose the right option</p>\        
+        <p> As everybody _1_  nowadays, the knowledge we _2_ of life before the beginnings of human memory and tradition is derived from the markings and fossils of living things in the stratified rocks.</p>", 
+        gaps: {
+          mode: 'select',
+          // here you can fill in the options for the gaps
+          _1_: [
+            {
+              text: 'knows',     // the word(s) the student will see
+              correct: true,    // is this solution correct, false or true
+              feedback: 'Good job! The right answer is <b>knows</b>, because it is a stative verb of mental states. Also, we use Present Simple with stative verbs of <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'  
+            },
+            {
+              text: 'is knowing',
+              correct: false,
+              feedback: 'Oops! The right answer is <b>‘knows’</b>, because it is a stative verb of mental states. Also, we use Present Simple with stative verbs of <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'
+            }
+          ],
+          _2_ : [
+            {
+              text: 'are possessing',
+              correct: false,
+              feedback: 'Oops! The right answer is <b>‘possess’</b>, because it is a relational verb. Also, we use Present Simple with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'
+            },
+            {
+              text: 'possess',
+              correct: true,
+              feedback: 'Good job! The right answer is <b>‘possess’</b>, because it is a relational verb. Also, we use Present Simple with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'
+            }
+          ]
+        },
+      },
+      {
+        name: "Reproductive exercises for Present Simple and Present Continuous",           // give your task a name
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        // here you have to write your question and your text
+        question: "<p>Choose the right option</p>\        
+        <p>In the movie Apollo 13, Ed Harris _1_ NASA flight director Gene Kranz as he successfully _2_the crew of a damaged spacecraft to safety. In a famous scene during which Kranz and his staff  _3_ to overcome some extremely daunting challenges, Harris  _4_, “Failure is not an option!”</p>", 
+        gaps: {
+          mode: 'select',
+          // here you can fill in the options for the gaps
+          _1_: [
+            {
+              text: 'portrays',     // the word(s) the student will see
+              correct: true,    // is this solution correct, false or true
+              feedback: 'Good job! The right answer is portrays. We use Present Simple  <b>to describe a plot of the film </b>'  
+            },
+            {
+              text: 'is portraying',
+              correct: false,
+              feedback: 'Oops! The right answer is portrays. We use Present Simple  <b>to describe a plot of the film </b>'
+            }
+          ],
+          _2_ : [
+            {
+              text: 'is guiding',
+              correct: false,
+              feedback: 'Oops! The right answer is guides. We use Present Simple <b> to describe a plot of the film </b>'
+            },
+            {
+              text: 'guides',
+              correct: true,
+              feedback: 'Good job! The right answer is guides. We use Present Simple <b>to describe a plot of the film </b>'
+            }
+          ],
+          _3_ : [
+            {
+              text: 'attempt',
+              correct: false,
+              feedback: 'Oops! The right answer is are attempting. We use Present Continuous <b>to focus on the action in progress</b>'
+            },
+            {
+              text: 'are attempting',
+              correct: true,
+              feedback: 'Good job! The right answer is are attempting. We use Present Continuous <b>to focus on the action in progress</b>'
+            }
+          ],
+          _4_ : [
+            {
+              text: 'shouts',
+              correct: true,
+              feedback: 'Good job! The right answer is shouts. We use Present Simple <b> to describe a plot of the film  </b>'
+            },
+            {
+              text: 'is shouting',
+              correct: false,
+              feedback: 'Oops! The right answer is shouts. We use Present Simple <b>to describe a plot of the film  </b>'
+            }
+          ]
+        },
+      },
+      {
+        name: "Reproductive exercises for Present Simple and Present Continuous",           // give your task a name
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        // here you have to write your question and your text
+        question: "<p>Choose the right option</p>\        
+        <p>But as more and more missions take flight, the network _1_ congested. The switchboard is often busy. So, NASA _2_ to lighten the load.</p>", 
+        gaps: {
+          mode: 'select',
+          // here you can fill in the options for the gaps
+          _1_: [
+            {
+              text: 'gets',     // the word(s) the student will see
+              correct: false,    // is this solution correct, false or true
+              feedback: 'Oops! The right answer is is getting. We use Present Continuous  <b>for changing or developing situations </b>'  
+            },
+            {
+              text: 'is getting',
+              correct: true,
+              feedback: 'Good job! The right answer is is getting. We use Present Continuous <b> for changing or developing situations </b>'
+            },
+          ],
+          _2_ : [
+            {
+              text: 'is working',
+              correct: true,
+              feedback: 'Good job! The right answer is "is working". We use Present Continuous <b> to expresses an action going on at the present period </b>'
+            },
+            {
+              text: 'works',
+              correct: false,
+              feedback: 'Oops! The right answer is "is working". We use Present Continuous  <b>to expresses an action going on at the present period </b>'
+            }
+          ]
+        },
+      },
 
         
     ] 
