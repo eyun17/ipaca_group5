@@ -1,8 +1,0 @@
-Django
-django-bootstrap-v5
-django-debug-toolbar
-crispy-bootstrap5
-django-crispy-forms
-json5
-
-

@@ -6,6 +6,7 @@ from learning_environment.its.tasks import TaskTypeFactory
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 import json5
+import random
 
 
 class User(AbstractUser):
@@ -43,7 +44,7 @@ class ProfileSeriesLevel(models.Model):
 
 
 
-class Lesson(models.Model):
+class Lesson(models.Model): # is checked when running read_lessons and then created there
     """
     A selected collection of task
     Comes which has a paragraph
@@ -52,6 +53,8 @@ class Lesson(models.Model):
     paragraph: piece of written academic text to read
     tasks: tasks belonging to the lesson
     """
+    # TODO: somehow add domain model to lesson
+
     name = models.CharField(max_length=255)
     lesson_id = models.SlugField(max_length=64)
     series = models.CharField(max_length=255, default='General')
@@ -92,6 +95,7 @@ class Lesson(models.Model):
         for t in lesson["tasks"]:
             task_num += 1
             Task.check_json5(t, task_num)
+            
         return True
 
     @classmethod
@@ -106,6 +110,8 @@ class Lesson(models.Model):
             Lesson.objects.get(lesson_id=lesson["id"]).delete()
         except Lesson.DoesNotExist:
             pass
+        
+        # TODO: create domain model for the lesson
 
         lsn = Lesson(name=lesson["name"],
                      lesson_id=lesson["id"],
@@ -126,12 +132,21 @@ class Lesson(models.Model):
 
 
         for task in lesson["tasks"]:
-            Task.create_from_json5(task, lsn)
+            t = Task.create_from_json5(task, lsn)
+
+            
+            # check if task is in TaskDifficulty, if not add
+            try: 
+                TaskDifficulty.objects.get(task=t)
+            except TaskDifficulty.DoesNotExist:
+                new_difficulty = TaskDifficulty(task=t, level=random.randint(1, 4))
+                new_difficulty.save()
+
 
         return lsn
+    
 
-
-class Task(models.Model):
+class Task(models.Model):      # same here 
     """
     There are multiple Tasks within a lesson
     The Tasks are subclassed according to their interaction type
@@ -227,3 +242,20 @@ class Solution(models.Model):
 class LearnerStatus(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     current_lesson = models.ForeignKey(Lesson, null=True, on_delete=models.SET_NULL)
+
+
+class TaskDifficulty(models.Model):
+
+    # define difficulty levels
+    class DifficultyLevels(models.IntegerChoices):
+        EASY = 1
+        MEDIUM = 2
+        HARD = 3
+        MASTER = 4
+
+    task = models.ForeignKey(Task, on_delete=models.CASCADE)
+    level = models.IntegerField(choices=DifficultyLevels.choices)
+
+
+    
+    

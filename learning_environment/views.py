@@ -27,7 +27,6 @@ def practice(request):
     """Display a task for practicing."""
 
     context = {'mode': 'solve'}
-
     # start a lesson
     if request.method == 'POST' and 'start' in request.POST:
         if not 'current_lesson_todo' in request.session:  # if there's no todo, we have a corrupt state -> show start screen

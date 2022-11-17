@@ -43,6 +43,8 @@ class Tutormodel:
             request.session['current_lesson_todo'] = order[:]
             request.session.modified = True
 
+        # TODO: get domainmodel of lesson
+        # TODO: get the knowledge level of the learner
         # pick a task
         while 1:
             next_type = request.session['current_lesson_todo'][0]
@@ -52,6 +54,9 @@ class Tutormodel:
             elif next_type == 'WRAPUP':
                 return next_type, lesson, None
             else:  # pick random task of fitting type
+                # TODO: check if next_task is empty
+                # TODO: search the domain-tree for a task in the appropriate difficulty level
+                # TODO: if there are several task, choose random
                 tasks = Task.objects.filter(lesson=lesson, type=next_type)
                 cnt = tasks.count()
                 if cnt == 0:
@@ -60,12 +65,7 @@ class Tutormodel:
                 task = tasks[random.randint(0, cnt-1)]
                 return next_type, lesson, task
 
-        # num_tasks = Task.objects.filter(lesson=lesson).count()
-        # if num_tasks == 0:
-        #   raise NoTaskAvailableError("No tasks in the database.")
-        # task = Task.objects.all()[random.randint(0, num_tasks-1)]
-        # return task
-
+        
     def start_lesson(self, series):
         try:
             current_level = ProfileSeriesLevel.objects.get(user=self.learner, series=series).level

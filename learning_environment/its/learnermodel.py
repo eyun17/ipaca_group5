@@ -31,9 +31,18 @@ class Learnermodel:
         solution = Solution(user=self.learner, task=task, solved=analysis.get('solved', False), analysis=analysis)
         solution.save()
 
+        # TODO: update knowledge level of learner
+
         # create message
         if analysis.get('solved', False):
             context['msg'] = "Congratulation! That's correct!"
         else:
             context['msg'] = "Oh no, that's not correct."
         return analysis, context
+
+        # TODO: calculate feedback for task:
+        # if task was solved: difficulty level of task
+        # if task was not solved:
+        # -> knowledge level - difficulty level
+        # -> how often tried
+        # -> calculate some number between 1 and 4 to reassign task
