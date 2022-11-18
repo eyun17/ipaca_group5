@@ -5,7 +5,7 @@ The tutor model is able to determine appropriate actions for a given learner. (E
 """
 
 import random
-from learning_environment.models import Lesson, Task, ProfileSeriesLevel
+from learning_environment.models import Lesson, Task, ProfileSeriesLevel, TaskDifficulty, LearnerKnowledgeLevel
 
 
 class NoTaskAvailableError(Exception):
@@ -25,6 +25,8 @@ class Tutormodel:
         (STATE, lesson, task)
         """
 
+        # TODO: other order
+        # we have to change the order, if not we only do one task per lesson an then the wrapup
         order = ['START', 'R', 'GS', 'V', 'WRAPUP']
 
         # determine the current lesson series
@@ -43,9 +45,8 @@ class Tutormodel:
             request.session['current_lesson_todo'] = order[:]
             request.session.modified = True
 
-        # TODO: get domainmodel of lesson
         # TODO: get the knowledge level of the learner
-        # pick a task
+        # pick a task according to knowledge level -> difficulty level of task
         while 1:
             next_type = request.session['current_lesson_todo'][0]
             request.session.modified = True
@@ -53,9 +54,7 @@ class Tutormodel:
                 return next_type, lesson, None
             elif next_type == 'WRAPUP':
                 return next_type, lesson, None
-            else:  # pick random task of fitting type
-                # TODO: check if next_task is empty
-                # TODO: search the domain-tree for a task in the appropriate difficulty level
+            else:  
                 # TODO: if there are several task, choose random
                 tasks = Task.objects.filter(lesson=lesson, type=next_type)
                 cnt = tasks.count()

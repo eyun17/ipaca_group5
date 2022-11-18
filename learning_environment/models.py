@@ -139,7 +139,8 @@ class Lesson(models.Model): # is checked when running read_lessons and then crea
             try: 
                 TaskDifficulty.objects.get(task=t)
             except TaskDifficulty.DoesNotExist:
-                new_difficulty = TaskDifficulty(task=t, level=random.randint(1, 4))
+                # initialize all new task with difficulty level 1
+                new_difficulty = TaskDifficulty(task=t, level=1)
                 new_difficulty.save()
 
 
@@ -256,6 +257,72 @@ class TaskDifficulty(models.Model):
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
     level = models.IntegerField(choices=DifficultyLevels.choices)
 
+    @classmethod
+    def update_task_difficulty(cls, task):
+
+        curr_difficulty = TaskDifficulty.objects.get(task=task)
+        feedback = True
+        change = 0
+
+        try:
+            knowlege = DifficultyFeedback.objects.filter(task=task).get(knowlege)
+            redo_count = DifficultyFeedback.objects.filter(task=task).get(redo_count)
+        except DifficultyFeedback.objects.filter(task=task).aexists():
+            feedback = False
+        
+        # calculate feedback
+        for entry in knowlege:
+            if feedback:
+                diff = knowlege[entry] - curr_difficulty 
+                nr_redo = redo_count[entry]
+                
+                # wenn diff < 0 bedeutet: task war schwerer als knowledge
+                # wenn diff > 0 bedeutet: task war leichter 
+                # wenn diff == 0 bedeutet: task war angemessen
+
+                # wenn task leichter und redo > 1 -> change + diff
+                # wenn task angemessen und redo > 1 -> change + 0
+                # wenn task schwer und redo < 1 -> change -diff
+                if diff > 0 and nr_redo > 1:
+                    change += diff
+                
+                if diff < 0 and nr_redo == 0:
+                    change += diff
+
+                if diff == 0 and nr_redo > 2:
+                    change += 1
+        
+        if feedback:
+            new_difficulty = curr_difficulty + change/len(knowlege)
+            curr_difficulty = new_difficulty
+
+        curr_difficulty.save()
+
+        return True
+
+
+
+class LearnerKnowledgeLevel(models.Model):
+
+    # define knowledge level
+    class KnowledgeLevels(models.IntegerChoices):
+        BEGINNER = 1
+        INTERMEDIATE = 2
+        ADVANCED = 3
+        MASTERY = 4
+    
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
+    score = models.IntegerField(default=0)
+    level = models.IntegerField(choices=KnowledgeLevels.choices, default=1)
 
     
+
+
+class DifficultyFeedback(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    task = models.ForeignKey(Task, on_delete=models.CASCADE)
+    knowlege = models.ForeignKey(LearnerKnowledgeLevel.level, on_delete=models.CASCADE)
+    redo_count = models.IntegerField(default=0)
+
     

@@ -11,7 +11,7 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import *
-from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel
+from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel, LearnerKnowledgeLevel, DifficultyFeedback
 from .its.tutormodel import Tutormodel, NoTaskAvailableError
 from .its.learnermodel import Learnermodel
 
@@ -72,13 +72,41 @@ def practice(request):
         context.update(learnermodel_context)
         if analysis.get('solved', False):  # we solved a task, so we remove its type from the session todo list
             context['solved'] = True
+
+            # update score and eventually level
+            try:
+                score = LearnerKnowledgeLevel.objects.get(score)
+                score += 1
+
+                if score == 5:
+                    level = LearnerKnowledgeLevel.objects.get(level)
+                    level += 1
+                    score = 0
+                    level.save()
+
+                score.save()
+            except LearnerKnowledgeLevel.DoesNotExist:
+                LearnerKnowledgeLevel.objects.create(user=request.user, lesson=request.session.get('current_lesson', None), score=0, level=1)
+
+
             if 'current_lesson_todo' in request.session and len(request.session['current_lesson_todo']) > 0:
                 request.session['current_lesson_todo'].pop(0)
             request.session.modified = True
         else:
             context['solved'] = False
+
+            # count the redos for the feedback
+            try: 
+                redo_count = DifficultyFeedback.objects.filter(task=task).get(redo_count)
+                redo_count += 1
+                redo_count.save()
+
+            except DifficultyFeedback.DoesNotExist:
+                # TODO: check whether knowledge level does exist!!!!!
+                DifficultyFeedback.objects.create(user=request.user, task=task, knowledge=LearnerKnowledgeLevel.objects.filter(user=request.user).get(level), redo_count = 1)
         lesson = task.lesson
         context['state'] = context['mode']
+
     elif 'redo' in request.GET:  # show a task again
         try:
             task = Task.objects.get(pk=int(request.GET['redo']))
@@ -86,6 +114,7 @@ def practice(request):
             return HttpResponseBadRequest("Error: No such ID")
         lesson = task.lesson
         context['state'] = context['mode']
+
     else:  # fetch new task and show it
         tutor = Tutormodel(request.user)
         try:
