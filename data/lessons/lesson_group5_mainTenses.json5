@@ -10,20 +10,16 @@
   text_url: "https://www.uni-osnabrueck.de/startseite/",
     
   tasks: [  // the list of tasks for this lesson
-      {  
+
+//Theoretical tasks (Present Simple and Present Continuous) Ex1
+      {
         name: "Theoretical task for Present Simple and Present Continuous",       // give your task a name
         type: "GS",
         interaction: "MARK",
         primary: false,
         show_lesson_text: false,
         question: "<p>Find the appropriate explanation for the usage of Present Simple and Present Continuous for every sentence.</p>",           
-        marktext: "<p>First, you #5#open a text editor or word processor, #5#create the HTML content and #5#choose the folder in which to save the Web page.
-        The brain #4#weighs about three pounds.
-        Noam Chomsky #6#explains that we're all born with an innate understanding of the way language works.
-        The Alchemist by Paulo Coelho #7#tells the mystical story of Santiago, an Andalusian shepherd boy who #7#yearns to travel in search of a worldly treasure.
-        As everybody #3#knows, vocabulary is an important part of language, just like bricks in a building.
-        With the advent of the Internet, the world #1#is #1#shrinking.
-        William #2#is #2#advertising for a new CEO, after Smith\’s sudden resignation.</p> ",  // write the text here, mark the words you want the student to mark with #1# in front of the word
+        marktext: "<p>First, you #5#open a text editor or word processor, #5#create the HTML content and #5#choose the folder in which to save the Web page. <p> The brain #4#weighs about three pounds.<p> Noam Chomsky #6#explains that we're all born with an innate understanding of the way language works. <p> The Alchemist by Paulo Coelho #7#tells the mystical story of Santiago, an Andalusian shepherd boy who #7#yearns to travel in search of a worldly treasure.,<p> As everybody #3#knows, vocabulary is an important part of language, just like bricks in a building.,<p> With the advent of the Internet, the world #1#is #1#shrinking.,<p> William #2#is #2#advertising for a new CEO, after Smith’s sudden resignation.</p> ",  // write the text here, mark the words you want the student to mark with #1# in front of the word
         markers: {
             // here you can write what should be marked
           '1': {
@@ -39,16 +35,56 @@
             description: 'factual description',
           },
           '5': {
-            description: 'description of processes, instructions'
+            description: 'description of processes, instructions',
           },
           '6': {
-            description: 'summarization of the main arguments of other academics'
+            description: 'summarization of the main arguments of other academics',
           },
           '7': {
-            description: 'plots of books, films, etc.'
+            description: 'plots of books, films, etc.',
           }
         } 
       },
+
+//Theoretical tasks (Present Simple and Present Continuous) Ex2,
+      {
+        name: "",
+        // give your task a name
+        type: "GS",
+        interaction: "MARK",
+        primary: false,
+        show_lesson_text: false,
+        question: "YOUR QUESTION",
+        //write your question here
+        marktext: "<p><ol>\n<li>Everything <b>#1#is #1#speeding #1#up</b>  thanks to our obsession with technology and efficiency.</li>\n<li>Almost 500 million people around the globe <b>#2#speak</b> Spanish.</li>\n<li>Dune by Denis Villeneuve <b>#3#tells</b>  the story of  Paul Atreides, a young man whose destiny is to travel in the Universe.</li>\n<li>Then you <b>#4#wash</b>  the fabric, <b>#4#dye</b>  it and <b>#4#cut</b>  it into patterns.</li>\n<li>She <b>#5#is #5#developing</b>  the commercial side of the organization.</li>\n<li>Brows <b>#6#explains</b>  that survivors of traumatic events  are often haunted by persistent and vivid memories of this experience.</li>\n</p> <li>Our company <b>#7#expects</b>  a rise in both our production and our cash flow.</li>\n</ol>\n",
+        // write the text here, mark the words you want the student to mark with #1# in front of the word
+        markers: {
+          // here you can write what should be marked
+          '1': {
+            description: 'changing and developing situations, trends in society or the world around us',
+          },
+          '2': {
+            description: 'events or actions that are happening at the moment',
+          },
+          '3': {
+            description: 'with stative verbs of physical perception, mental states, emotions, possession and others,',
+          },
+          '4': {
+            description: 'factual description,',
+          },
+          '5': {
+            description: 'description of processes, instructions',
+          },
+          '6': {
+            description: 'summarization of the main arguments of other academics',
+          },
+          '7': {
+            description: 'plots of books, films, etc.',
+          }
+        },
+      },
+
+//Fill in the gaps (Present Simple and Present Continuous Ex1
       {
         name: "Reproductive exercises for Present Simple and Present Continuous",           // give your task a name
         type: "GS",
@@ -87,6 +123,8 @@
           ]
         },
       },
+
+//Fill in the gaps (Present Simple and Present Continuous) Ex2
       {
         name: "Reproductive exercises for Present Simple and Present Continuous",           // give your task a name
         type: "GS",
@@ -95,7 +133,9 @@
         show_lesson_text: false,
         // here you have to write your question and your text
         question: "<p>Choose the right option</p>\        
-        <p>In the movie Apollo 13, Ed Harris _1_ NASA flight director Gene Kranz as he successfully _2_the crew of a damaged spacecraft to safety. In a famous scene during which Kranz and his staff  _3_ to overcome some extremely daunting challenges, Harris  _4_, “Failure is not an option!”</p>", 
+        <p>In the movie Apollo 13, Ed Harris _1_ NASA flight director Gene Kranz as he successfully _2_the crew \
+        of a damaged spacecraft to safety. In a famous scene during which Kranz and his staff  _3_ to overcome \
+        some extremely daunting challenges, Harris  _4_, “Failure is not an option!”</p>",
         gaps: {
           mode: 'select',
           // here you can fill in the options for the gaps
@@ -149,6 +189,8 @@
           ]
         },
       },
+
+//Fill in the gaps (Present Simple and Present Continuous) Ex3
       {
         name: "Reproductive exercises for Present Simple and Present Continuous",           // give your task a name
         type: "GS",
@@ -188,7 +230,679 @@
         },
       },
 
-        
-    ] 
+//Fill in the gaps (Present Simple and Present Continuous) Ex4
+      {
+        name: "Reproductive exercises for Present Simple and Present Continuous",           // give your task a name
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        // here you have to write your question and your text
+        question: "<p> Choose the right option</p>\
+        <p> Healthcare _1_ healthcare is in need of change. The population ageing, the increase in chronic and heart diseases and the increase in population size _2_ the current hospital-centric healthcare.\n</p>",
+        gaps: {
+          mode: 'select',
+          // here you can fill in the options for the gaps
+          _1_: [
+            {
+              text: 'changes',     // the word(s) the student will see
+              correct: false,    // is this solution correct, false or true
+              feedback: 'Oops! The right answer is ‘is changing’, because we use Present Continuous  <b>for changing and developing situations. </b>'  // feedback you want to give to the user
+            },
+            {
+              text: 'is changing',
+              correct: true,
+              feedback: 'Good job! The right answer is ‘is changing’, because we use Present Continuous <b> for changing and developing situations. </b>,'
+            },
+          ],
+          _2_ : [
+            {
+              text: 'is overwhelming,',
+              correct: true,
+              feedback: 'Good job! The right answer is ‘is overwhelming’, because we use Present Continuous  <b>or temporary situations and trends in society or the world around us. </b>,'
+            },
+            {
+              text: 'overwhelms',
+              correct: false,
+              feedback: 'Oops! The right answer is ‘is overwhelming’, because we use Present Continuous <b> for temporary situation and trends in society or the world around us. </b>,'
+            }
+          ]
+        },
+      },
 
-} // end of lesson
+//Fill in the gaps (Present Simple and Present Continuous) Ex5
+      {
+        name: "Reproductive exercises for Present Simple and Present Continuous",           // give your task a name
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        // here you have to write your question and your text
+        question: "<p> Choose the right option </p>\
+        <p> Sometimes called rainforests of the sea, shallow coral reefs _1_ some of Earth's most diverse ecosystems.\
+         Now, they _2_ less than 0.1% of the world's ocean area and _3_ a home for at least 25% of all marine species,\
+         including fish, mollusks, worms, crustaceans, echinoderms, sponges, tunicates and other cnidarians. </p>",
+        gaps: {
+          mode: 'select',
+          // here you can fill in the options for the gaps
+          _1_: [
+            {
+              text: 'are forming',     // the word(s) the student will see
+              correct: false ,    // is this solution correct, false or true
+              feedback: 'Oops! The right answer is ‘form’, because we use Present Simple <b> for factual description. </b>'  // feedback you want to give to the user
+            },
+            {
+              text: 'form',
+              correct: true ,
+              feedback: 'Good job! The right answer is ‘form’, because we use Present Simple <b> for factual description. </b>'
+            },
+          ],
+          _2_ : [
+            {
+              text: 'are occupying',
+              correct: true ,
+              feedback: 'Good job! The right answer is ‘are occupying’, because we use Present Continuous <b>for events or actions that are happening at the moment. </b>'
+            },
+            {
+              text: 'occupy',
+              correct: false ,
+              feedback: 'Oops! The right answer is ‘are occupying’, because we use Present Continuous  <b>for events or actions that are happening at the moment. </b>,'
+            },
+          ],
+          _3_ : [
+            {
+              text: 'are providing',
+              correct: false ,
+              feedback: 'Oops! The right answer is ‘provide’, because we use Present Simple  <b>for factual description. </b>'
+            },
+            {
+              text: 'provide',
+              correct: true ,
+              feedback: 'Good job! The right answer is ‘provide’, because we use Present Simple  <b>for factual description. </b>'
+            }
+          ]
+        },
+      },
+
+//Single choice (Present Simple and Present Continuous) Ex1
+      {
+      name: "Reproductive exercises for Present Continuous",      // give your task a name
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: false,
+        question:, "The expedition (to look for) sponsorship from one of the major banks.",      // write your text or question here
+        choices: [
+           {text: "is looking for", // this is the text the student will see
+            correct: true , // is it correct (false, true)
+            feedback: "Good job! The right answer is ‘is looking for’. We use Present Continuous for <b> actions that are happening at the moment </b>" // what feedback do you want to give the student
+            },
+            { text: "looks for",
+            correct: false ,
+            feedback: "Oops! The right answer is ‘is looking for’. We use Present Continuous for  <b>actions that are happening at the moment </b>"
+            },
+            { text: "are looking for",
+            correct: false ,
+            feedback: "Oops! The right answer is ‘is looking for’. We use Present Continuous for  <b>actions that are happening at the moment </b>"
+            }
+
+        ],
+      },
+
+//Single choice (Present Simple and Present Continuous) Ex2
+      {
+      name: "Reproductive exercises for Present Simple",       // give your task a name
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: false,
+        question: "First you (to make) your paper mache, (to apply) the paste or paper mache clay to your form, \
+        then (to dry) your paper mache all the way through. make, apply, dry.",      // write your text or question here
+        choices: [
+           {text: "are making, are applying, are drying", // this is the text the student will see
+            correct: false , // is it correct (false, true)
+            feedback: "Oops! The right answer is ‘make, apply, dry’. We use Present Simple to <b>describe processes and give instructions</b>" // what feedback do you want to give the student
+            },
+            { text: "is making, is applying, is drying",
+            correct: false ,
+            feedback: "Oops! The right answer is ‘make, apply, dry’. We use Present Simple to <b>describe processes and give instructions</b>"
+            },
+            { text: "make, apply, dry",
+            correct: true ,
+            feedback: "Good job! The right answer is ‘make, apply, dry’. We use Present Simple to <b>describe processes and give instructions</b>"
+            }
+
+        ],
+      },
+
+//Single choice (Present Simple and Present Continuous) Ex3
+    {
+      name: "Reproductive exercises for Present Simple",
+      // give your task a name
+      type: "GS",
+      interaction: "SC",
+      primary: false,
+      show_lesson_text: false,
+      question: "Dr Kennett (to note) that present-day bison are not like the ones the Clovis people hunted.",
+      // write your text or question here
+      choices: [
+        {
+          text: "is noting",
+          // this is the text the student will see
+          correct: false,
+          // is it correct (false, true)
+          feedback: "Oops! The right answer is ‘notes’. We use Present Simple to summarize or report the main arguments of other academics"
+          // what feedback do you want to give the student
+        },
+        {
+          text: "notes",
+          correct: true,
+          feedback: "Good job! The right answer is ‘notes’. We use Present Simple to summarize or report the main arguments of other academics"
+        },
+        {
+          text: "are noting",
+          correct: false,
+          feedback: "Oops! The right answer is ‘notes’. We use Present Simple to summarize or report the main arguments of other academics"
+        }
+      ],
+    },
+
+//Single choice (Present Simple and Present Continuous) Ex4
+    {
+      name: "Reproductive exercises for Present Continuous",       // give your task a name
+      type: "GS",
+      interaction: "SC",
+      primary: false,
+      show_lesson_text: false,
+      question: "The company (to want) to make the site more advanced to increase its usefulness.",      // write your text or question here
+      choices: [
+         {text: "is wanting", // this is the text the student will see
+          correct: false , // is it correct (false, true)
+          feedback: "Oops! The right answer is ‘wants’, because it is a stative verb. Also, we use Present Simple \
+          with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>\
+          (to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> ,\
+          <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>\
+          ( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree,\
+          to allow, to appear (= to seem), to astonish, to claim).</i>\n" // what feedback do you want to give the student
+          },
+          { text: "wants",
+          correct: true ,
+          feedback: "Good job! The right answer is ‘wants’, because it is a stative verb. Also, we use Present Simple with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> \
+           <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> \
+           , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>\
+           ( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, \
+           to appear (= to seem), to astonish, to claim).</i>\n"
+          },
+          { text: "are wanting",
+          correct: false ,
+          feedback: "Good job! The right answer is ‘wants’, because it is a stative verb. Also, we use Present Simple \
+                     with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> \
+                     <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> \
+                     , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>\
+                     ( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, \
+                     to appear (= to seem), to astonish, to claim).</i>\n"
+          }
+        ],
+    },
+
+//Single choice (Present Simple and Present Continuous) Ex5
+    {
+      name: "Reproductive exercises for Present Simple",
+      // give your task a name
+      type: "GS",
+      interaction: "SC",
+      primary: false,
+      show_lesson_text: false,
+      question: "The seventh seal by Ingmar Bergman (to tell) about a knight named Antonius Block and his ongoing game of chess with a shadowy, hooded figure - Death.",
+      // write your text or question here
+      choices: [
+        {
+          text: "is telling",
+          // this is the text the student will see
+          correct: false,
+          // is it correct (false, true)
+          feedback: "Oops! The right answer is ‘tells’. We use Present Simple  to describe a plot of the film"
+          // what feedback do you want to give the student
+        },
+        {
+          text: "tells",
+          correct: true ,
+          feedback: "Good job! The right answer is ‘tells’. We use Present Simple  to describe a plot of the film"
+        },
+        {
+          text: "told",
+          correct: false ,
+          feedback: "Oops! The right answer is ‘tells’. We use Present Simple  to describe a plot of the film",
+        }
+      ],
+    },
+
+//Single choice (Present Simple and Present Continuous) Ex6
+    {
+      name: "Reproductive exercises for Present Continuous",
+      // give your task a name
+      type: "GS",
+      interaction: "SC",
+      primary: false,
+      show_lesson_text: false,
+      question: "Amongst young people attitudes to marriage (to change) fast.",
+      // write your text or question here
+      choices: [
+        {
+          text: "are changing",
+          // this is the text the student will see
+          correct:true ,
+          // is it correct (false, true)
+          feedback: "Good job! The right answer is ‘are changing’. We use Present Continuous for <b>temporary situations and trends in society or the world around us</b>"
+          // what feedback do you want to give the student
+        },
+        {
+          text: "changes",
+          correct:false ,
+          feedback: "Oops! The right answer is ‘are changing’. We use Present Continuous for <b>temporary situations and trends in society or the world around us</b>"
+        },
+        {
+          text: "is changing",
+          correct:false ,
+          feedback: "Oops! The right answer is ‘are changing’. We use Present Continuous for<b>temporary situations and trends in society or the world around us</b>"
+        }
+      ],
+    },
+
+//Single choice (Present Simple and Present Continuous) Ex7
+    {
+        name: "Reproductive exercises for Present Continuous",       // give your task a name
+          type: "GS",
+          interaction: "SC",
+          primary: false,
+          show_lesson_text: false,
+          question: "According to the airport's own statistics, around 75.7 million people (to pass through) the terminals annually",      // write your text or question here
+          choices: [
+             {text: "pass through", // this is the text the student will see
+              correct: true , // is it correct (false, true)
+              feedback: "Good job! The right answer is ‘pass through’. We use Present Simple for <b>factual description</b>" // what feedback do you want to give the student
+              },
+              { text: "is passing through",
+              correct: false ,
+              feedback: "Oops! The right answer is ‘pass through’. We use Present Simple for <b>factual description<b>"
+              },
+              { text: "are passing through",
+              correct: false ,
+              feedback: "Oops! The right answer is ‘pass through’. We use Present Simple for<b>factual description</b>"
+              }
+
+          ],
+    },
+
+//Single choice (Present Simple and Present Continuous) Ex8
+    {
+       name: "Reproductive exercises for Present Continuous",       // give your task a name
+          type: "GS",
+          interaction: "SC",
+          primary: false,
+          show_lesson_text: false,
+          question: "Only 2% of the Earth's population (to have) green eyes.",      // write your text or question here
+          choices: [
+             {text: "have", // this is the text the student will see
+              correct: true , // is it correct (false, true)
+              feedback: "Good job! The right answer is ‘have’, because it is a stative verb. Also, we use Present Simple with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>" // what feedback do you want to give the student
+              },
+              { text: "are having",
+              correct: false ,
+              feedback: "Oops! The right answer is ‘have’, because it is a stative verb. Also, we use Present Simple with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>"
+              },
+              { text: "is having",
+              correct: false ,
+              feedback: "Oops! The right answer is ‘have’, because it is a stative verb. Also, we use Present Simple with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>\n"
+              }
+
+          ],
+    },
+
+//Single choice (Present Simple and Present Continuous) Ex9
+    {
+        name: "Reproductive exercises for Present Continuous",       // give your task a name
+          type: "GS",
+          interaction: "SC",
+          primary: false,
+          show_lesson_text: false,
+          question: "With the possibilities of modern technology, people (to develop).",      // write your text or question here
+          choices: [
+             {text: "are developing", // this is the text the student will see
+              correct: true , // is it correct (false, true)
+              feedback: "Good job! The right answer is ‘have’. We use Present Simple for <b>factual description</b>" // what feedback do you want to give the student
+              },
+              { text: "develop",
+              correct: false ,
+              feedback: "Oops! The right answer is ‘are developing’. We use Present Continuous for <b>events or actions that are happening at the moment<b>"
+              },
+              { text: "develops",
+              correct: false ,
+              feedback: "Oops! The right answer is ‘are developing’. We use Present Continuous for <b> events or actions that are happening at the moment</b>"
+              }
+
+          ],
+    },
+
+//Single choice (Present Simple and Present Continuous) Ex10
+    {
+        name: "Reproductive exercises for Present Continuous",       // give your task a name
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: false,
+        question: "As psychologist Carol Dweck (to explain), we convey our expectations through very subtle cues, such as how far we stand apart and how much eye contact we make.",      // write your text or question here
+        choices: [
+           {text: "is explaining", // this is the text the student will see
+            correct: false , // is it correct (false, true)
+            feedback: "Oops! The right answer is ‘explains’. We use Present Simple <b>to summarize or report the main arguments of other academics</b>" // what feedback do you want to give the student
+            },
+            { text: "are explaining",
+            correct: false ,
+            feedback: "Oops! The right answer is ‘explains’. We use Present Simple <b>to summarize or report the main arguments of other academics</b>"
+            },
+            { text: "explains",
+            correct: true ,
+            feedback: "Good job! The right answer is ‘explains’. We use Present Simple <b>to summarize or report the main arguments of other academics</b>"
+            }
+
+        ],
+    },
+//Theoretical tasks (Past Simple and Past Continuous) Ex1
+    {
+        name: "Theoretical task for Past Simple and Past Continuous",       // give your task a name
+        type: "GS",
+        interaction: "MARK",
+        primary: false,
+        show_lesson_text: false,
+        question: "Find the appropriate explanation for the usage of Past Simple and Past Continuous for every sentence.",           //write your question here
+        marktext: "<p><ol>\n<li>In 1957 the Soviets <b>#3launched </b> Sputnik 1 into outer space.</li>\n<li>In the early 1980s, Louis Liebenberg <b>#1was #1taking</b> a philosophy of science class at the University of Cape Town.</li>\n<li>At the moment when the volcano erupted, most people <b>#2were #2sleeping</b>.</li>\n<li>The organization <b>#4depended</b> heavily on voluntary help from 2005 to 2007. </li>\n</ol>\n</p> ",  // write the text here, mark the words you want the student to mark with #1# in front of the word
+        markers: {
+            // here you can write what should be marked
+          '1': {
+            description: 'an action which happened for a long period of time and came to an end in the past. (for, during)',
+          },
+          '2': {
+            description: 'a past action which was in progress when another action interrupted it ',
+          },
+          '3': {
+            description: 'action which happened at a specific time in the past ',
+          },
+          '4': {
+            description: ' with stative verbs of physical perception, mental states, emotions, possession and others to express an action going on at a given past moment',
+          }
+        },
+    },
+//Theoretical tasks (Past Simple and Past Continuous) Ex2
+    {
+        name: "Theoretical task for Past Simple and Past Continuous",       // give your task a name
+        type: "GS",
+        interaction: "MARK",
+        primary: false,
+        show_lesson_text: false,
+        question: "Find the appropriate explanation for the usage of Past Simple and Past Continuous for every sentence.",           //write your question here
+        marktext: "<p><ol>\n<li>In 1913, the Venezuelan government <b>#3contracted</b> with the Royal Dutch Shell Group to extract rich oil reserves.</li>\n<li>Lucas came across Campbell's work while he <b>#2was #2working</b> on Star Wars</li>\n<li>The United States <b>#4wanted</b> to create an international order that was strong enough to promote international economic stability.</li>\n<li>Darwin <b>#1was #1studying</b> to be a medical doctor at the University of Edinburgh for three years.</li>\n</ol>\n</p> ",  // write the text here, mark the words you want the student to mark with #1# in front of the word
+        markers: {
+            // here you can write what should be marked
+          '1': {
+            description: 'an action which happened for a long period of time and came to an end in the past. (for, during)',
+          },
+          '2': {
+            description: 'a past action which was in progress when another action interrupted it',
+          },
+          '3': {
+            description: 'action which happened at a specific time in the past',
+          },
+          '4': {
+            description: ' with stative verbs of physical perception, mental states, emotions, possession and others to express an action going on at a given past moment'
+          }
+        },
+    },
+//Fill in the gaps (Past  Simple and Past Continuous) Ex1
+    {
+        name: "Reproductive exercises for  Past Simple and Past Continuous",           // give your task a name
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        // here you have to write your question and your text
+        question: "<p>Choose the right option!</p>\
+        <p>The modern telephone is the result of the work of many people. Alexander Graham Bell was, however, the first to patent the telephone, as an \"apparatus for transmitting vocal or other sounds telegraphically\". Above all, Bell _1_ himself the goal of making life easier when he_2_ such a powerful machine.</p>",
+        gaps: {
+          mode: 'select',
+          // here you can fill in the options for the gaps
+          _1_: [
+            {
+              text: 'was setting',     // the word(s) the student will see
+              correct: false ,    // is this solution correct, false or true
+              feedback: 'Oops! The right answer is <b>‘set’</b>, because we use Past Simple for a single action which took place in the past.'  // feedback you want to give to the user
+            },
+            {
+              text: 'set',
+              correct: true,
+              feedback: 'Good job! The right answer is <b>‘set’</b>, because use Past Simple for a single action which took place in the past.'
+            },
+          ],
+          _2_ : [
+            {
+              text: 'was creating',
+              correct: true ,
+              feedback: 'Good job! The right answer is <b>‘was creating’.</b>, because we use Past Continuous for events which were in progress in the past.'
+            },
+            {
+              text: 'created',
+              correct: false ,
+              feedback: 'Oops! The right answer is <b>‘was creating’.</b>, because we use Past Continuous for events which were in progress in the past.'
+            },
+          ]
+        },
+      },
+//Fill in the gaps (Past  Simple and Past Continuous) Ex2
+    {
+        name: "Reproductive exercises for Past Simple and Past Continuous",           // give your task a name
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        // here you have to write your question and your text
+        question: "<p>Choose the right option!</p>\
+        <p>Christopher Columbus was an Italian explorer and navigator who _1_ four voyages across the Atlantic Ocean that were sponsored by the Catholic Monarchs of Spain. Thanks to this, the first contact of Europeans with the Caribbean, Central America, and South America _2_ place.</p>",
+        gaps: {
+          mode: 'select',
+          // here you can fill in the options for the gaps
+          _1_: [
+            {
+              text: 'was completing',     // the word(s) the student will see
+              correct: false ,    // is this solution correct, false or true
+              feedback: 'Oops! The right answer is <b>‘completed’</b>, because we use Past Simple for a single action which took place in the past.'  // feedback you want to give to the user
+            },
+            {
+              text: 'completed',
+              correct: true ,
+              feedback: 'Good job! The right answer is <b>‘completed’</b>, because we use Past Simple for a single action which took place in the past.'
+            },
+          ],
+          _2_ : [
+            {
+              text: 'took',
+              correct: true ,
+              feedback: 'Good job! The right answer is <b>‘took’.</b>, because we use Past Simple for a single action which took place in the past.'
+            },
+            {
+              text: 'was taking',
+              correct: false ,
+              feedback: 'Oops! The right answer is <b>‘took’.</b>, because we use Past Simple for a single action which took place in the past.'
+            },
+          ],
+        },
+//Fill in the gaps (Past simple and past continuous) Ex3
+    {
+        name: "Reproductive exercises for Past Simple and Past Continuous",           // give your task a name
+          type: "GS",
+          interaction: "GAP",
+          primary: false,
+          show_lesson_text: false,
+          // here you have to write your question and your text
+          question: "<p>Choose the right option!</p>\
+          <p>At the dawn of the 1920s, the world _1_ from the First World War. The conflict, which _2_ just over a year before the new decade began, had a fundamental and irreversible effect on society, culture, and fashion.</p>",
+          gaps: {
+            mode: 'select',
+            // here you can fill in the options for the gaps
+            _1_: [
+              {
+                text: 'recovered',     // the word(s) the student will see
+                correct: false ,    // is this solution correct, false or true
+                feedback: 'Oops! The right answer is <b>‘was recovering’</b>, because we use Past Continuous for events which were in progress in the past.'  // feedback you want to give to the user
+              },
+              {
+                text: 'was recovering',
+                correct: true ,
+                feedback: 'Good job! The right answer is<b>‘was recovering’</b>, because we use Past Continuous for event which was in progress in the past.'
+              },
+            ],
+            _2_ : [
+              {
+                text: 'ended',
+                correct: true ,
+                feedback: 'Good job! The right answer is <b>‘ended’</b>, because we use Past Simple for a single action which took place in the past.'
+              },
+              {
+                text: 'was ending',
+                correct: false ,
+                feedback: 'Oops! The right answer is <b>‘ended’</b>, because we use Past Simple for a single action which took place in the past.'
+              },
+            ],
+          },
+    },
+//Single choice (Past Simple and Past Continuous Ex1
+    {
+      name: "Reproductive exercises for Past Simple",
+      // give your task a name
+      type: "GS",
+      interaction: "SC",
+      primary: false,
+      show_lesson_text: false,
+      question: "The company (to begin) integrated circuit research and development in 1960.",
+      // write your text or question here
+      choices: [
+        {
+          text: "was beginning",
+          // this is the text the student will see
+          correct: false ,
+          // is it correct (false, true)
+          feedback: "Oops! The right answer is ‘began’. We use Past Simple for  <b>actions which happened at a specific time in the past \n</b>\n"
+          // what feedback do you want to give the student
+        },
+        {
+          text: "began",
+          correct: false ,
+          feedback: "Oops! The right answer is ‘began’. We use Past Simple for  <b>actions which happened at a specific time in the past </b>"
+        },
+        {
+          text: "began",
+          correct: true ,
+          feedback: "Good job! The right answer is ‘began’. We use Past Simple for  <b>actions which happened at a specific time in the past </b>"
+        },
+         {
+          text: "had begun",
+          correct: false ,
+          feedback: "Oops! The right answer is ‘began’. We use Past Simple for  <b>actions which happened at a specific time in the past </b>"
+        }
+      ],
+    },
+//Single choice (Past Simple and Past Continuous) Ex2
+    {
+      name: "Reproductive exercises for Past Continuous",
+      // give your task a name
+      type: "GS",
+      interaction: "SC",
+      primary: false,
+      show_lesson_text: false,
+      question: "Lucas came across Campbell's work while he (to work) on Star Wars.",
+      // write your text or question here
+      choices: [
+        {
+          text: "was working",
+          // this is the text the student will see
+          correct: true ,
+          // is it correct (false, true)
+          feedback: "Good job! The right answer is ‘was working’. We use Past Continuous for  <b>past action which was in progress when another action interrupted it</b>"
+          // what feedback do you want to give the student
+        },
+        {
+          text: "worked",
+          correct: false ,
+          feedback: "Oops The right answer is ‘was working’. We use Past Continuous for  <b>past action which was in progress when another action interrupted it</b>"
+        },
+        {
+          text: "had worked",
+          correct: false ,
+          feedback: "Oops! The right answer is ‘was working’. We use Past Continuous for  <b>past action which was in progress when another action interrupted it</b>"
+        }
+      ],
+    },
+//Single choice (Past Simple and Past Continuous) Ex3
+    {
+      name: "Reproductive exercises for Past Simple",
+      // give your task a name
+      type: "GS",
+      interaction: "SC",
+      primary: false,
+      show_lesson_text: false,
+      question: "Locke (to believe) that government must protect those natural rights that the individual cannot effectively protect in a state of nature.",
+      // write your text or question here
+      choices: [
+        {
+          text: "had believed",
+          // this is the text the student will see
+          correct: false,
+          // is it correct (false, true)
+          feedback: "Oops! The right answer is ‘believed’, because it is a stative verb of mental states. Also , we use Past Simple for  <b> with stative verbs of physical perception, mental states, emotions, possession and others to express an action going on at a given past moment</b>"
+          // what feedback do you want to give the student
+        },
+        {
+          text: "believed",
+          correct: true ,
+          feedback: "Good job! The right answer is ‘believed’, because it is a stative verb of mental states. Also , we use Past Simple for  <b> with stative verbs of physical perception, mental states, emotions, possession and others to express an action going on at a given past moment</b>"
+        },
+        {
+          text: "was believing",
+          correct: false,
+          feedback: "Oops! The right answer is ‘believed’, because it is a stative verb of mental states. Also , we use Past Simple for  <b> with stative verbs of physical perception, mental states, emotions, possession and others to express an action going on at a given past moment</b>"
+        }
+      ],
+    },
+
+//Single choice (Past Simple and Past Continuous) Ex4
+    {
+      name: "Reproductive exercises for Past Continuous",
+      // give your task a name
+      type: "GS",
+      interaction: "SC",
+      primary: false,
+      show_lesson_text: false,
+      question: "Albert Einsten (to work) on his theory of relativity for 7 years.",
+      // write your text or question here
+      choices: [
+        {
+          text: "worked",
+          // this is the text the student will see
+          correct: false ,
+          // is it correct (false, true)
+          feedback: "Oops! The right answer is ‘was working’. We use Past Continuous  for  <b>events which were in progress in the past</b>"
+          // what feedback do you want to give the student
+        },
+        {
+          text: "had worked",
+          correct: false ,
+          feedback: "Oops! The right answer is ‘was working’. We use Past Continuous  for  <b>events which were in progress in the past</b>"
+        },
+        {
+          text: "was working",
+          correct: true ,
+          feedback: "Good job! The right answer is ‘was working’. We use Past Continuous  for  <b>events which were in progress in the past</b>"
+        }
+      ],
+    },
+}
+// end of lesson
