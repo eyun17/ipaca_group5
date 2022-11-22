@@ -225,4 +225,4 @@ class Solution(models.Model):
 
 class LearnerStatus(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    current_lesson = models.ForeignKey(Lesson, null=True, on_delete=models.SET_NULL)
+    score = models.IntegerField(default=5)

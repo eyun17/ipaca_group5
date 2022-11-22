@@ -5,7 +5,7 @@ The learner model maintains a model about a given learner's competencies.
 """
 
 from .tasks import TaskTypeFactory
-from learning_environment.models import Solution
+from learning_environment.models import Solution, LearnerStatus
 
 class Learnermodel:
 
@@ -31,7 +31,21 @@ class Learnermodel:
         solution = Solution(user=self.learner, task=task, solved=analysis.get('solved', False), analysis=analysis)
         solution.save()
 
+
         # create message
+        if analysis.get('solved', False):
+            context['msg'] = "Congratulation! That's correct!"
+        else:
+            context['msg'] = "Oh no, that's not correct."
+        return analysis, context
+
+
+    def score_update(self, analysis):
+        # Try score to update with update function in Learnermodel
+        score = LearnerStatus.objects.filter("score")
+        ls = LearnerStatus(user = self.learner, score=score)
+        ls.save()
+
         if analysis.get('solved', False):
             context['msg'] = "Congratulation! That's correct!"
         else:
