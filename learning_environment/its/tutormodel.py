@@ -28,7 +28,7 @@ class Tutormodel:
         # TODO: other order
         # we have to change the order, if not we only do one task per lesson an then the wrapup
         order = ['START', 'R', 'GS', 'V', 'WRAPUP']
-
+        order1 =['R', 'GS', 'V']
         # determine the current lesson series
         series = request.session.get('lesson_series', 'General')
 
@@ -45,23 +45,61 @@ class Tutormodel:
             request.session['current_lesson_todo'] = order[:]
             request.session.modified = True
 
+        try: 
+            lkl = LearnerKnowledgeLevel.objects.get(user=request.user, lesson=lesson)
+        except ValueError:
+            LearnerKnowledgeLevel.objects.create(user=request.user, lesson=lesson, level=1, score=0)
+            lkl = LearnerKnowledgeLevel.objects.get(user=request.user, lesson=lesson)
+
+        # when master
+        if lkl.level == 5:
+            request.session['current_lesson_todo'] = ['WRAPUP']
+            request.session.modified = True
+        
+        empty_count=0
         # TODO: get the knowledge level of the learner
         # pick a task according to knowledge level -> difficulty level of task
         while 1:
             next_type = request.session['current_lesson_todo'][0]
             request.session.modified = True
             if next_type == 'START':
+                request.session['current_lesson_todo'] = order1[:]
+                request.session.modified = True
+                print(request.session['current_lesson_todo'])
                 return next_type, lesson, None
+
             elif next_type == 'WRAPUP':
                 return next_type, lesson, None
             else:  
-                # TODO: if there are several task, choose random
-                tasks = Task.objects.filter(lesson=lesson, type=next_type)
-                cnt = tasks.count()
+                possible_tasks = Task.objects.filter(lesson=lesson, type=next_type)
+                task_list = []
+                print(possible_tasks)
+                for task in possible_tasks:
+                    difficulty = TaskDifficulty.objects.get(task=task.id).level
+                    print("d", difficulty)
+                    print("k", lkl.level)
+                    if difficulty == lkl.level:
+                        print("in task_list.append")
+                        task_list.append(task)
+                request.session['current_lesson_todo'].extend(order1)
+                request.session.modified = True
+                print(task_list)
+                cnt = len(task_list)
                 if cnt == 0:
-                    request.session['current_lesson_todo'].pop(0)  # if we don't have such a task, remove it
+                    print("in cnt==0")
+                    empty_count+=1
+                    request.session['current_lesson_todo'].pop(0) 
+                    request.session['current_lesson_todo'].extend(order1) 
+
+                    # if the knowledge level is at mastery or there are no more tasks available do wrapup
+                    if lkl.level==5 or empty_count==3:
+                        request.session['current_lesson_todo'] = ['WRAPUP']
+
+                    request.session.modified = True
                     continue  # next state
-                task = tasks[random.randint(0, cnt-1)]
+                task = task_list[random.randint(0, cnt-1)]
+                print(task)
+               
                 return next_type, lesson, task
 
         
@@ -72,5 +110,14 @@ class Tutormodel:
             ProfileSeriesLevel.objects.create(user=self.learner, series=series, level=0)
             current_level = 0
 
+        
         lesson = Lesson.objects.filter(series=series).order_by("lesson_id")[current_level]
+
+        # check whether LearnerKnowledgeLevel exists for this lesson
+        
+        try:
+            LearnerKnowledgeLevel.objects.get(user=self.learner, lesson=lesson).level
+        except (LearnerKnowledgeLevel.DoesNotExist, ValueError):
+            LearnerKnowledgeLevel.objects.create(user=self.learner, lesson=lesson, level=1, score=0)
+        
         return lesson

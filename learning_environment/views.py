@@ -33,6 +33,8 @@ def practice(request):
             return redirect('myhome')
         request.session['current_lesson_todo'].pop(0)  # remove the start item
         request.session.modified = True
+        
+    
         tutor = Tutormodel(request.user)
         try:
             (state, lesson, task) = tutor.next_task(request)
@@ -47,6 +49,7 @@ def practice(request):
             return redirect('myhome')
         if request.session['current_lesson_todo'][0] != 'WRAPUP':  # if we didn't finish a lesson, we have corrupt state
             # TODO: message
+            context['msg'] = "Congratulations! You mastered the topic of this lesson"
             return redirect('myhome')
 
         # increase level for current series
@@ -67,43 +70,21 @@ def practice(request):
         except (KeyError, Task.DoesNotExist):
             return HttpResponseBadRequest("Invalid Task ID")
         # Evaluate solution
+        
+        # TODO: get knowledge level
         learnermodel = Learnermodel(request.user)
         analysis, learnermodel_context = learnermodel.update(task, request.POST)
         context.update(learnermodel_context)
         if analysis.get('solved', False):  # we solved a task, so we remove its type from the session todo list
             context['solved'] = True
 
-            # update score and eventually level
-            try:
-                score = LearnerKnowledgeLevel.objects.get(score)
-                score += 1
-
-                if score == 5:
-                    level = LearnerKnowledgeLevel.objects.get(level)
-                    level += 1
-                    score = 0
-                    level.save()
-
-                score.save()
-            except LearnerKnowledgeLevel.DoesNotExist:
-                LearnerKnowledgeLevel.objects.create(user=request.user, lesson=request.session.get('current_lesson', None), score=0, level=1)
-
-
+        
             if 'current_lesson_todo' in request.session and len(request.session['current_lesson_todo']) > 0:
                 request.session['current_lesson_todo'].pop(0)
             request.session.modified = True
         else:
             context['solved'] = False
 
-            # count the redos for the feedback
-            try: 
-                redo_count = DifficultyFeedback.objects.filter(task=task).get(redo_count)
-                redo_count += 1
-                redo_count.save()
-
-            except DifficultyFeedback.DoesNotExist:
-                # TODO: check whether knowledge level does exist!!!!!
-                DifficultyFeedback.objects.create(user=request.user, task=task, knowledge=LearnerKnowledgeLevel.objects.filter(user=request.user).get(level), redo_count = 1)
         lesson = task.lesson
         context['state'] = context['mode']
 
@@ -117,6 +98,10 @@ def practice(request):
 
     else:  # fetch new task and show it
         tutor = Tutormodel(request.user)
+        print(request.user)
+        print(request.session.get('current_lesson'))
+        
+
         try:
             (state, lesson, task) = tutor.next_task(request)
         except NoTaskAvailableError:

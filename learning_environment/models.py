@@ -260,13 +260,13 @@ class TaskDifficulty(models.Model):
     @classmethod
     def update_task_difficulty(cls, task):
 
-        curr_difficulty = TaskDifficulty.objects.get(task=task)
+        curr_difficulty = TaskDifficulty.objects.filter(task=task).get("level")
         feedback = True
         change = 0
 
         try:
-            knowlege = DifficultyFeedback.objects.filter(task=task).get(knowlege)
-            redo_count = DifficultyFeedback.objects.filter(task=task).get(redo_count)
+            knowlege = DifficultyFeedback.objects.filter(task=task).get("knowlege")
+            redo_count = DifficultyFeedback.objects.filter(task=task).get("redo_count")
         except DifficultyFeedback.objects.filter(task=task).aexists():
             feedback = False
         
@@ -283,6 +283,7 @@ class TaskDifficulty(models.Model):
                 # wenn task leichter und redo > 1 -> change + diff
                 # wenn task angemessen und redo > 1 -> change + 0
                 # wenn task schwer und redo < 1 -> change -diff
+
                 if diff > 0 and nr_redo > 1:
                     change += diff
                 
@@ -293,8 +294,9 @@ class TaskDifficulty(models.Model):
                     change += 1
         
         if feedback:
-            new_difficulty = curr_difficulty + change/len(knowlege)
+            new_difficulty = int(curr_difficulty + change/len(knowlege))
             curr_difficulty = new_difficulty
+
 
         curr_difficulty.save()
 
@@ -306,10 +308,11 @@ class LearnerKnowledgeLevel(models.Model):
 
     # define knowledge level
     class KnowledgeLevels(models.IntegerChoices):
-        BEGINNER = 1
-        INTERMEDIATE = 2
-        ADVANCED = 3
-        MASTERY = 4
+        EASY = 1
+        BEGINNER = 2
+        INTERMEDIATE = 3
+        ADVANCED = 4
+        MASTERY = 5
     
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
@@ -322,7 +325,8 @@ class LearnerKnowledgeLevel(models.Model):
 class DifficultyFeedback(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
-    knowlege = models.ForeignKey(LearnerKnowledgeLevel.level, on_delete=models.CASCADE)
+    knowledge = models.IntegerField(default=0)       # TODO: get knowledge level here!!!
     redo_count = models.IntegerField(default=0)
+    ita_feedback = models.IntegerField(default=1)
 
-    
+
