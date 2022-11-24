@@ -8,7 +8,7 @@
   text_source: "Carolina Ziegler",
   text_licence: "CC0",
   text_url: "https://www.uni-osnabrueck.de/startseite/",
-    
+
   tasks: [  // the list of tasks for this lesson
 
 //Theoretical tasks 1
@@ -25,89 +25,89 @@
         ],
     },
 //Theoretical tasks 2 ,
-      {
-        name: "Theoretical exercise",
-        type: "G",
-        interaction: "SC",
-        primary: false,
-        show_lesson_text: true,
-        question: "Look at the sentences below and answer the questions\nThe Swiss invented the watch.\nThe watch was invented by the Swiss.\nDo the sentences mean the same thing?\n",
-        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
-          { text: "yes", correct: false, feedback: "That’s right! " },
-          { text: "no", correct: true, feedback: "No. Have a look: “The Swiss invented the watch”. The focus of the sentence is who did it." },
-        ],
+    {
+      name: "Theoretical exercise",
+      type: "GS",
+      interaction: "SC",
+      primary: false,
+      show_lesson_text: true,
+      question: "Look at the sentences below and answer the questions\nThe Swiss invented the watch.\nThe watch was invented by the Swiss.\nDo the sentences mean the same thing?\n",
+      choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+        { text: "yes", correct: false, feedback: "That’s right! " },
+        { text: "no", correct: true, feedback: "No. Have a look: “The Swiss invented the watch”. The focus of the sentence is who did it." },
+      ],
     },
 
 //Theoretical tasks 3 ,
-      {
-        name: "Theoretical exercise",
-        type: "GS",
-        interaction: "SC",
-        primary: false,
-        show_lesson_text: true,
-        question: "Which preposition do we use when we want to include a person who does the action?",
-        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
-          { text: "with", correct: false, feedback: "That’s incorrect. The article ‘by’ should be used. E.g. Mona Lisa was painted by Da Vinci" },
-          { text: "by", correct: true, feedback: "Right!" },
-          { text: "to", correct: true, feedback: "That’s incorrect. The article ‘by’ should be used. E.g. Mona Lisa was painted by Da Vinci" }
-        ],
+    {
+      name: "Theoretical exercise",
+      type: "GS",
+      interaction: "SC",
+      primary: false,
+      show_lesson_text: true,
+      question: "Which preposition do we use when we want to include a person who does the action?",
+      choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+        { text: "with", correct: false, feedback: "That’s incorrect. The article ‘by’ should be used. E.g. Mona Lisa was painted by Da Vinci" },
+        { text: "by", correct: true, feedback: "Right!" },
+        { text: "to", correct: false, feedback: "That’s incorrect. The article ‘by’ should be used. E.g. Mona Lisa was painted by Da Vinci" }
+      ],
     },
 //Theoretical tasks 4 ,
-      {
-        name: "Theoretical exercise",
-        type: "GS",
-        interaction: "SC",
-        primary: false,
-        show_lesson_text: true,
-        question: "In passive, what is the focus of the sentence?",
-        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
-          { text: "The doer of the action", correct: false, feedback: "That’s incorrect. The focus is on the action or thing which is done. Mind the difference: The table is made of wood. vs He made a table out of wood. " },
-          { text: "the action or thing itself", correct: true, feedback: "Exactly!" },
-        ],
-    },
+    {
+      name: "Theoretical exercise",
+      type: "GS",
+      interaction: "SC",
+      primary: false,
+      show_lesson_text: true,
+      question: "In passive, what is the focus of the sentence?",
+      choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+        { text: "The doer of the action", correct: false, feedback: "That’s incorrect. The focus is on the action or thing which is done. Mind the difference: The table is made of wood. vs He made a table out of wood. " },
+        { text: "the action or thing itself", correct: true, feedback: "Exactly!" },
+      ],
+  },
 //Theoretical tasks 5 ,
-      {
-        name: "Theoretical exercise",
-        type: "GS",
-        interaction: "SC",
-        primary: false,
-        show_lesson_text: true,
-        question: "In the sentence \"The watch was invented by the Swiss, what is the passive form?",
-        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
-          { text: "The doer of the action", correct: false, feedback: "That’s incorrect. The focus is on the action or thing which is done. Mind the difference: The table is made of wood. vs He made a table out of wood. " },
-          { text: "the action or thing itself", correct: true, feedback: "Exactly!" },
-        ],
+    {
+      name: "Theoretical exercise",
+      type: "GS",
+      interaction: "SC",
+      primary: false,
+      show_lesson_text: true,
+      question: "In the sentence \"The watch was invented by the Swiss, what is the passive form?",
+      choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+        { text: "The doer of the action", correct: false, feedback: "That’s incorrect. The focus is on the action or thing which is done. Mind the difference: The table is made of wood. vs He made a table out of wood. " },
+        { text: "the action or thing itself", correct: true, feedback: "Exactly!" },
+      ],
     },
 
 //Theoretical tasks 6 ,
-      {
-        name: "Theoretical exercise",
-        type: "GS",
-        interaction: "SC",
-        primary: false,
-        show_lesson_text: true,
-        question: "In the sentence \"A new car is bought by my father every year\", what is the passive form?",
-        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
-          { text: "bought", correct: false, feedback: "That’s a mistake. The form of the Present Simple Passive is am/is/are + Ved/3rd form." },
-          { text: "is bought", correct: true, feedback: "Good job! The form of the Present Simple Passive is am/is/are + Ved/3rd form. " },
-        ],
+    {
+      name: "Theoretical exercise",
+      type: "GS",
+      interaction: "SC",
+      primary: false,
+      show_lesson_text: true,
+      question: "In the sentence \"A new car is bought by my father every year\", what is the passive form?",
+      choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+        { text: "bought", correct: false, feedback: "That’s a mistake. The form of the Present Simple Passive is am/is/are + Ved/3rd form." },
+        { text: "is bought", correct: true, feedback: "Good job! The form of the Present Simple Passive is am/is/are + Ved/3rd form. " },
+      ],
     },
 //Theoretical tasks 7 ,
-      {
-        name: "Theoretical exercise",
-        type: "GS",
-        interaction: "SC",
-        primary: false,
-        show_lesson_text: true,
-        question: "In the sentence \"This work will be finished tomorrow\", what is the passive form?",
-        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
-          { text: "finished", correct: false, feedback: "That’s a mistake. The form of the Future Simple Passive is will be + Ved/3rd form." },
-          { text: "be finished", correct: false, feedback: "That’s a mistake. The form of the Future Simple Passive is will be + Ved/3rd form." },
-          { text: "will be finished", correct: true, feedback: "Good job! The form of the Future Simple Passive is will be + Ved/3rd form." }
-        ],
+    {
+      name: "Theoretical exercise",
+      type: "GS",
+      interaction: "SC",
+      primary: false,
+      show_lesson_text: true,
+      question: "In the sentence \"This work will be finished tomorrow\", what is the passive form?",
+      choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+        { text: "finished", correct: false, feedback: "That’s a mistake. The form of the Future Simple Passive is will be + Ved/3rd form." },
+        { text: "be finished", correct: false, feedback: "That’s a mistake. The form of the Future Simple Passive is will be + Ved/3rd form." },
+        { text: "will be finished", correct: true, feedback: "Good job! The form of the Future Simple Passive is will be + Ved/3rd form." }
+      ],
     },
 
-// Mark the Words
+// Mark the Words (8)
     {
         name: "Name of your task:\nMark the mistakes in the sentences with red color \n\n",
         type: "GS",
@@ -115,12 +115,12 @@
         primary: false,
         show_lesson_text: false,
         question: "Find the appropriate explanation for the usage of Past Simple and Past Continuous for every sentence.",           //write your question here
-        marktext: "<p>1. He #1are #1knew for his decency</p>\
-        <p>2. This project will be  #1finishes on Friday </p>\
+        marktext: "<p>1. He #1#are #1#knew for his decency</p>\
+        <p>2. This project will be  #1#finishes on Friday </p>\
         <p>3. I’m concerned about the climate change.</p>\
-        <p>4. The washing machine #1is #1purchase  by my husband 2 weeks ago.</p>\
+        <p>4. The washing machine #1#is #1#purchase  by my husband 2 weeks ago.</p>\
         <p>5. My next job will be related to technology</p>\
-        <p>6. This house  #1construct 7 years ago.</p>\
+        <p>6. This house  #1#construct 7 years ago.</p>\
         <p>7. My bed is make of wood</p>",  // write the text here, mark the words you want the student to mark with #1# in front of the word
         markers: {
             // here you can write what should be marked
@@ -129,15 +129,15 @@
           },
         },
     },
-// Mark the Words- theoretical task
+// Mark the Words- theoretical task (9)
     {
         name: "Name of your task:\nMark the mistakes in the sentences with red color \n\n",
         type: "GS",
         interaction: "MARK",
         primary: false,
         show_lesson_text: false,
-        question: "Mark the following tenses:"         //write your question here,
-        marktext: "<p>Mona Lisa is one of the most famous works of art in the world. It #1was #1painted by Leonardo Da Vinci in the 16th century. An Italian noblewoman Lisa Gherardini #2is #2depicted in the portrait. The painting #2is #2kept in the Louvre, Paris. In 1911 the painting #1was #1stolen, causing an immediate media sensation. It #2is hoped it will not be stolen again.</p>",
+        question: "Mark the following tenses:",     //write your question here,
+        marktext: "<p>Mona Lisa is one of the most famous works of art in the world. It #2#was #2#painted by Leonardo Da Vinci in the 16th century. An Italian noblewoman Lisa Gherardini #1#is #1#depicted in the portrait. The painting #1#is #1#kept in the Louvre, Paris. In 1911 the painting #2#was #2#stolen, causing an immediate media sensation. It #1#is #1#hoped it #3#will #3#not #3#be #3#stolen again.</p>",
         markers: {
             // here you can write what should be marked
           '1': {
@@ -151,79 +151,80 @@
           }
         },
     },
- // Fill in the gaps 1
+ // Fill in the gaps 1 (10)
     {
-        name: "Fill in each gap with the correct answer",
-        type: "GS",
-        interaction: "GAP",
-        primary: true,
-        show_lesson_text: false,
-        question: "<p>Fill in each gap with the correct answer:</p>\
+      name: "Fill in each gap with the correct answer",
+      type: "GS",
+      interaction: "GAP",
+      primary: true,
+      show_lesson_text: false,
+      question: "<p>Fill in each gap with the correct answer:</p>\
         <p>1.English _1_ spoken in many countries all over the world.</p>\
         <p>2. America was _2_ by Christophor Columbus in 1492.</p>\
-        <p>3. I _3_ _4_ helped by her tomorrow</p>"
-        gaps: {
-          mode: 'select',
-          _1_: [
-            {
-              text: 'is',
-              correct: true,
-              feedback: 'well-done!'
-            },
-            {
-              text: 'are',
-              correct: false,
-              feedback:'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form'
-            },
-            {
-              text: 'was',
-              correct: false,
-              feedback: 'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form'
-            },
-          ],
-          _2_: [
-            {
-              text: 'discover',
-              correct: true,
-              feedback: 'well-done!'
-            },
-            {
-              text: 'discvert',
-              correct: false,
-              feedback:'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form'
-            },
-            {
-              text: 'discovered',
-              correct: false,
-              feedback: 'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form'
-            },
-          ],
-          _3_: [
-            {
-              text: 'is',
-              correct: false,
-              feedback: 'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form'
-            },
-            {
-              text: 'will',
-              correct: true,
-              feedback:'Well-done,'
-            },
-          ],
-          _4_: [
-            {
-              text: 'be',
-              correct: true,
-              feedback: 'well-done!'
-            },
-            {
-              text: 'will',
-              correct: false,
-              feedback:'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form'
-            },
-          ]
-        },
-/// Fill in the Gaps 2
+        <p>3. I _3_ _4_ helped by her tomorrow</p>",
+      gaps: {
+        mode: 'select',
+        _1_: [
+          {
+            text: 'is',
+            correct: true,
+            feedback: 'well-done!'
+          },
+          {
+            text: 'are',
+            correct: false,
+            feedback: 'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form'
+          },
+          {
+            text: 'was',
+            correct: false,
+            feedback: 'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form'
+          },
+        ],
+        _2_: [
+          {
+            text: 'discover',
+            correct: true,
+            feedback: 'well-done!'
+          },
+          {
+            text: 'discvert',
+            correct: false,
+            feedback: 'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form'
+          },
+          {
+            text: 'discovered',
+            correct: false,
+            feedback: 'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form'
+          },
+        ],
+        _3_: [
+          {
+            text: 'is',
+            correct: false,
+            feedback: 'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form'
+          },
+          {
+            text: 'will',
+            correct: true,
+            feedback: 'Well-done,'
+          },
+        ],
+        _4_: [
+          {
+            text: 'be',
+            correct: true,
+            feedback: 'well-done!'
+          },
+          {
+            text: 'will',
+            correct: false,
+            feedback: 'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form',
+          },
+        ],
+      },
+    },
+/// Fill in the Gaps 2 (11)
     {
         name: "Fill in each gap with the correct answer",
         type: "GS",
@@ -257,7 +258,7 @@
             {
               text: 'will deliver',
               correct: false,
-              feedback: 'Oh no! The form of the Future Simple Passive is will be+Ved/3 form''
+              feedback: 'Oh no! The form of the Future Simple Passive is will be+Ved/3 form',
             },
             {
               text: 'will be delivered',
@@ -289,7 +290,7 @@
           ],
         }
     },
-// Fill in the Gaps 3
+// Fill in the Gaps 3 (12)
     {
         name: "Rewrite the incorrect sentences so that they have no mistakes ",
         type: "GS",
@@ -299,7 +300,7 @@
         question: "<p>Rewrite the incorrect sentences so that they have no mistakes </p>\
         <p>1. He are knew for his decency \n→ He _1_ for his decency </p>\
         <p>2. This project will finishes on Friday \n→ This project _2_ /will finish/will finished on Friday. </p>\
-        <p>3. The washing machine is purchase by my husband 2 weeks ago \n → the washing machine _3_ is purchased/was purchased/will be purchased by my husband 2 weeks ago",</p>
+        <p>3. The washing machine is purchase by my husband 2 weeks ago \n → the washing machine _3_ is purchased/was purchased/will be purchased by my husband 2 weeks ago</p>",
         gaps: {
           mode: 'select',
           _1_: [
@@ -355,7 +356,7 @@
           ],
         }
     },
-// Fill in the Gaps 4
+// Fill in the Gaps 4 (13)
     {
         name: "Fill in the gaps",
         type: "GS",
@@ -401,7 +402,7 @@
           ],
         }
     },
-// Fill in the Gaps 5
+// Fill in the Gaps 5 (14)
     {
         name: "Fill in the gaps",
         type: "GS",
@@ -464,7 +465,7 @@
           ]
         }
     },
-// Fill in the Gaps 6
+// Fill in the Gaps 6 (15)
     {
         name: "Fill in the gaps",
         type: "GS",
@@ -544,7 +545,7 @@
           ]
         },
     },
-// Fill in the Gaps 7
+// Fill in the Gaps 7 (16)
     {
         name: "Fill in the gaps",
         type: "GS",
@@ -641,182 +642,318 @@
           ]
         },
     },
-// Fill in the Gaps 8
+// Fill in the Gaps 8 (17)
     {
-        name: "Fill in the gaps",
+      name: "Fill in the gaps",
+      type: "GS",
+      interaction: "GAP",
+      primary: false,
+      show_lesson_text: false,
+      question: "<p>The steps of the scientific method _1_ is examined/ was examined/ will be examined in detail later, but one of the most important aspects of this method is the testing of hypotheses by means of repeatable experiments… </p>\
+        <p>Biologists study the living world by posing questions about it and seeking science-based responses. This approach is common to other sciences as well and _2_ to as the scientific method. The scientific method _3_ even in ancient times, but it _4_ by England’s Sir Francis Bacon (1561–1626) (Figure 1.5), who set up inductive methods for scientific inquiry. The scientific method _5_ will not be exclusively used /is not exclusively used/were not exclusively used by biologists but can be applied to almost all fields of study as a logical, rational problem-solving method </p>",
+      gaps: {
+        mode: 'select',
+        _1_: [
+          {
+            text: 'Is examined',
+            correct: false,
+            feedback: 'Oh no! Pay attention to the word “later”',
+          },
+          {
+            text: 'was examined',
+            correct: false,
+            feedback: 'Oh no! Pay attention to the word “later”',
+          },
+          {
+            text: 'Will be examined',
+            correct: true,
+            feedback: 'Brilliant!'
+          },
+        ],
+        _2_: [
+          {
+            text: 'Is often referred',
+            correct: true,
+            feedback: 'Good job!',
+          },
+          {
+            text: 'Was often referred',
+            correct: false,
+            feedback: 'Oh no! ”Often” is a marker of Present Simple and there are no markers of other tenses in the sentence',
+          },
+          {
+            text: 'Will be often referred',
+            correct: false,
+            feedback: 'Oh no! ”Often” is a marker of Present Simple and there are no markers of other tenses in the sentence',
+          },
+        ],
+        _3_: [
+          {
+            text: 'Will be used',
+            correct: false,
+            feedback: 'Oh no!  “In ancient times” is a time marker in this sentence . Pay attention to it.',
+          },
+          {
+            text: 'is used',
+            correct: false,
+            feedback: 'Oh no!  “In ancient times” is a time marker in this sentence . Pay attention to it.'
+          },
+          {
+            text: 'was used',
+            correct: true,
+            feedback: 'Good for you!',
+          },
+        ],
+        _4_: [
+          {
+            text: 'Was first documented',
+            correct: true,
+            feedback: 'Good job!',
+          },
+          {
+            text: 'Is first documented',
+            correct: false,
+            feedback: 'Oh no! Pay your attention to the rest of the sentence!',
+          },
+          {
+            text: 'Will be first documented',
+            correct: false,
+            feedback: 'Oh no! Pay your attention to the rest of the sentence!'
+          },
+        ],
+        _5_: [
+          {
+            text: 'will not be exclusively used',
+            correct: false,
+            feedback: 'Oh no! Isn’t it used now?',
+          },
+          {
+            text: 'is not be exclusively used',
+            correct: true,
+            feedback: 'Great!'
+          },
+          {
+            text: 'were not be exclusively used',
+            correct: false,
+            feedback: ' Oh no! There’s no indicator of Past Simple. Furthermore, the noun is singular',
+          },
+        ]
+      },
+    },
+// Transform the sentence from active to passive 1 (18)
+    {
+        name: "Transform the sentence from active to passive",
         type: "GS",
         interaction: "GAP",
         primary: false,
         show_lesson_text: false,
-        question : "<p>The steps of the scientific method _1_ is examined/ was examined/ will be examined in detail later, but one of the most important aspects of this method is the testing of hypotheses by means of repeatable experiments… </p>\
-        <p>Biologists study the living world by posing questions about it and seeking science-based responses. This approach is\ncommon to other sciences as well and _2_ to as the scientific method. The scientific method _3_ even in ancient times, but it _4_ by England’s Sir Francis Bacon (1561–1626) (Figure 1.5), who set up inductive methods for scientific inquiry. The scientific method _5_ will not be exclusively used /is not exclusively used/were not exclusively used by biologists but can be applied to almost all fields of study as a logical, rational problem-solving method </p>",
+        question:"<p>My father repaired his car a week ago <p>\
+        <p>→ _1_  _2_ _3_ _4_  <p>",
         gaps: {
           mode: 'select',
           _1_: [
             {
-              text: 'Is examined',
-              correct: false,
-              feedback: 'Oh no! Pay attention to the word “later”',
-            },
-            {
-              text: 'was examined',
-              correct: false,
-              feedback: 'Oh no! Pay attention to the word “later”',
-            },
-            {
-              text: 'Will be examined',
+              text: 'The car',
               correct: true,
-              feedback: 'Brilliant!'
+              feedback: 'Excellent!',
+            },
+            {
+              text: 'My father',
+              correct: false,
+              feedback: 'Oh no! Look at the original sentence carefully. Father is a doer of the action',
             },
           ],
           _2_: [
             {
-              text: 'Is often referred',
+              text: 'Is repaired',
+              correct: false,
+              feedback: 'Oh no! Look at the tense used in the original sentence ',
+            },
+            {
+              text: 'Was repair',
+              correct: false,
+              feedback: 'Oh no! The form of the Past Simple Passive is was/were+Ved/3 form'
+            },
+            {
+              text: 'Was repaired',
               correct: true,
-              feedback: 'Good job!',
+              feedback: 'Wonderful!'
             },
             {
-              text: 'Was often referred',
+              text: 'Will be repaired',
               correct: false,
-              feedback: 'Oh no! ”Often” is a marker of Present Simple and there are no markers of other tenses in the sentence',
-            },
-            {
-              text: 'Will be often referred',
-              correct: false,
-              feedback: 'Oh no! ”Often” is a marker of Present Simple and there are no markers of other tenses in the sentence',
-            },
+              feedback: 'Oh no! Look at the tense used in the original sentence'
+            }
           ],
           _3_: [
             {
-              text: 'Will be used',
+              text: 'to',
               correct: false,
-              feedback: 'Oh no!  “In ancient times” is a time marker in this sentence . Pay attention to it.',
+              feedback: ' Oh no! When we want to include a person who does the action we use “by”'
             },
             {
-              text: 'is used',
-              correct: false,
-              feedback: 'Oh no!  “In ancient times” is a time marker in this sentence . Pay attention to it.'
-            },
-            {
-              text: 'was used',
+              text: 'by',
               correct: true,
-              feedback: 'Good for you!',
+              feedback: 'Exactly!'
             },
           ],
           _4_: [
+           {
+              text: 'The car',
+              correct: false,
+              feedback: 'Look at the original sentence carefully. “The car” isn’t a doer of the action. Instead, “My father” is',
+            },
             {
-              text: 'Was first documented',
+              text: 'My father',
               correct: true,
-              feedback: 'Good job!',
-            },
-            {
-              text: 'Is first documented',
-              correct: false,
-              feedback: 'Oh no! Pay your attention to the rest of the sentence!',
-            },
-            {
-              text: 'Will be first documented',
-              correct: false,
-              feedback: 'Oh no! Pay your attention to the rest of the sentence!'
-            },
+              feedback: 'Exactly!'
+            }
           ],
-// Fill in the Gaps 8
+        },
+    },
+// Transform the sentence from active to passive 2 (19)
     {
-        name: "Fill in the gaps",
+        name: "Transform the sentence from active to passive",
         type: "GS",
         interaction: "GAP",
         primary: false,
         show_lesson_text: false,
-        question : "<p>The steps of the scientific method _1_ is examined/ was examined/ will be examined in detail later, but one of the most important aspects of this method is the testing of hypotheses by means of repeatable experiments… </p>\
-        <p>Biologists study the living world by posing questions about it and seeking science-based responses. This approach is\ncommon to other sciences as well and _2_ to as the scientific method. The scientific method _3_ even in ancient times, but it _4_ by England’s Sir Francis Bacon (1561–1626) (Figure 1.5), who set up inductive methods for scientific inquiry. The scientific method _5_ will not be exclusively used /is not exclusively used/were not exclusively used by biologists but can be applied to almost all fields of study as a logical, rational problem-solving method </p>",
+        question:"<<p>Our engineer will resolve this issue in a couple of days</p>\
+        <p>→ _1_ _2_ _3_ _4_ </p>",
         gaps: {
           mode: 'select',
           _1_: [
             {
-              text: 'Is examined',
-              correct: false,
-              feedback: 'Oh no! Pay attention to the word “later”',
-            },
-            {
-              text: 'was examined',
-              correct: false,
-              feedback: 'Oh no! Pay attention to the word “later”',
-            },
-            {
-              text: 'Will be examined',
+              text: 'This issue',
               correct: true,
-              feedback: 'Brilliant!'
+              feedback: 'Exactly!',
+            },
+            {
+              text: 'Our engineer',
+              correct: false,
+              feedback: 'Oh no! Look at the original sentence carefully! Our engineer is a doer of the action',
             },
           ],
           _2_: [
             {
-              text: 'Is often referred',
+              text: 'Were resolved',
+              correct: false,
+              feedback: 'Oh no! Look at the tense used in the original sentence. Besides, the noun is singular'
+            },
+            {
+              text: 'Will resolved',
+              correct: false,
+              feedback: 'Oh no! The form of the Future Simple Passive is will be +Ved/3rd form'
+            },
+            {
+              text: 'is resolved',
+              correct: false,
+              feedback: 'Oh no! Look at the tense used in the original sentence'
+            },
+            {
+              text: 'Will be resolved',
               correct: true,
-              feedback: 'Good job!',
-            },
-            {
-              text: 'Was often referred',
-              correct: false,
-              feedback: 'Oh no! ”Often” is a marker of Present Simple and there are no markers of other tenses in the sentence',
-            },
-            {
-              text: 'Will be often referred',
-              correct: false,
-              feedback: 'Oh no! ”Often” is a marker of Present Simple and there are no markers of other tenses in the sentence',
-            },
+              feedback: 'Brilliant!'
+            }
           ],
           _3_: [
             {
-              text: 'Will be used',
-              correct: false,
-              feedback: 'Oh no!  “In ancient times” is a time marker in this sentence . Pay attention to it.',
-            },
-            {
-              text: 'is used',
-              correct: false,
-              feedback: 'Oh no!  “In ancient times” is a time marker in this sentence . Pay attention to it.'
-            },
-            {
-              text: 'was used',
+              text: 'by',
               correct: true,
-              feedback: 'Good for you!',
+              feedback: 'That’s right!'
+            },
+            {
+              text: 'for',
+              correct: false,
+              feedback: 'Oh no! When we want to include a person who does the action we use “by”'
             },
           ],
           _4_: [
             {
-              text: 'Was first documented',
+              text: 'This issue',
+              correct: false,
+              feedback: 'Oh no! Look at the original sentence carefully. “This issue” isn’t a doer of the action. Instead, “Our engineer” is',
+            },
+            {
+              text: 'Our engineer',
               correct: true,
-              feedback: 'Good job!',
+              feedback: ' Good job!'
+            }
+          ],
+        },
+    },
+
+// Transform the sentence from active to passive 3 (20)
+        {
+        name: "Transform the sentence from active to passive",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question:"<p>Young people use phones too often </p>\
+        <p>→ _1_  _2_  _3_ _4_ too often</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'Young people',
+              correct: false,
+              feedback: 'Oh no! Look at the original sentence carefully. Young people are doers of the action !',
             },
             {
-              text: 'Is first documented',
-              correct: false,
-              feedback: 'Oh no! Pay your attention to the rest of the sentence!',
-            },
-            {
-              text: 'Will be first documented',
-              correct: false,
-              feedback: 'Oh no! Pay your attention to the rest of the sentence!'
+              text: 'Phones',
+              correct: true,
+              feedback: 'Perfect!'
             },
           ],
-          _5_: [
+          _2_: [
             {
-              text: 'will not be exclusively used',
-              correct: false,
-              feedback: 'Oh no! Isn’t it used now?',
-            },
-            {
-              text: 'is not be exclusively used',
+              text: 'Are used',
               correct: true,
               feedback: 'Great!'
             },
             {
-              text: 'were not be exclusively used',
+              text: 'Will be used',
               correct: false,
-              feedback: 'Oh no! There’s no indicator of Past Simple. Furthermore, the noun is singular',
+              feedback: 'Oh no! Look at the tense used in the original sentence'
             },
-          ]
+            {
+              text: 'Is used',
+              correct: false,
+              feedback: 'Oh no! The noun is plural'
+            },
+            {
+              text: 'were used',
+              correct: false,
+              feedback: 'Oh no! Look at the tense used in the original sentence'
+            }
+          ],
+          _3_: [
+            {
+              text: 'to',
+              correct: false,
+              feedback: 'Oh no! When we want to include a person who does the action we use “by”'
+            },
+            {
+              text: 'by',
+              correct: true,
+              feedback: 'Awesome!'
+            },
+          ],
+          _4_: [
+           {
+            {
+              text: 'Young people',
+              correct: true,
+              feedback: 'Perfect!'
+            },
+            {
+              text: 'Phones',
+              correct: false,
+              feedback: 'Oh no! Look at the original sentence carefully. Phones aren’t  doers of the action. Instead,  young people are'
+            }
+          ],
         },
-    },
-}
-// end of lesson
+    } // end of the last task
+  ] // end of task list bracket
+} // end of lesson
