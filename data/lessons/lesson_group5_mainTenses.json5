@@ -1,614 +1,648 @@
 {
-  name: "Main Tenses",  // the name that's also shown to the users
-  id: "lesson-group5-001",        // an internal id, will never be shown, but important to identify the lesson
+  name: "Passive Voice",  // the name that's also shown to the users
+  id: "lesson-group5-002",        // an internal id, will never be shown, but important to identify the lesson
   series: 'Grammar',
-  author: "Group 5",    // used for documentation, will not be shown to the user
+  author: "Group 5-1",    // used for documentation, will not be shown to the user
   version: 1,                 // if you revise your lesson, give it a higher version number each time
   text: "<p> This is the Grammar Lesson for Main Tenses. Here we want to test our intelligent tutoring system.</p>",
-  text_source: "Carolina Ziegler",
+  text_source: "https://assets.openstax.org/oscms-prodcms/media/documents/APBiology-OP_5meoFaG.pdf?_gl=1*e8462e*_ga*MjEyMTAxNDE4Mi4xNjY4NDI5MzU5*_ga_T746F8B0QC*MTY2ODQyOTM1OS4xLjEuMTY2ODQyOTM2OS41MC4wLjA",
   text_licence: "CC0",
   text_url: "https://www.uni-osnabrueck.de/startseite/",
-    
+
   tasks: [  // the list of tasks for this lesson
 
-//Theoretical tasks (Present Simple and Present Continuous) Ex1
-      {
-        name: "Theoretical task for Present Simple and Present Continuous",       // give your task a name
+//Theoretical tasks 1
+    {
+        name: "Theoretical exercise",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "<p>Look at the sentences below and answer the questions\nThe Swiss invented the watch.\nThe watch was invented by the Swiss.\nDo the sentences mean the same thing?</p>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "yes", correct: false, feedback: "Oh no! The sentences don’t mean the same thing." },
+          { text: "no", correct: true, feedback: "Well-done!" },
+        ],
+    },
+//Theoretical tasks 2 ,
+    {
+      name: "Theoretical exercise",
+      type: "GS",
+      interaction: "SC",
+      primary: false,
+      show_lesson_text: true,
+      question: "Look at the sentences below and answer the questions\nThe Swiss invented the watch.\nThe watch was invented by the Swiss.\nDo the sentences mean the same thing?\n",
+      choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+        { text: "yes", correct: false, feedback: "That’s right! " },
+        { text: "no", correct: true, feedback: "No. Have a look: “The Swiss invented the watch”. The focus of the sentence is who did it." },
+      ],
+    },
+
+//Theoretical tasks 3 ,
+    {
+      name: "Theoretical exercise",
+      type: "GS",
+      interaction: "SC",
+      primary: false,
+      show_lesson_text: true,
+      question: "Which preposition do we use when we want to include a person who does the action?",
+      choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+        { text: "with", correct: false, feedback: "That’s incorrect. The article ‘by’ should be used. E.g. Mona Lisa was painted by Da Vinci" },
+        { text: "by", correct: true, feedback: "Right!" },
+        { text: "to", correct: false, feedback: "That’s incorrect. The article ‘by’ should be used. E.g. Mona Lisa was painted by Da Vinci" }
+      ],
+    },
+//Theoretical tasks 4 ,
+    {
+      name: "Theoretical exercise",
+      type: "GS",
+      interaction: "SC",
+      primary: false,
+      show_lesson_text: true,
+      question: "In passive, what is the focus of the sentence?",
+      choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+        { text: "The doer of the action", correct: false, feedback: "That’s incorrect. The focus is on the action or thing which is done. Mind the difference: The table is made of wood. vs He made a table out of wood. " },
+        { text: "the action or thing itself", correct: true, feedback: "Exactly!" },
+      ],
+  },
+//Theoretical tasks 5 ,
+    {
+      name: "Theoretical exercise",
+      type: "GS",
+      interaction: "SC",
+      primary: false,
+      show_lesson_text: true,
+      question: "In the sentence \"The watch was invented by the Swiss, what is the passive form?",
+      choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+        { text: "The doer of the action", correct: false, feedback: "That’s incorrect. The focus is on the action or thing which is done. Mind the difference: The table is made of wood. vs He made a table out of wood. " },
+        { text: "the action or thing itself", correct: true, feedback: "Exactly!" },
+      ],
+    },
+
+//Theoretical tasks 6 ,
+    {
+      name: "Theoretical exercise",
+      type: "GS",
+      interaction: "SC",
+      primary: false,
+      show_lesson_text: true,
+      question: "In the sentence \"A new car is bought by my father every year\", what is the passive form?",
+      choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+        { text: "bought", correct: false, feedback: "That’s a mistake. The form of the Present Simple Passive is am/is/are + Ved/3rd form." },
+        { text: "is bought", correct: true, feedback: "Good job! The form of the Present Simple Passive is am/is/are + Ved/3rd form. " },
+      ],
+    },
+//Theoretical tasks 7 ,
+    {
+      name: "Theoretical exercise",
+      type: "GS",
+      interaction: "SC",
+      primary: false,
+      show_lesson_text: true,
+      question: "In the sentence \"This work will be finished tomorrow\", what is the passive form?",
+      choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+        { text: "finished", correct: false, feedback: "That’s a mistake. The form of the Future Simple Passive is will be + Ved/3rd form." },
+        { text: "be finished", correct: false, feedback: "That’s a mistake. The form of the Future Simple Passive is will be + Ved/3rd form." },
+        { text: "will be finished", correct: true, feedback: "Good job! The form of the Future Simple Passive is will be + Ved/3rd form." }
+      ],
+    },
+
+// Mark the Words (8)
+    {
+        name: "Name of your task:\nMark the mistakes in the sentences with red color \n\n",
         type: "GS",
         interaction: "MARK",
         primary: false,
         show_lesson_text: false,
-        question: "<p>Find the appropriate explanation for the usage of Present Simple and Present Continuous for every sentence.</p>",           
-        marktext: "<p>First, you #5#open a text editor or word processor, #5#create the HTML content and #5#choose the folder in which to save the Web page. <p> The brain #4#weighs about three pounds.<p> Noam Chomsky #6#explains that we're all born with an innate understanding of the way language works. <p> The Alchemist by Paulo Coelho #7#tells the mystical story of Santiago, an Andalusian shepherd boy who #7#yearns to travel in search of a worldly treasure.,<p> As everybody #3#knows, vocabulary is an important part of language, just like bricks in a building.,<p> With the advent of the Internet, the world #1#is #1#shrinking.,<p> William #2#is #2#advertising for a new CEO, after Smith’s sudden resignation.</p> ",  // write the text here, mark the words you want the student to mark with #1# in front of the word
+        question: "Find the appropriate explanation for the usage of Past Simple and Past Continuous for every sentence.",           //write your question here
+        marktext: "<p>1. He #1#are #1#knew for his decency</p>\
+        <p>2. This project will be  #1#finishes on Friday </p>\
+        <p>3. I’m concerned about the climate change.</p>\
+        <p>4. The washing machine #1#is #1#purchase  by my husband 2 weeks ago.</p>\
+        <p>5. My next job will be related to technology</p>\
+        <p>6. This house  #1#construct 7 years ago.</p>\
+        <p>7. My bed is make of wood</p>",  // write the text here, mark the words you want the student to mark with #1# in front of the word
         markers: {
             // here you can write what should be marked
           '1': {
-            description: 'changing and developing situations, trends in society or the world around us',
+            description: 'Mark the mistakes in the sentences with red color (not all the sentences have mistakes)',
           },
-          '2': {
-            description: 'events or actions that are happening at the moment',
-          },
-          '3': {
-            description: 'with stative verbs of physical perception, mental states, emotions, possession and others',
-          },
-          '4': {
-            description: 'factual description',
-          },
-          '5': {
-            description: 'description of processes, instructions',
-          },
-          '6': {
-            description: 'summarization of the main arguments of other academics',
-          },
-          '7': {
-            description: 'plots of books, films, etc.',
-          }
-        } 
-      },
-
-//Theoretical tasks (Present Simple and Present Continuous) Ex2,
-      {
-        name: "",
-        // give your task a name
+        },
+    },
+// Mark the Words- theoretical task (9)
+    {
+        name: "Mark the mistakes in the sentences with red color",
         type: "GS",
         interaction: "MARK",
         primary: false,
         show_lesson_text: false,
-        question: "YOUR QUESTION",
-        //write your question here
-        marktext: "<p><ol>\n<li>Everything <b>#1#is #1#speeding #1#up</b>  thanks to our obsession with technology and efficiency.</li>\n<li>Almost 500 million people around the globe <b>#2#speak</b> Spanish.</li>\n<li>Dune by Denis Villeneuve <b>#3#tells</b>  the story of  Paul Atreides, a young man whose destiny is to travel in the Universe.</li>\n<li>Then you <b>#4#wash</b>  the fabric, <b>#4#dye</b>  it and <b>#4#cut</b>  it into patterns.</li>\n<li>She <b>#5#is #5#developing</b>  the commercial side of the organization.</li>\n<li>Brows <b>#6#explains</b>  that survivors of traumatic events  are often haunted by persistent and vivid memories of this experience.</li>\n</p> <li>Our company <b>#7#expects</b>  a rise in both our production and our cash flow.</li>\n</ol>\n",
-        // write the text here, mark the words you want the student to mark with #1# in front of the word
+        question: "Mark the following tenses:",     //write your question here,
+        marktext: "<p>Mona Lisa is one of the most famous works of art in the world. It #2#was #2#painted by Leonardo Da Vinci in the 16th century. An Italian noblewoman Lisa Gherardini #1#is #1#depicted in the portrait. The painting #1#is #1#kept in the Louvre, Paris. In 1911 the painting #2#was #2#stolen, causing an immediate media sensation. It #1#is #1#hoped it #3#will #3#not #3#be #3#stolen again.</p>",
         markers: {
-          // here you can write what should be marked
+            // here you can write what should be marked
           '1': {
-            description: 'changing and developing situations, trends in society or the world around us',
+            description: 'Present Simple Passive',
           },
           '2': {
-            description: 'events or actions that are happening at the moment',
+            description: 'Past Simple Passive',
           },
           '3': {
-            description: 'with stative verbs of physical perception, mental states, emotions, possession and others,',
-          },
-          '4': {
-            description: 'factual description,',
-          },
-          '5': {
-            description: 'description of processes, instructions',
-          },
-          '6': {
-            description: 'summarization of the main arguments of other academics',
-          },
-          '7': {
-            description: 'plots of books, films, etc.',
+            description: 'Future Simple Passive',
           }
         },
-      },
-
-//Fill in the gaps (Present Simple and Present Continuous Ex1
-      {
-        name: "Reproductive exercises for Present Simple and Present Continuous",           // give your task a name
-        type: "GS",
-        interaction: "GAP",
-        primary: false,
-        show_lesson_text: false,
-        // here you have to write your question and your text
-        question: "<p>Choose the right option</p>\        
-        <p> As everybody _1_  nowadays, the knowledge we _2_ of life before the beginnings of human memory and tradition is derived from the markings and fossils of living things in the stratified rocks.</p>", 
-        gaps: {
-          mode: 'select',
-          // here you can fill in the options for the gaps
-          _1_: [
-            {
-              text: 'knows',     // the word(s) the student will see
-              correct: true,    // is this solution correct, false or true
-              feedback: 'Good job! The right answer is <b>knows</b>, because it is a stative verb of mental states. Also, we use Present Simple with stative verbs of <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'  
-            },
-            {
-              text: 'is knowing',
-              correct: false,
-              feedback: 'Oops! The right answer is <b>‘knows’</b>, because it is a stative verb of mental states. Also, we use Present Simple with stative verbs of <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'
-            }
-          ],
-          _2_ : [
-            {
-              text: 'are possessing',
-              correct: false,
-              feedback: 'Oops! The right answer is <b>‘possess’</b>, because it is a relational verb. Also, we use Present Simple with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'
-            },
-            {
-              text: 'possess',
-              correct: true,
-              feedback: 'Good job! The right answer is <b>‘possess’</b>, because it is a relational verb. Also, we use Present Simple with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'
-            }
-          ]
-        },
-      },
-
-//Fill in the gaps (Present Simple and Present Continuous) Ex2
-      {
-        name: "Reproductive exercises for Present Simple and Present Continuous",           // give your task a name
-        type: "GS",
-        interaction: "GAP",
-        primary: false,
-        show_lesson_text: false,
-        // here you have to write your question and your text
-        question: "<p>Choose the right option</p>\        
-        <p>In the movie Apollo 13, Ed Harris _1_ NASA flight director Gene Kranz as he successfully _2_the crew \
-        of a damaged spacecraft to safety. In a famous scene during which Kranz and his staff  _3_ to overcome \
-        some extremely daunting challenges, Harris  _4_, “Failure is not an option!”</p>",
-        gaps: {
-          mode: 'select',
-          // here you can fill in the options for the gaps
-          _1_: [
-            {
-              text: 'portrays',     // the word(s) the student will see
-              correct: true,    // is this solution correct, false or true
-              feedback: 'Good job! The right answer is portrays. We use Present Simple  <b>to describe a plot of the film </b>'  
-            },
-            {
-              text: 'is portraying',
-              correct: false,
-              feedback: 'Oops! The right answer is portrays. We use Present Simple  <b>to describe a plot of the film </b>'
-            }
-          ],
-          _2_ : [
-            {
-              text: 'is guiding',
-              correct: false,
-              feedback: 'Oops! The right answer is guides. We use Present Simple <b> to describe a plot of the film </b>'
-            },
-            {
-              text: 'guides',
-              correct: true,
-              feedback: 'Good job! The right answer is guides. We use Present Simple <b>to describe a plot of the film </b>'
-            }
-          ],
-          _3_ : [
-            {
-              text: 'attempt',
-              correct: false,
-              feedback: 'Oops! The right answer is are attempting. We use Present Continuous <b>to focus on the action in progress</b>'
-            },
-            {
-              text: 'are attempting',
-              correct: true,
-              feedback: 'Good job! The right answer is are attempting. We use Present Continuous <b>to focus on the action in progress</b>'
-            }
-          ],
-          _4_ : [
-            {
-              text: 'shouts',
-              correct: true,
-              feedback: 'Good job! The right answer is shouts. We use Present Simple <b> to describe a plot of the film  </b>'
-            },
-            {
-              text: 'is shouting',
-              correct: false,
-              feedback: 'Oops! The right answer is shouts. We use Present Simple <b>to describe a plot of the film  </b>'
-            }
-          ]
-        },
-      },
-
-//Fill in the gaps (Present Simple and Present Continuous) Ex3
-      {
-        name: "Reproductive exercises for Present Simple and Present Continuous",           // give your task a name
-        type: "GS",
-        interaction: "GAP",
-        primary: false,
-        show_lesson_text: false,
-        // here you have to write your question and your text
-        question: "<p>Choose the right option</p>\        
-        <p>But as more and more missions take flight, the network _1_ congested. The switchboard is often busy. So, NASA _2_ to lighten the load.</p>", 
-        gaps: {
-          mode: 'select',
-          // here you can fill in the options for the gaps
-          _1_: [
-            {
-              text: 'gets',     // the word(s) the student will see
-              correct: false,    // is this solution correct, false or true
-              feedback: 'Oops! The right answer is is getting. We use Present Continuous  <b>for changing or developing situations </b>'  
-            },
-            {
-              text: 'is getting',
-              correct: true,
-              feedback: 'Good job! The right answer is is getting. We use Present Continuous <b> for changing or developing situations </b>'
-            },
-          ],
-          _2_ : [
-            {
-              text: 'is working',
-              correct: true,
-              feedback: 'Good job! The right answer is "is working". We use Present Continuous <b> to expresses an action going on at the present period </b>'
-            },
-            {
-              text: 'works',
-              correct: false,
-              feedback: 'Oops! The right answer is "is working". We use Present Continuous  <b>to expresses an action going on at the present period </b>'
-            }
-          ]
-        },
-      },
-
-//Fill in the gaps (Present Simple and Present Continuous) Ex4
-      {
-        name: "Reproductive exercises for Present Simple and Present Continuous",           // give your task a name
-        type: "GS",
-        interaction: "GAP",
-        primary: false,
-        show_lesson_text: false,
-        // here you have to write your question and your text
-        question: "<p> Choose the right option</p>\
-        <p> Healthcare _1_ healthcare is in need of change. The population ageing, the increase in chronic and heart diseases and the increase in population size _2_ the current hospital-centric healthcare.\n</p>",
-        gaps: {
-          mode: 'select',
-          // here you can fill in the options for the gaps
-          _1_: [
-            {
-              text: 'changes',     // the word(s) the student will see
-              correct: false,    // is this solution correct, false or true
-              feedback: 'Oops! The right answer is ‘is changing’, because we use Present Continuous  <b>for changing and developing situations. </b>'  // feedback you want to give to the user
-            },
-            {
-              text: 'is changing',
-              correct: true,
-              feedback: 'Good job! The right answer is ‘is changing’, because we use Present Continuous <b> for changing and developing situations. </b>,'
-            },
-          ],
-          _2_ : [
-            {
-              text: 'is overwhelming,',
-              correct: true,
-              feedback: 'Good job! The right answer is ‘is overwhelming’, because we use Present Continuous  <b>or temporary situations and trends in society or the world around us. </b>,'
-            },
-            {
-              text: 'overwhelms',
-              correct: false,
-              feedback: 'Oops! The right answer is ‘is overwhelming’, because we use Present Continuous <b> for temporary situation and trends in society or the world around us. </b>,'
-            }
-          ]
-        },
-      },
-
-//Fill in the gaps (Present Simple and Present Continuous) Ex5
-      {
-        name: "Reproductive exercises for Present Simple and Present Continuous",           // give your task a name
-        type: "GS",
-        interaction: "GAP",
-        primary: false,
-        show_lesson_text: false,
-        // here you have to write your question and your text
-        question: "<p> Choose the right option </p>\
-        <p> Sometimes called rainforests of the sea, shallow coral reefs _1_ some of Earth's most diverse ecosystems.\
-         Now, they _2_ less than 0.1% of the world's ocean area and _3_ a home for at least 25% of all marine species,\
-         including fish, mollusks, worms, crustaceans, echinoderms, sponges, tunicates and other cnidarians. </p>",
-        gaps: {
-          mode: 'select',
-          // here you can fill in the options for the gaps
-          _1_: [
-            {
-              text: 'are forming',     // the word(s) the student will see
-              correct: false ,    // is this solution correct, false or true
-              feedback: 'Oops! The right answer is ‘form’, because we use Present Simple <b> for factual description. </b>'  // feedback you want to give to the user
-            },
-            {
-              text: 'form',
-              correct: true ,
-              feedback: 'Good job! The right answer is ‘form’, because we use Present Simple <b> for factual description. </b>'
-            },
-          ],
-          _2_ : [
-            {
-              text: 'are occupying',
-              correct: true ,
-              feedback: 'Good job! The right answer is ‘are occupying’, because we use Present Continuous <b>for events or actions that are happening at the moment. </b>'
-            },
-            {
-              text: 'occupy',
-              correct: false ,
-              feedback: 'Oops! The right answer is ‘are occupying’, because we use Present Continuous  <b>for events or actions that are happening at the moment. </b>,'
-            },
-          ],
-          _3_ : [
-            {
-              text: 'are providing',
-              correct: false ,
-              feedback: 'Oops! The right answer is ‘provide’, because we use Present Simple  <b>for factual description. </b>'
-            },
-            {
-              text: 'provide',
-              correct: true ,
-              feedback: 'Good job! The right answer is ‘provide’, because we use Present Simple  <b>for factual description. </b>'
-            }
-          ]
-        },
-      },
-
-//Single choice (Present Simple and Present Continuous) Ex1
-      {
-      name: "Reproductive exercises for Present Continuous",      // give your task a name
-        type: "GS",
-        interaction: "SC",
-        primary: false,
-        show_lesson_text: false,
-        question:, "The expedition (to look for) sponsorship from one of the major banks.",      // write your text or question here
-        choices: [
-           {text: "is looking for", // this is the text the student will see
-            correct: true , // is it correct (false, true)
-            feedback: "Good job! The right answer is ‘is looking for’. We use Present Continuous for <b> actions that are happening at the moment </b>" // what feedback do you want to give the student
-            },
-            { text: "looks for",
-            correct: false ,
-            feedback: "Oops! The right answer is ‘is looking for’. We use Present Continuous for  <b>actions that are happening at the moment </b>"
-            },
-            { text: "are looking for",
-            correct: false ,
-            feedback: "Oops! The right answer is ‘is looking for’. We use Present Continuous for  <b>actions that are happening at the moment </b>"
-            }
-
-        ],
-      },
-
-//Single choice (Present Simple and Present Continuous) Ex2
-      {
-      name: "Reproductive exercises for Present Simple",       // give your task a name
-        type: "GS",
-        interaction: "SC",
-        primary: false,
-        show_lesson_text: false,
-        question: "First you (to make) your paper mache, (to apply) the paste or paper mache clay to your form, \
-        then (to dry) your paper mache all the way through. make, apply, dry.",      // write your text or question here
-        choices: [
-           {text: "are making, are applying, are drying", // this is the text the student will see
-            correct: false , // is it correct (false, true)
-            feedback: "Oops! The right answer is ‘make, apply, dry’. We use Present Simple to <b>describe processes and give instructions</b>" // what feedback do you want to give the student
-            },
-            { text: "is making, is applying, is drying",
-            correct: false ,
-            feedback: "Oops! The right answer is ‘make, apply, dry’. We use Present Simple to <b>describe processes and give instructions</b>"
-            },
-            { text: "make, apply, dry",
-            correct: true ,
-            feedback: "Good job! The right answer is ‘make, apply, dry’. We use Present Simple to <b>describe processes and give instructions</b>"
-            }
-
-        ],
-      },
-
-//Single choice (Present Simple and Present Continuous) Ex3
-    {
-      name: "Reproductive exercises for Present Simple",
-      // give your task a name
-      type: "GS",
-      interaction: "SC",
-      primary: false,
-      show_lesson_text: false,
-      question: "Dr Kennett (to note) that present-day bison are not like the ones the Clovis people hunted.",
-      // write your text or question here
-      choices: [
-        {
-          text: "is noting",
-          // this is the text the student will see
-          correct: false,
-          // is it correct (false, true)
-          feedback: "Oops! The right answer is ‘notes’. We use Present Simple to summarize or report the main arguments of other academics"
-          // what feedback do you want to give the student
-        },
-        {
-          text: "notes",
-          correct: true,
-          feedback: "Good job! The right answer is ‘notes’. We use Present Simple to summarize or report the main arguments of other academics"
-        },
-        {
-          text: "are noting",
-          correct: false,
-          feedback: "Oops! The right answer is ‘notes’. We use Present Simple to summarize or report the main arguments of other academics"
-        }
-      ],
     },
-
-//Single choice (Present Simple and Present Continuous) Ex4
+ // Fill in the gaps 1 (10)
     {
-      name: "Reproductive exercises for Present Continuous",       // give your task a name
+      name: "Fill in each gap with the correct answer",
       type: "GS",
-      interaction: "SC",
+      interaction: "GAP",
       primary: false,
       show_lesson_text: false,
-      question: "The company (to want) to make the site more advanced to increase its usefulness.",      // write your text or question here
-      choices: [
-         {text: "is wanting", // this is the text the student will see
-          correct: false , // is it correct (false, true)
-          feedback: "Oops! The right answer is ‘wants’, because it is a stative verb. Also, we use Present Simple \
-          with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>\
-          (to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> ,\
-          <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>\
-          ( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree,\
-          to allow, to appear (= to seem), to astonish, to claim).</i>\n" // what feedback do you want to give the student
+      question: "<p>Fill in each gap with the correct answer:</p>\
+        <p>1.English _1_ spoken in many countries all over the world.</p>\
+        <p>2. America was _2_ by Christopher Columbus in 1492.</p>\
+        <p>3. I _3_ _4_ helped by her tomorrow</p>",
+      gaps: {
+        mode: 'select',
+        _1_: [
+          {
+            text: 'is',
+            correct: true,
+            feedback: 'well-done!'
           },
-          { text: "wants",
-          correct: true ,
-          feedback: "Good job! The right answer is ‘wants’, because it is a stative verb. Also, we use Present Simple with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> \
-           <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> \
-           , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>\
-           ( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, \
-           to appear (= to seem), to astonish, to claim).</i>\n"
+          {
+            text: 'are',
+            correct: false,
+            feedback: 'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form'
           },
-          { text: "are wanting",
-          correct: false ,
-          feedback: "Good job! The right answer is ‘wants’, because it is a stative verb. Also, we use Present Simple \
-                     with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> \
-                     <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> \
-                     , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>\
-                     ( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, \
-                     to appear (= to seem), to astonish, to claim).</i>\n"
-          }
+          {
+            text: 'was',
+            correct: false,
+            feedback: 'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form'
+          },
         ],
+        _2_: [
+          {
+            text: 'discover',
+            correct: true,
+            feedback: 'well-done!'
+          },
+          {
+            text: 'discovert',
+            correct: false,
+            feedback: 'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form'
+          },
+          {
+            text: 'discovered',
+            correct: false,
+            feedback: 'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form'
+          },
+        ],
+        _3_: [
+          {
+            text: 'is',
+            correct: false,
+            feedback: 'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form'
+          },
+          {
+            text: 'will',
+            correct: true,
+            feedback: 'Well-done,'
+          },
+        ],
+        _4_: [
+          {
+            text: 'be',
+            correct: true,
+            feedback: 'well-done!'
+          },
+          {
+            text: 'will',
+            correct: false,
+            feedback: 'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form',
+          },
+        ],
+      },
     },
-
-//Single choice (Present Simple and Present Continuous) Ex5
+/// Fill in the Gaps 2 (11)
     {
-      name: "Reproductive exercises for Present Simple",
-      // give your task a name
-      type: "GS",
-      interaction: "SC",
-      primary: false,
-      show_lesson_text: false,
-      question: "The seventh seal by Ingmar Bergman (to tell) about a knight named Antonius Block and his ongoing game of chess with a shadowy, hooded figure - Death.",
-      // write your text or question here
-      choices: [
-        {
-          text: "is telling",
-          // this is the text the student will see
-          correct: false,
-          // is it correct (false, true)
-          feedback: "Oops! The right answer is ‘tells’. We use Present Simple  to describe a plot of the film"
-          // what feedback do you want to give the student
-        },
-        {
-          text: "tells",
-          correct: true ,
-          feedback: "Good job! The right answer is ‘tells’. We use Present Simple  to describe a plot of the film"
-        },
-        {
-          text: "told",
-          correct: false ,
-          feedback: "Oops! The right answer is ‘tells’. We use Present Simple  to describe a plot of the film",
-        }
-      ],
-    },
-
-//Single choice (Present Simple and Present Continuous) Ex6
-    {
-      name: "Reproductive exercises for Present Continuous",
-      // give your task a name
-      type: "GS",
-      interaction: "SC",
-      primary: false,
-      show_lesson_text: false,
-      question: "Amongst young people attitudes to marriage (to change) fast.",
-      // write your text or question here
-      choices: [
-        {
-          text: "are changing",
-          // this is the text the student will see
-          correct:true ,
-          // is it correct (false, true)
-          feedback: "Good job! The right answer is ‘are changing’. We use Present Continuous for <b>temporary situations and trends in society or the world around us</b>"
-          // what feedback do you want to give the student
-        },
-        {
-          text: "changes",
-          correct:false ,
-          feedback: "Oops! The right answer is ‘are changing’. We use Present Continuous for <b>temporary situations and trends in society or the world around us</b>"
-        },
-        {
-          text: "is changing",
-          correct:false ,
-          feedback: "Oops! The right answer is ‘are changing’. We use Present Continuous for<b>temporary situations and trends in society or the world around us</b>"
-        }
-      ],
-    },
-
-//Single choice (Present Simple and Present Continuous) Ex7
-    {
-        name: "Reproductive exercises for Present Continuous",       // give your task a name
-          type: "GS",
-          interaction: "SC",
-          primary: false,
-          show_lesson_text: false,
-          question: "According to the airport's own statistics, around 75.7 million people (to pass through) the terminals annually",      // write your text or question here
-          choices: [
-             {text: "pass through", // this is the text the student will see
-              correct: true , // is it correct (false, true)
-              feedback: "Good job! The right answer is ‘pass through’. We use Present Simple for <b>factual description</b>" // what feedback do you want to give the student
-              },
-              { text: "is passing through",
-              correct: false ,
-              feedback: "Oops! The right answer is ‘pass through’. We use Present Simple for <b>factual description<b>"
-              },
-              { text: "are passing through",
-              correct: false ,
-              feedback: "Oops! The right answer is ‘pass through’. We use Present Simple for<b>factual description</b>"
-              }
-
-          ],
-    },
-
-//Single choice (Present Simple and Present Continuous) Ex8
-    {
-       name: "Reproductive exercises for Present Continuous",       // give your task a name
-          type: "GS",
-          interaction: "SC",
-          primary: false,
-          show_lesson_text: false,
-          question: "Only 2% of the Earth's population (to have) green eyes.",      // write your text or question here
-          choices: [
-             {text: "have", // this is the text the student will see
-              correct: true , // is it correct (false, true)
-              feedback: "Good job! The right answer is ‘have’, because it is a stative verb. Also, we use Present Simple with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>" // what feedback do you want to give the student
-              },
-              { text: "are having",
-              correct: false ,
-              feedback: "Oops! The right answer is ‘have’, because it is a stative verb. Also, we use Present Simple with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>"
-              },
-              { text: "is having",
-              correct: false ,
-              feedback: "Oops! The right answer is ‘have’, because it is a stative verb. Also, we use Present Simple with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>\n"
-              }
-
-          ],
-    },
-
-//Single choice (Present Simple and Present Continuous) Ex9
-    {
-        name: "Reproductive exercises for Present Continuous",       // give your task a name
-          type: "GS",
-          interaction: "SC",
-          primary: false,
-          show_lesson_text: false,
-          question: "With the possibilities of modern technology, people (to develop).",      // write your text or question here
-          choices: [
-             {text: "are developing", // this is the text the student will see
-              correct: true , // is it correct (false, true)
-              feedback: "Good job! The right answer is ‘have’. We use Present Simple for <b>factual description</b>" // what feedback do you want to give the student
-              },
-              { text: "develop",
-              correct: false ,
-              feedback: "Oops! The right answer is ‘are developing’. We use Present Continuous for <b>events or actions that are happening at the moment<b>"
-              },
-              { text: "develops",
-              correct: false ,
-              feedback: "Oops! The right answer is ‘are developing’. We use Present Continuous for <b> events or actions that are happening at the moment</b>"
-              }
-
-          ],
-    },
-
-//Single choice (Present Simple and Present Continuous) Ex10
-    {
-        name: "Reproductive exercises for Present Continuous",       // give your task a name
+        name: "Fill in each gap with the correct answer",
         type: "GS",
-        interaction: "SC",
+        interaction: "GAP",
         primary: false,
         show_lesson_text: false,
-        question: "As psychologist Carol Dweck (to explain), we convey our expectations through very subtle cues, such as how far we stand apart and how much eye contact we make.",      // write your text or question here
-        choices: [
-           {text: "is explaining", // this is the text the student will see
-            correct: false , // is it correct (false, true)
-            feedback: "Oops! The right answer is ‘explains’. We use Present Simple <b>to summarize or report the main arguments of other academics</b>" // what feedback do you want to give the student
+        question: "<p>Fill in each gap with the correct answer:</p>\
+        <p>1.Usually I _1_ to school by my mother. </p>\
+        <p>2. The package _2_ tomorrow.</p>\
+        <p>3. The books _3_ were return/was returned/were returned to the library yesterday \n/p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'am drove',
+              correct: false,
+              feedback:'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form'
             },
-            { text: "are explaining",
-            correct: false ,
-            feedback: "Oops! The right answer is ‘explains’. We use Present Simple <b>to summarize or report the main arguments of other academics</b>"
+            {
+              text: 'was driven',
+              correct: false,
+              feedback:'Oh no! The form of the Present Simple Passive is will be+Ved/3 form'
             },
-            { text: "explains",
-            correct: true ,
-            feedback: "Good job! The right answer is ‘explains’. We use Present Simple <b>to summarize or report the main arguments of other academics</b>"
+            {
+              text: 'am driven',
+              correct: true,
+              feedback: 'well-done!'
+            },
+          ],
+          _2_: [
+            {
+              text: 'will deliver',
+              correct: false,
+              feedback: 'Oh no! The form of the Future Simple Passive is will be+Ved/3 form',
+            },
+            {
+              text: 'will be delivered',
+              correct: true,
+              feedback: 'well-done!'
+            },
+            {
+              text: 'will  delivered ',
+              correct: false,
+              feedback: 'Oh no! The form of the Future Simple Passive is will be+Ved/3 form'
+            },
+          ],
+          _3_: [
+            {
+              text: 'Were return,',
+              correct: false,
+              feedback: 'Oh no! The form of the Past Simple Passive is was/were+Ved/3 form',
+            },
+            {
+              text: 'Was returned',
+              correct: true,
+              feedback:'Oh no! The form of the Past Simple Passive is was/were+Ved/3 form. The noun “Books” is plural',
+            },
+            {
+              text: 'were returned',
+              correct: true,
+              feedback:'Well-done,'
             }
-
-        ],
+          ],
+        }
     },
-//Theoretical tasks (Past Simple and Past Continuous) Ex1
+// Fill in the Gaps 3 (12)
+    {
+        name: "Rewrite the incorrect sentences so that they have no mistakes ",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Rewrite the incorrect sentences so that they have no mistakes </p>\
+        <p>1. He are knew for his decency \n→ He _1_ for his decency </p>\
+        <p>2. This project will finishes on Friday \n→ This project _2_ /will finish/will finished on Friday. </p>\
+        <p>3. The washing machine is purchase by my husband 2 weeks ago \n → the washing machine _3_ is purchased/was purchased/will be purchased by my husband 2 weeks ago</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'is knew',
+              correct: false,
+              feedback:'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form'
+            },
+            {
+              text: 'is known',
+              correct: false,
+              feedback: 'well-done!'
+            },
+            {
+              text: 'was knew',
+              correct: true,
+              feedback:'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form'
+            },
+          ],
+          _2_: [
+            {
+              text: 'will be finished',
+              correct: false,
+              feedback: 'well-done!'
+            },
+            {
+              text: 'Will finish',
+              correct: true,
+              feedback: 'Oh no! The form of the Future Simple Passive is will be+Ved/3 form'
+            },
+            {
+              text: 'Will finished',
+              correct: false,
+              feedback: 'Oh no! The form of the Future Simple Passive is will be+Ved/3 form'
+            },
+          ],
+          _3_: [
+            {
+              text: 'Is purchased',
+              correct: false,
+              feedback:'Oh no! Be attentive! 2 weeks ago'
+            },
+            {
+              text: 'Was purchased',
+              correct: true,
+              feedback:'Well-done,'
+            },
+            {
+              text: 'Will be purchased',
+              correct: false,
+              feedback:'Oh no! Be attentive! 2 weeks ago'
+            }
+          ],
+        }
+    },
+// Fill in the Gaps 4 (13)
+    {
+        name: "Fill in the gaps",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Another field of biological study, neurobiology, studies the biology of the nervous system, and although it _1_ a branch of biology, it _2_ are also recognized as an interdisciplinary field of study known as neuroscience.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'Is considered',
+              correct: true,
+              feedback: 'Perfect!'
+            },
+            {
+              text: 'was consider',
+              correct: false,
+              feedback: 'Oh no! Be attentive! There’s no indicator of the Past Simple in the sentence. Besides, the form of the Past Simple Passive is was/were+Ved/3 form'
+            },
+            {
+              text: 'was considered',
+              correct: false,
+              feedback: 'Oh no! Be attentive! There’s no indicator of the Past Simple in the sentence. Besides, the form of the Past Simple Passive is was/were+Ved/3 form'
+            },
+          ],
+          _2_: [
+            {
+              text: 'Is also recognized',
+              correct: true,
+              feedback: 'Perfect!'
+            },
+            {
+              text: 'Will be also recognized',
+              correct: false,
+              feedback: 'Oh no! Be attentive! There’s no indicator of the Future Simple in the sentence.'
+            },
+            {
+              text: 'are also recognized',
+              correct: false,
+              feedback: 'Oh no! Be attentive! The noun is singular in this sentence'
+            },
+          ],
+        }
+    },
+// Fill in the Gaps 5 (14)
+    {
+        name: "Fill in the gaps",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "Understanding that the organization of the periodic table _1_ on the total number of protons (and electrons) helps us know how electrons _2_ among the shells. The periodic table _3_ in columns and rows based on the number of electrons and where these electrons are located.",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'Is based',
+              correct: true,
+              feedback: 'Great!'
+            },
+            {
+              text: 'Will be based',
+              correct: false,
+              feedback: 'Oh no! Be attentive! There’s no marker of the Future Simple '
+            },
+            {
+              text: 'was based',
+              correct: false,
+              feedback: 'Oh no! Be attentive! There’s no marker of the Future Simple '
+            },
+          ],
+          _2_: [
+            {
+              text: 'Are distribute',
+              correct: false,
+              feedback: 'Oh no! The form of the Present Simple Passive is am/is/are+Ved/3 form',
+            },
+            {
+              text: 'Are distributed',
+              correct: true,
+              feedback: 'Amazing!'
+            },
+            {
+              text: 'were distribute',
+              correct: false,
+              feedback: 'Oh no! There’s no marker of the Past Simple. Moreover, the form of the Present Simple Passive is am/is/are+Ved/3 form',
+            },
+          ],
+          _3_: [
+            {
+              text: 'Will be arranged',
+              correct: false,
+              feedback: 'Oh no! There’s no marker of the Future Simple in this sentence',
+            },
+            {
+              text: 'Were arranged',
+              correct: false,
+              feedback: 'Oh no! There’s no marker of the Past Simple in this sentence. What’s more, the noun is singular',
+            },
+            {
+              text: 'Is arranged',
+              correct: true,
+              feedback: 'Amazing!'
+            },
+          ]
+        }
+    },
+// Fill in the Gaps 6 (15)
+    {
+        name: "Fill in the gaps",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question : "<p>While research efforts in both basic science and applied science _1_, it is important to note that some discoveries _2_ by serendipity, that is, by means of a fortunate accident or a lucky surprise. Penicillin _3_ when biologist Alexander Fleming accidentally left a petri dish of Staphylococcus bacteria open. An unwanted mold grew on the dish, killing the bacteria. The mold turned out to be Penicillium, and a new antibiotic _4_. Even in the highly organized world of science, luck—when combined with an observant, curious mind—can lead to unexpected breakthroughs.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'Are usually carefully plan',
+              correct: false,
+              feedback: 'Oh no! The form of the Present Simple Passive is am/is/are+Ved/3 form',
+            },
+            {
+              text: 'Are usually carefully planned',
+              correct: true,
+              feedback: 'Perfect!'
+            },
+            {
+              text: 'Will be usually carefully planned',
+              correct: false,
+              feedback: 'Oh no! Be attentive! “Usually” is a marker of the other tense',
+            },
+          ],
+          _2_: [
+            {
+              text: 'Was made',
+              correct: false,
+              feedback: 'Oh no! Be attentive! There’s no indicator of the Past Simple in the sentence. Moreover, the noun is plural',
+            },
+            {
+              text: 'Were made',
+              correct: false,
+              feedback: 'Oh no! Be attentive! There’s no indicator of the Past Simple in the sentence.',
+            },
+            {
+              text: 'are made',
+              correct: true,
+              feedback: 'Perfect!',
+            },
+          ],
+          _3_: [
+            {
+              text: 'Is discovered',
+              correct: false,
+              feedback: 'Oh no! Pay attention to the Tense of the rest of the sentence',
+            },
+            {
+              text: 'Was discovered',
+              correct: true,
+              feedback: 'Great!'
+            },
+            {
+              text: 'Was discover',
+              correct: false,
+              feedback: 'The form of the Past Simple Passive is was/were+Ved/3 form'
+            },
+          ],
+          _4_: [
+            {
+              text: 'Was discovered',
+              correct: true,
+              feedback: 'Great!'
+            },
+            {
+              text: 'Is discovered',
+              correct: false,
+              feedback: 'Oh no! Pay attention to the Tense of the rest of the sentence',
+            },
+            {
+              text: 'Will be discover',
+              correct: false,
+              feedback: 'Oh no! Pay attention to the Tense of the rest of the sentence',
+            },
+          ]
+        },
+    },
+// Fill in the Gaps 7 (16)
+    {
+        name: "Fill in the gaps",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Some chemical reactions, such as the one shown above, can proceed in one direction until the reactants _1_.. The equations that describe these reactions contain a unidirectional arrow and are irreversible. Reversible reactions are those that can go in either direction. In reversible reactions, reactants _2_ into products, but when the concentration of product goes beyond a certain threshold (characteristic of the particular reaction), some of these products _3_ back into reactants; at this point, the designations of products and reactants _4_. This back and forth continues until a certain relative balance between reactants and products occurs—a state called equilibrium. These situations of reversible reactions _5_ by a chemical equation with a double headed arrow pointing towards both the reactants and products </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'Were all used up',
+              correct: false,
+              feedback: 'Oh no! Pay attention to the tense in the context!',
+            },
+            {
+              text: 'are all used up',
+              correct: true,
+              feedback: 'Amazing!',
+            },
+            {
+              text: 'Will all be used up',
+              correct: false,
+              feedback: 'Oh no! Pay attention to the tense in the context!',
+            },
+          ],
+          _2_: [
+            {
+              text: 'Are turned',
+              correct: true,
+              feedback: 'Correct!'
+            },
+            {
+              text: 'Were turned',
+              correct: false,
+              feedback: 'Oh no! There’s no indicator of the Past simple',
+            },
+            {
+              text: 'Will be turned',
+              correct: false,
+              feedback: 'Oh no! Pay attention to the tense in the context',
+            },
+          ],
+          _3_: [
+            {
+              text: 'Will converted',
+              correct: false,
+              feedback: 'Oh no! The form of the Future Simple Passive is will be+Ved/3rd form',
+            },
+            {
+              text: 'Will be converted',
+              correct: true,
+              feedback: 'That’s right!',
+            },
+            {
+              text: 'Is converted',
+              correct: false,
+              feedback: 'Oh no! In this sentence we can observe 1st Conditional.'
+            },
+          ],
+          _4_: [
+            {
+              text: 'Were reversed',
+              correct: false,
+              feedback: 'Oh no! Pay attention to the context',
+            },
+            {
+              text: 'Is reversed',
+              correct: false,
+              feedback: 'Oh no! There are two nouns in this sentence and both are plural',
+            },
+            {
+              text: 'Are reversed',
+              correct: true,
+              feedback: 'Brilliant!'
+            },
+          ],
+          _5_: [
+            {
+              text: 'Were often denoted',
+              correct: false,
+              feedback: 'Oh no! ”Often” is a marker of Present Simple and there are no markers of other tenses in the sentence',
+            },
+            {
+              text: 'Are often denoted',
+              correct: true,
+              feedback: 'Perfect!'
+            },
+            {
+              text: 'Will be often denoted',
+              correct: false,
+              feedback: 'Oh no! ”Often” is a marker of Present Simple and there are no markers of other tenses in the sentence',
+            },
+          ]
+        },
+    },
+// Fill in the Gaps 8 (17)
     {
         name: "Theoretical task for Past Simple and Past Continuous",       // give your task a name
         type: "GS",
@@ -903,6 +937,7 @@
           feedback: "Good job! The right answer is ‘was working’. We use Past Continuous  for  <b>events which were in progress in the past</b>"
         }
       ],
-    },
-}
+      },
+    ]
+  }
 // end of lesson
