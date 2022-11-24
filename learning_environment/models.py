@@ -260,18 +260,24 @@ class TaskDifficulty(models.Model):
     @classmethod
     def update_task_difficulty(cls, task):
 
-        curr_difficulty = TaskDifficulty.objects.filter(task=task).get("level")
+        td = TaskDifficulty.objects.get(task=task)
+        curr_difficulty= td.level
         feedback = True
         change = 0
 
         try:
-            knowlege = DifficultyFeedback.objects.filter(task=task).get("knowlege")
-            redo_count = DifficultyFeedback.objects.filter(task=task).get("redo_count")
-        except DifficultyFeedback.objects.filter(task=task).aexists():
+            knowlege = list(DifficultyFeedback.objects.filter(task=task).values_list("knowledge", flat=True))
+            redo_count = list(DifficultyFeedback.objects.filter(task=task).values_list("redo_count", flat=True))
+        except ValueError:
             feedback = False
+            knowlege=[]
+            redo_count=[]
         
+        print("knowledge", knowlege)
+        print("redo_count", redo_count)
         # calculate feedback
-        for entry in knowlege:
+        for entry in range(len(knowlege)):
+
             if feedback:
                 diff = knowlege[entry] - curr_difficulty 
                 nr_redo = redo_count[entry]
@@ -290,16 +296,20 @@ class TaskDifficulty(models.Model):
                 if diff < 0 and nr_redo == 0:
                     change += diff
 
-                if diff == 0 and nr_redo > 2:
+                if diff == 0 and nr_redo > 0:
                     change += 1
-        
+        print("task", task)
+        print("curr_before", curr_difficulty)
+        print("change", change)
         if feedback:
             new_difficulty = int(curr_difficulty + change/len(knowlege))
             curr_difficulty = new_difficulty
-
-
-        curr_difficulty.save()
-
+            print("new", new_difficulty)
+            print("curr", curr_difficulty)
+        td.level = curr_difficulty
+        td.save()
+        # delete all existing rows in Difficulty feedback
+        #DifficultyFeedback.objects.filter(task=task).delete()
         return True
 
 
