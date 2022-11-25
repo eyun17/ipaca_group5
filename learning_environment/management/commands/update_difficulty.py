@@ -30,8 +30,8 @@ class Command(BaseCommand):
             except ValueError:
                 print("other thing went wrong!")
 
-            
-            
+        # delete the entries in the difficulty feedback    
+        DifficultyFeedback.objects.all().delete()
         
 
         self.stdout.write(self.style.SUCCESS('Successfully updated {} task difficulties.'.format(nr_updates)))

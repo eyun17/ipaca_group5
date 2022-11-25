@@ -5,7 +5,7 @@ The tutor model is able to determine appropriate actions for a given learner. (E
 """
 
 import random
-from learning_environment.models import Lesson, Task, ProfileSeriesLevel, TaskDifficulty, LearnerKnowledgeLevel
+from learning_environment.models import Lesson, Task, ProfileSeriesLevel, TaskDifficulty, LearnerKnowledgeLevel, DifficultyFeedback
 
 
 class NoTaskAvailableError(Exception):
@@ -73,20 +73,26 @@ class Tutormodel:
             else:  
                 possible_tasks = Task.objects.filter(lesson=lesson, type=next_type)
                 task_list = []
-                print(possible_tasks)
+                
                 for task in possible_tasks:
                     difficulty = TaskDifficulty.objects.get(task=task.id).level
-                    print("d", difficulty)
-                    print("k", lkl.level)
-                    if difficulty == lkl.level:
-                        print("in task_list.append")
+
+                    # was task successfully done
+                    try:
+                        DifficultyFeedback.objects.get(user = self.learner, task=task, redo_count=0)
+                        success = True
+                    except (DifficultyFeedback.DoesNotExist, ValueError):
+                        success = False
+
+                    if (difficulty == lkl.level) and not(success):
                         task_list.append(task)
+
+
                 request.session['current_lesson_todo'].extend(order1)
                 request.session.modified = True
-                print(task_list)
+                
                 cnt = len(task_list)
                 if cnt == 0:
-                    print("in cnt==0")
                     empty_count+=1
                     request.session['current_lesson_todo'].pop(0) 
                     request.session['current_lesson_todo'].extend(order1) 
@@ -97,6 +103,10 @@ class Tutormodel:
 
                     request.session.modified = True
                     continue  # next state
+
+                # check whether the task has already been successfully done:
+
+
                 task = task_list[random.randint(0, cnt-1)]
                 print(task)
                

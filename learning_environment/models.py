@@ -276,9 +276,10 @@ class TaskDifficulty(models.Model):
         print("knowledge", knowlege)
         print("redo_count", redo_count)
         # calculate feedback
-        for entry in range(len(knowlege)):
 
-            if feedback:
+        if feedback:
+            for entry in range(len(knowlege)):
+
                 diff = knowlege[entry] - curr_difficulty 
                 nr_redo = redo_count[entry]
                 
@@ -298,14 +299,10 @@ class TaskDifficulty(models.Model):
 
                 if diff == 0 and nr_redo > 0:
                     change += 1
-        print("task", task)
-        print("curr_before", curr_difficulty)
-        print("change", change)
-        if feedback:
+                    
             new_difficulty = int(curr_difficulty + change/len(knowlege))
             curr_difficulty = new_difficulty
-            print("new", new_difficulty)
-            print("curr", curr_difficulty)
+
         td.level = curr_difficulty
         td.save()
         # delete all existing rows in Difficulty feedback
