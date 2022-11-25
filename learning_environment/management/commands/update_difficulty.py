@@ -31,7 +31,7 @@ class Command(BaseCommand):
                 print("other thing went wrong!")
 
             
-            
+        DifficultyFeedback.objects.all().delete()   
         
 
         self.stdout.write(self.style.SUCCESS('Successfully updated {} task difficulties.'.format(nr_updates)))

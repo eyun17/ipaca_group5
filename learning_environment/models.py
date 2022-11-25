@@ -296,11 +296,10 @@ class TaskDifficulty(models.Model):
                 if diff < 0 and nr_redo == 0:
                     change += diff
 
-                if diff == 0 and nr_redo > 0:
+                if diff == 0 and nr_redo > 1:
                     change += 1
-        print("task", task)
-        print("curr_before", curr_difficulty)
-        print("change", change)
+        
+
         if feedback:
             new_difficulty = int(curr_difficulty + change/len(knowlege))
             curr_difficulty = new_difficulty
