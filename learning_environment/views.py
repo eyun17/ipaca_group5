@@ -11,7 +11,7 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import *
-from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel
+from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel, LearnerKnowledgeLevel, DifficultyFeedback
 from .its.tutormodel import Tutormodel, NoTaskAvailableError
 from .its.learnermodel import Learnermodel
 
@@ -27,13 +27,14 @@ def practice(request):
     """Display a task for practicing."""
 
     context = {'mode': 'solve'}
-
     # start a lesson
     if request.method == 'POST' and 'start' in request.POST:
         if not 'current_lesson_todo' in request.session:  # if there's no todo, we have a corrupt state -> show start screen
             return redirect('myhome')
         request.session['current_lesson_todo'].pop(0)  # remove the start item
         request.session.modified = True
+        
+    
         tutor = Tutormodel(request.user)
         try:
             (state, lesson, task) = tutor.next_task(request)
@@ -48,6 +49,7 @@ def practice(request):
             return redirect('myhome')
         if request.session['current_lesson_todo'][0] != 'WRAPUP':  # if we didn't finish a lesson, we have corrupt state
             # TODO: message
+            context['msg'] = "Congratulations! You mastered the topic of this lesson"
             return redirect('myhome')
 
         # increase level for current series
@@ -68,18 +70,24 @@ def practice(request):
         except (KeyError, Task.DoesNotExist):
             return HttpResponseBadRequest("Invalid Task ID")
         # Evaluate solution
+        
+        # TODO: get knowledge level
         learnermodel = Learnermodel(request.user)
         analysis, learnermodel_context = learnermodel.update(task, request.POST)
         context.update(learnermodel_context)
         if analysis.get('solved', False):  # we solved a task, so we remove its type from the session todo list
             context['solved'] = True
+
+        
             if 'current_lesson_todo' in request.session and len(request.session['current_lesson_todo']) > 0:
                 request.session['current_lesson_todo'].pop(0)
             request.session.modified = True
         else:
             context['solved'] = False
+
         lesson = task.lesson
         context['state'] = context['mode']
+
     elif 'redo' in request.GET:  # show a task again
         try:
             task = Task.objects.get(pk=int(request.GET['redo']))
@@ -87,8 +95,13 @@ def practice(request):
             return HttpResponseBadRequest("Error: No such ID")
         lesson = task.lesson
         context['state'] = context['mode']
+
     else:  # fetch new task and show it
         tutor = Tutormodel(request.user)
+        print(request.user)
+        print(request.session.get('current_lesson'))
+        
+
         try:
             (state, lesson, task) = tutor.next_task(request)
         except NoTaskAvailableError:

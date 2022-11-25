@@ -6,6 +6,7 @@ from learning_environment.its.tasks import TaskTypeFactory
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 import json5
+import random
 
 
 class User(AbstractUser):
@@ -43,7 +44,7 @@ class ProfileSeriesLevel(models.Model):
 
 
 
-class Lesson(models.Model):
+class Lesson(models.Model): # is checked when running read_lessons and then created there
     """
     A selected collection of task
     Comes which has a paragraph
@@ -52,6 +53,8 @@ class Lesson(models.Model):
     paragraph: piece of written academic text to read
     tasks: tasks belonging to the lesson
     """
+    # TODO: somehow add domain model to lesson
+
     name = models.CharField(max_length=255)
     lesson_id = models.SlugField(max_length=64)
     series = models.CharField(max_length=255, default='General')
@@ -92,6 +95,7 @@ class Lesson(models.Model):
         for t in lesson["tasks"]:
             task_num += 1
             Task.check_json5(t, task_num)
+            
         return True
 
     @classmethod
@@ -106,6 +110,8 @@ class Lesson(models.Model):
             Lesson.objects.get(lesson_id=lesson["id"]).delete()
         except Lesson.DoesNotExist:
             pass
+        
+        # TODO: create domain model for the lesson
 
         lsn = Lesson(name=lesson["name"],
                      lesson_id=lesson["id"],
@@ -126,12 +132,22 @@ class Lesson(models.Model):
 
 
         for task in lesson["tasks"]:
-            Task.create_from_json5(task, lsn)
+            t = Task.create_from_json5(task, lsn)
+
+            
+            # check if task is in TaskDifficulty, if not add
+            try: 
+                TaskDifficulty.objects.get(task=t)
+            except TaskDifficulty.DoesNotExist:
+                # initialize all new task with difficulty level 1
+                new_difficulty = TaskDifficulty(task=t, level=1)
+                new_difficulty.save()
+
 
         return lsn
+    
 
-
-class Task(models.Model):
+class Task(models.Model):      # same here 
     """
     There are multiple Tasks within a lesson
     The Tasks are subclassed according to their interaction type
@@ -156,6 +172,7 @@ class Task(models.Model):
     show_lesson_text = models.BooleanField(default=True)
     question = models.TextField()
     content = models.JSONField()
+    
 
     @classmethod
     def check_json5(cls, task_json5, task_num=0):
@@ -165,7 +182,7 @@ class Task(models.Model):
                            ("interaction", TaskTypeFactory.shortcuts(), ','.join(TaskTypeFactory.shortcuts())),
                            ("primary", bool, "true or false"),
                            ("show_lesson_text", bool, "true or false"),
-                           ("question", str, "a string")]:
+                           ("question", str, "a string")]: 
             if task_field[0] not in task_json5:
                 raise Json5ParseException(
                     'Field "{}" is missing for task {}'.format(task_field[0], task_num))
@@ -226,3 +243,100 @@ class Solution(models.Model):
 class LearnerStatus(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     current_lesson = models.ForeignKey(Lesson, null=True, on_delete=models.SET_NULL)
+
+
+class TaskDifficulty(models.Model):
+
+    # define difficulty levels
+    class DifficultyLevels(models.IntegerChoices):
+        EASY = 1
+        MEDIUM = 2
+        HARD = 3
+        MASTER = 4
+
+    task = models.ForeignKey(Task, on_delete=models.CASCADE)
+    level = models.IntegerField(choices=DifficultyLevels.choices)
+
+    @classmethod
+    def update_task_difficulty(cls, task):
+
+        td = TaskDifficulty.objects.get(task=task)
+        curr_difficulty= td.level
+        feedback = True
+        change = 0
+
+        try:
+            knowlege = list(DifficultyFeedback.objects.filter(task=task).values_list("knowledge", flat=True))
+            redo_count = list(DifficultyFeedback.objects.filter(task=task).values_list("redo_count", flat=True))
+        except ValueError:
+            feedback = False
+            knowlege=[]
+            redo_count=[]
+        
+        print("knowledge", knowlege)
+        print("redo_count", redo_count)
+        # calculate feedback
+        for entry in range(len(knowlege)):
+
+            if feedback:
+                diff = knowlege[entry] - curr_difficulty 
+                nr_redo = redo_count[entry]
+                
+                # wenn diff < 0 bedeutet: task war schwerer als knowledge
+                # wenn diff > 0 bedeutet: task war leichter 
+                # wenn diff == 0 bedeutet: task war angemessen
+
+                # wenn task leichter und redo > 1 -> change + diff
+                # wenn task angemessen und redo > 1 -> change + 0
+                # wenn task schwer und redo < 1 -> change -diff
+
+                if diff > 0 and nr_redo > 1:
+                    change += diff
+                
+                if diff < 0 and nr_redo == 0:
+                    change += diff
+
+                if diff == 0 and nr_redo > 0:
+                    change += 1
+        print("task", task)
+        print("curr_before", curr_difficulty)
+        print("change", change)
+        if feedback:
+            new_difficulty = int(curr_difficulty + change/len(knowlege))
+            curr_difficulty = new_difficulty
+            print("new", new_difficulty)
+            print("curr", curr_difficulty)
+        td.level = curr_difficulty
+        td.save()
+        # delete all existing rows in Difficulty feedback
+        #DifficultyFeedback.objects.filter(task=task).delete()
+        return True
+
+
+
+class LearnerKnowledgeLevel(models.Model):
+
+    # define knowledge level
+    class KnowledgeLevels(models.IntegerChoices):
+        EASY = 1
+        BEGINNER = 2
+        INTERMEDIATE = 3
+        ADVANCED = 4
+        MASTERY = 5
+    
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
+    score = models.IntegerField(default=0)
+    level = models.IntegerField(choices=KnowledgeLevels.choices, default=1)
+
+    
+
+
+class DifficultyFeedback(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    task = models.ForeignKey(Task, on_delete=models.CASCADE)
+    knowledge = models.IntegerField(default=0)       # TODO: get knowledge level here!!!
+    redo_count = models.IntegerField(default=0)
+    ita_feedback = models.IntegerField(default=1)
+
+

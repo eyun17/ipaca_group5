@@ -8,3 +8,5 @@ admin.site.register(Lesson)
 admin.site.register(Task)
 
 # Register your models here.
+
+# TODO: register domain
