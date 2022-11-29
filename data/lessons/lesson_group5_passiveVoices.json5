@@ -4,7 +4,7 @@
   series: 'Grammar',
   author: "Group 5-1",    // used for documentation, will not be shown to the user
   version: 1,                 // if you revise your lesson, give it a higher version number each time
-  text: "<p> This is the Grammar Lesson for Main Tenses. Here we want to test our intelligent tutoring system.</p>",
+  text: "<p> This is the Grammar Lesson for Passive Voice. Here we want to test our intelligent tutoring system.</p>",
   text_source: "Biology for AP Courses - Openstax",
   text_licence: "CC0",
   text_url: "https://assets.openstax.org/oscms-prodcms/media/documents/APBiology-OP_5meoFaG.pdf?_gl=1*e8462e*_ga*MjEyMTAxNDE4Mi4xNjY4NDI5MzU5*_ga_T746F8B0QC*MTY2ODQyOTM1OS4xLjEuMTY2ODQyOTM2OS41MC4wLjA",
@@ -18,7 +18,9 @@
         interaction: "SC",
         primary: false,
         show_lesson_text: true,
-        question: "Look at the sentences below and answer the questions\nThe Swiss invented the watch.\nThe watch was invented by the Swiss.\nDo the sentences mean the same thing?\n",
+        question: "<p>Look at the sentences below and answer the questions</p> \
+      The Swiss invented the watch.\n The watch was invented by the Swiss. \
+      <p>Do the sentences mean the same thing</p>?",
         choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
           { text: "yes", correct: false, feedback: "Oh no! The sentences don’t mean the same thing." },
           { text: "no", correct: true, feedback: "Well-done!" },
@@ -31,7 +33,9 @@
       interaction: "SC",
       primary: false,
       show_lesson_text: true,
-      question: "Look at the sentences below and answer the questions\nThe Swiss invented the watch.\nThe watch was invented by the Swiss.\nDo the sentences mean the same thing?\n",
+      question: "<p>Look at the sentences below and answer the questions</p>  \
+      The Swiss invented the watch.\nThe watch was invented by the Swiss.\n\
+      Do the sentences mean the same thing?\n",
       choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
         { text: "yes", correct: false, feedback: "That’s right! " },
         { text: "no", correct: true, feedback: "No. Have a look: “The Swiss invented the watch”. The focus of the sentence is who did it." },
@@ -72,7 +76,7 @@
       interaction: "SC",
       primary: false,
       show_lesson_text: true,
-      question: "In the sentence \"The watch was invented by the Swiss, what is the passive form?",
+      question: "In the sentence \"The watch was invented by the Swiss\" what is the passive form?",
       choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
         { text: "The doer of the action", correct: false, feedback: "That’s incorrect. The focus is on the action or thing which is done. Mind the difference: The table is made of wood. vs He made a table out of wood. " },
         { text: "the action or thing itself", correct: true, feedback: "Exactly!" },
@@ -109,12 +113,12 @@
 
 // Mark the Words (8)
     {
-        name: "Name of your task:\nMark the mistakes in the sentences with red color \n\n",
+        name: "Mark the mistakes in the sentences with red color",
         type: "GS",
         interaction: "MARK",
         primary: false,
         show_lesson_text: false,
-        question: "Find the appropriate explanation for the usage of Past Simple and Past Continuous for every sentence.",           //write your question here
+        question: "Find the appropriate explanation for the usage of Past Simple and Past Continuous for every sentence.",
         marktext: "<p>1. He #1#are #1#knew for his decency</p>\
         <p>2. This project will be  #1#finishes on Friday </p>\
         <p>3. I’m concerned about the climate change.</p>\
@@ -131,13 +135,17 @@
     },
 // Mark the Words- theoretical task (9)
     {
-        name: "Name of your task:\nMark the mistakes in the sentences with red color \n\n",
+        name: "Mark the mistakes in the sentences with red color",
         type: "GS",
         interaction: "MARK",
         primary: false,
         show_lesson_text: false,
         question: "Mark the following tenses:",     //write your question here,
-        marktext: "<p>Mona Lisa is one of the most famous works of art in the world. It #2#was #2#painted by Leonardo Da Vinci in the 16th century. An Italian noblewoman Lisa Gherardini #1#is #1#depicted in the portrait. The painting #1#is #1#kept in the Louvre, Paris. In 1911 the painting #2#was #2#stolen, causing an immediate media sensation. It #1#is #1#hoped it #3#will #3#not #3#be #3#stolen again.</p>",
+        marktext: "<p>Mona Lisa is one of the most famous works of art in the world. \
+        It #2#was #2#painted by Leonardo Da Vinci in the 16th century.\
+        An Italian noblewoman Lisa Gherardini #1#is #1#depicted in the portrait. \
+        The painting #1#is #1#kept in the Louvre, Paris. In 1911 the painting #2#was #2#stolen, \
+        causing an immediate media sensation. It #1#is #1#hoped it #3#will #3#not #3#be #3#stolen again.</p>",
         markers: {
             // here you can write what should be marked
           '1': {
@@ -156,11 +164,11 @@
       name: "Fill in each gap with the correct answer",
       type: "GS",
       interaction: "GAP",
-      primary: true,
+      primary: false,
       show_lesson_text: false,
       question: "<p>Fill in each gap with the correct answer:</p>\
-        <p>1.English _1_ spoken in many countries all over the world.</p>\
-        <p>2. America was _2_ by Christophor Columbus in 1492.</p>\
+        <p>1. English _1_ spoken in many countries all over the world.</p>\
+        <p>2. America was _2_ by Christopher Columbus in 1492.</p>\
         <p>3. I _3_ _4_ helped by her tomorrow</p>",
       gaps: {
         mode: 'select',
@@ -183,7 +191,7 @@
         ],
         _2_: [
           {
-            text: 'discover',
+            text: 'discovered',
             correct: true,
             feedback: 'well-done!'
           },
@@ -193,7 +201,7 @@
             feedback: 'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form'
           },
           {
-            text: 'discovered',
+            text: 'discover',
             correct: false,
             feedback: 'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form'
           },
@@ -232,9 +240,9 @@
         primary: true,
         show_lesson_text: false,
         question: "<p>Fill in each gap with the correct answer:</p>\
-        <p>1.Usually I _1_ to school by my mother. </p>\
+        <p>1. Usually I _1_ to school by my mother. </p>\
         <p>2. The package _2_ tomorrow.</p>\
-        <p>3. The books _3_ were return/was returned/were returned to the library yesterday \n/p>",
+        <p>3. The books _3_ to the library yesterday </p>",
         gaps: {
           mode: 'select',
           _1_: [
@@ -266,14 +274,14 @@
               feedback: 'well-done!'
             },
             {
-              text: 'will  delivered ',
+              text: 'will  delivered',
               correct: false,
               feedback: 'Oh no! The form of the Future Simple Passive is will be+Ved/3 form'
             },
           ],
           _3_: [
             {
-              text: 'Were return,',
+              text: 'Were return',
               correct: false,
               feedback: 'Oh no! The form of the Past Simple Passive is was/were+Ved/3 form',
             },
@@ -300,7 +308,7 @@
         question: "<p>Rewrite the incorrect sentences so that they have no mistakes </p>\
         <p>1. He are knew for his decency \n→ He _1_ for his decency </p>\
         <p>2. This project will finishes on Friday \n→ This project _2_ /will finish/will finished on Friday. </p>\
-        <p>3. The washing machine is purchase by my husband 2 weeks ago \n → the washing machine _3_ is purchased/was purchased/will be purchased by my husband 2 weeks ago</p>",
+        <p>3. The washing machine is purchase by my husband 2 weeks ago \n → the washing machine _3_ by my husband 2 weeks ago</p>",
         gaps: {
           mode: 'select',
           _1_: [
@@ -363,7 +371,8 @@
         interaction: "GAP",
         primary: true,
         show_lesson_text: false,
-        question: "<p>Another field of biological study, neurobiology, studies the biology of the nervous system, and although it _1_ a branch of biology, it _2_ are also recognized as an interdisciplinary field of study known as neuroscience.</p>",
+        question: "<p>Another field of biological study, neurobiology, studies the biology of the nervous system, \
+        and although it _1_ a branch of biology, it _2_ are also recognized as an interdisciplinary field of study known as neuroscience.</p>",
         gaps: {
           mode: 'select',
           _1_: [
@@ -409,7 +418,9 @@
         interaction: "GAP",
         primary: true,
         show_lesson_text: false,
-        question: "Understanding that the organization of the periodic table _1_ on the total number of protons (and electrons) helps us know how electrons _2_ among the shells. The periodic table _3_ in columns and rows based on the number of electrons and where these electrons are located.",
+        question: "Understanding that the organization of the periodic table _1_ on the total number of protons \
+        (and electrons) helps us know how electrons _2_ among the shells. \
+        The periodic table _3_ in columns and rows based on the number of electrons and where these electrons are located.",
         gaps: {
           mode: 'select',
           _1_: [
@@ -472,7 +483,11 @@
         interaction: "GAP",
         primary: false,
         show_lesson_text: false,
-        question : "<p>While research efforts in both basic science and applied science _1_, it is important to note that some discoveries _2_ by serendipity, that is, by means of a fortunate accident or a lucky surprise. Penicillin _3_ when biologist Alexander Fleming accidentally left a petri dish of Staphylococcus bacteria open. An unwanted mold grew on the dish, killing the bacteria. The mold turned out to be Penicillium, and a new antibiotic _4_. Even in the highly organized world of science, luck—when combined with an observant, curious mind—can lead to unexpected breakthroughs.</p>",
+        question : "<p>While research efforts in both basic science and applied science _1_, \
+        it is important to note that some discoveries _2_ by serendipity, that is, by means of a fortunate accident or a lucky surprise. \
+        Penicillin _3_ when biologist Alexander Fleming accidentally left a petri dish of Staphylococcus bacteria open. \
+        An unwanted mold grew on the dish, killing the bacteria. The mold turned out to be Penicillium, and a new antibiotic _4_. \
+        Even in the highly organized world of science, luck—when combined with an observant, curious mind—can lead to unexpected breakthroughs.</p>",
         gaps: {
           mode: 'select',
           _1_: [
@@ -552,7 +567,13 @@
         interaction: "GAP",
         primary: false,
         show_lesson_text: false,
-        question: "<p>Some chemical reactions, such as the one shown above, can proceed in one direction until the reactants _1_.. The equations that describe these reactions contain a unidirectional arrow and are irreversible. Reversible reactions are those that can go in either direction. In reversible reactions, reactants _2_ into products, but when the concentration of product goes beyond a certain threshold (characteristic of the particular reaction), some of these products _3_ back into reactants; at this point, the designations of products and reactants _4_. This back and forth continues until a certain relative balance between reactants and products occurs—a state called equilibrium. These situations of reversible reactions _5_ by a chemical equation with a double headed arrow pointing towards both the reactants and products </p>",
+        question: "<p>Some chemical reactions, such as the one shown above, can proceed in one direction until the reactants _1_.\
+        The equations that describe these reactions contain a unidirectional arrow and are irreversible. \
+        Reversible reactions are those that can go in either direction. \
+        In reversible reactions, reactants _2_ into products, but when the concentration of product goes beyond a certain threshold (characteristic of the particular reaction), \
+        some of these products _3_ back into reactants; at this point, the designations of products and reactants _4_. \
+        This back and forth continues until a certain relative balance between reactants and products occurs—a state called equilibrium. \
+        These situations of reversible reactions _5_ by a chemical equation with a double headed arrow pointing towards both the reactants and products </p>",
         gaps: {
           mode: 'select',
           _1_: [
@@ -649,8 +670,11 @@
       interaction: "GAP",
       primary: false,
       show_lesson_text: false,
-      question: "<p>The steps of the scientific method _1_ is examined/ was examined/ will be examined in detail later, but one of the most important aspects of this method is the testing of hypotheses by means of repeatable experiments… </p>\
-        <p>Biologists study the living world by posing questions about it and seeking science-based responses. This approach is common to other sciences as well and _2_ to as the scientific method. The scientific method _3_ even in ancient times, but it _4_ by England’s Sir Francis Bacon (1561–1626) (Figure 1.5), who set up inductive methods for scientific inquiry. The scientific method _5_ will not be exclusively used /is not exclusively used/were not exclusively used by biologists but can be applied to almost all fields of study as a logical, rational problem-solving method </p>",
+      question: "<p>The steps of the scientific method _1_ in detail later, but one of the most important aspects of this method is the testing of hypotheses by means of repeatable experiments… </p>\
+        <p>Biologists study the living world by posing questions about it and seeking science-based responses. \
+        This approach is common to other sciences as well and _2_ to as the scientific method. \
+        The scientific method _3_ even in ancient times, but it _4_ by England’s Sir Francis Bacon (1561–1626) (Figure 1.5), who set up inductive methods for scientific inquiry. \
+        The scientific method _5_ by biologists but can be applied to almost all fields of study as a logical, rational problem-solving method </p>",
       gaps: {
         mode: 'select',
         _1_: [
@@ -748,7 +772,7 @@
         primary: false,
         show_lesson_text: false,
         question:"<p>My father repaired his car a week ago <p>\
-        <p>→ _1_  _2_ _3_ _4_  <p>",
+        <p> → _1_  _2_  _3_  _4_  <p>",
         gaps: {
           mode: 'select',
           _1_: [
@@ -819,7 +843,7 @@
         primary: false,
         show_lesson_text: false,
         question:"<p>Our engineer will resolve this issue in a couple of days</p>\
-        <p>→ _1_ _2_ _3_ _4_ </p>",
+        <p>→ _1_  _2_  _3_  _4_ </p>",
         gaps: {
           mode: 'select',
           _1_: [
