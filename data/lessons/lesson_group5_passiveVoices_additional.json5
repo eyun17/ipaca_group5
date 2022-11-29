@@ -1,0 +1,498 @@
+{
+  name: "Passive Voice",  // the name that's also shown to the users
+  id: "lesson-group5-003",        // an internal id, will never be shown, but important to identify the lesson
+  series: 'Grammar',
+  author: "Group 5-1",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "<p> This is the additional Grammar Lesson for Passive Voice.</p>",
+  text_source: "N/A",
+  text_licence: "CC0",
+  text_url: "N/A",
+
+  tasks: [  // the list of tasks for this lesson
+
+//Past simple passive 1
+    {
+        name: "Past simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        The candies __________ ",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "was eating", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "were eating", correct: false, feedback: "NO, think about the past simple passive."},
+          { text: "was eaten", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "were eaten", correct: true, feedback: "Well-done!" }
+        ],
+    },
+//Past simple passive 2
+    {
+        name: "Past simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        Vegetables ____________ to the store.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "was brought", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "were brought", correct: true, feedback: "Well-done!" },
+          { text: "was buyed", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "were buyed", correct: false, feedback: "NO, think about the past simple passive." }
+        ],
+    },
+//Past simple passive 3
+    {
+        name: "Past simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        A cup ______________. ",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "was broked", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "were broken ",correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "was broken ", correct: true, feedback: "Well-done!" },
+          { text: "were broked", correct: false, feedback: "NO, think about the past simple passive." }
+        ],
+    },
+//Past simple passive 4
+    {
+        name: "Past simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        The window ____________. ",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "was open", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "were opened", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "was opened", correct: true, feedback: "Well-done!" },
+          { text: "were open", correct: false, feedback: "NO, think about the past simple passive." }
+        ],
+    },
+//Past simple passive 5
+    {
+        name: "Past simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        The jewels  ____________. ",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "were stolen", correct: true, feedback: "Well-done!" },
+          { text: "were stole", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "was stolen", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "wes stole", correct: false, feedback: "NO, think about the past simple passive." }
+        ],
+    },
+//Past simple passive 6
+    {
+        name: "Past simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        The letter _____________ by the president.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "were wrote", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "was written", correct: true, feedback: "Well-done!" },
+          { text: "was wrote", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "were written", correct: false, feedback: "NO, think about the past simple passive." }
+        ],
+    },
+//Past simple passive 7
+    {
+        name: "Past simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        The parcel _____________ last week.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "was sent", correct: true, feedback: "Well-done!" },
+          { text: "was send", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "was discussed", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "were discussed", correct: false, feedback: "NO, think about the past simple passive." }
+        ],
+    },
+//Past simple passive 8
+    {
+        name: "Past simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        This film ______________ by them.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "was discused", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "were discussed",correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "was discussed", correct: true, feedback: "Well-done!" },
+          { text: "were dicussed", correct: false, feedback: "NO, think about the past simple passive." }
+        ],
+    },
+//Past simple passive 9
+    {
+        name: "Past simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        The dishes ______________ by the dishwasher.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "was washed", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "were washed", correct: true, feedback: "Well-done!" },
+          { text: "ware wash", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "was wash", correct: false, feedback: "NO, think about the past simple passive." }
+        ],
+    },
+//Past simple passive 10
+    {
+        name: "Past simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        Her car ______________ last year.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "were wreck", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "was wrecked", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "was wreck", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "were wrecked", correct: true, feedback: "Well-done!" }
+        ],
+    },
+
+
+//Present simple passive 1
+    {
+        name: "Present simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        Many trees _____________ by volunteers.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "is planted", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "are planted", correct: true, feedback: "Perfect!" },
+          { text: "plants", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "is plant", correct: false, feedback: "NO, think about the past simple passive." }
+        ],
+    },
+//Present simple passive 2
+    {
+        name: "Present simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        ______ chocolate __________ from cocoa?",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Are…make", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "Is…make", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "Are…made", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "Is...made", correct: true, feedback: "Perfect!" }
+        ],
+    },
+//Present simple passive 3
+    {
+        name: "Present simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        This poem ______________by Shevchenko.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "aren’t  write", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "isn’t written", correct: true, feedback: "Perfect!" },
+          { text: "isn’t write", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "aren’t written", correct: false, feedback: "NO, think about the past simple passive." }
+        ],
+    },
+//Present simple passive 4
+    {
+        name: "Present simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        Carrots _______________ by the girl.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "are eaten", correct: true, feedback: "Perfect!" },
+          { text: "is eat", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "is eaten", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "are eat", correct: false, feedback: "NO, think about the past simple passive." }
+        ],
+    },
+//Present simple passive 5
+    {
+        name: "Present simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        The mall _______________ now.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "is closed", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "are close", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "are closed", correct: true, feedback: "Perfect!" },
+          { text: "is close", correct: false, feedback: "NO, think about the past simple passive." }
+        ],
+    },
+//Present simple passive 6
+    {
+        name: "Present simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        He _____________ to kindergarten.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "is taken", correct: true, feedback: "Perfect!" },
+          { text: "am taken", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "are taken", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "is took", correct: false, feedback: "NO, think about the past simple passive." }
+        ],
+    },
+//Present simple passive 7
+    {
+        name: "Present simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        She _______________ to dance club.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "aren’t taken", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "aren’t took", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "isn't took", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "isn't taken", correct: true, feedback: "Perfect!" }
+        ],
+    },
+//Present simple passive 8
+    {
+        name: "Present simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        The text ______________.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "are read", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "was read", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "is read", correct: true, feedback: "Perfect!" }
+        ],
+    },
+//Present simple passive 9
+    {
+        name: "Present simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        His car ______________.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "was broken", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "is broken", correct: true, feedback: "Perfect!" },
+          { text: "are broken", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "is broke", correct: false, feedback: "NO, think about the past simple passive." }
+        ],
+    },
+//Present simple passive 10
+    {
+        name: "Present simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        Eggs _____________ every day.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "is eaten", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "are eaten", correct: true, feedback: "Perfect!" },
+          { text: "is ate", correct: false, feedback: "NO, think about the past simple passive." },
+          { text: "are ate", correct: false, feedback: "NO, think about the past simple passive." }
+        ],
+    },
+
+//Future simple passive 1
+    {
+        name: "Future simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        The parcel ___________ by the company.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "would be sent", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "will  sent", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "will be send", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "will be sent", correct: true, feedback: "Great!" }
+        ],
+    },
+//Future simple passive 2
+    {
+        name: "Future simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        The project _____________.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "will not be done", correct: true, feedback: "Great!" },
+          { text: "will not be do", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "will not be did", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "would not be did",  correct: false, feedback: "NO, think about the future simple passive form." }
+        ],
+    },
+//Future simple passive 3
+    {
+        name: "Future simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        _____ the fire ______ put out?",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Will…be", correct: true, feedback: "Great!" },
+          { text: "Will…been", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "Would…be", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "Would…been", correct: false, feedback: "NO, think about the future simple passive form." }
+        ],
+    },
+//Future simple passive 4
+    {
+        name: "Future simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        The house _____________.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "would not been build", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "will not be built", correct: true, feedback: "Great!" },
+          { text: "would not be built", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "will not been build", correct: false, feedback: "NO, think about the future simple passive form." }
+        ],
+    },
+//Future simple passive 5
+    {
+        name: "Future simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        The contract _____________ by our company.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "will terminated", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "would be terminated", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "will be terminated", correct: true, feedback: "Great!" },
+          { text: "will be terminate", correct: false, feedback: "NO, think about the future simple passive form." }
+        ],
+    },
+//Future simple passive 6
+    {
+        name: "Future simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        Our meeting _____________ because of bad weather.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "would be reschedule", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "will  rescheduled", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "would reschedule", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "will be rescheduled", correct: true, feedback: "Great!" }
+        ],
+    },
+//Future simple passive 7
+    {
+        name: "Future simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        The plane _______________.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "will not delayed", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "will not been delayed", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "will not be delayed", correct: true, feedback: "Great!" },
+          { text: "would not been delayed", correct: false, feedback: "NO, think about the future simple passive form." }
+        ],
+    },
+//Future simple passive 8
+    {
+        name: "Future simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        _____ the house _______________?",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Will…cleaned", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "Will…clean", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "Would…be cleaned", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "Will…be cleaned", correct: true, feedback: "Great!" }
+        ],
+    },
+//Future simple passive 9
+    {
+        name: "Future simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        The result _____________ next week.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "will be done", correct: true, feedback: "Great!" },
+          { text: "will  done", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "would be done", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "would done", correct: false, feedback: "NO, think about the future simple passive form." }
+        ],
+    },
+//Future simple passive 10
+    {
+        name: "Future simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        Your order ______________ in two days.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "will made", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "will be make", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "would be made", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "will be made", correct: true, feedback: "Great!" }
+        ],
+    },
+// end of the last task
+  ] // end of task list bracket
+} // end of lesson
