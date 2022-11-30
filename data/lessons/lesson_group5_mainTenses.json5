@@ -6,9 +6,12 @@
   name: "Main Tenses",
   series: 'Grammar',
   // used for documentation, will not be shown to the user
+  text: "This is the exercise for the main tenses.",
+  text_source: "N/A",
+  text_licence: "CC BY-SA",
+  text_url: "N/A",
   tasks: [
     // the list of tasks for this lesson
-
     //Theoretical tasks (Present Simple and Present Continuous) Ex1
     {
       name: "Theoretical task for Present Simple and Present Continuous",
@@ -80,7 +83,7 @@
         '7': {
           description: 'plots of books, films, etc.'
         }
-      }
+      },
     },
     //Fill in the gaps (Present Simple and Present Continuous) Ex1
     {
@@ -92,22 +95,24 @@
       show_lesson_text: false,
       // here you have to write your question and your text
       question: "<p>Choose the right option</p>\
-        <p> As everybody _1_  nowadays, the knowledge we _2_ of life before the beginnings of human memory and tradition is derived from the markings and fossils of living things in the stratified rocks.</p>",
+      <p> As everybody _1_  nowadays, the knowledge we _2_ of life before the beginnings of human memory and tradition is derived from the markings and fossils of living things in the stratified rocks.</p>",
       gaps: {
         mode: 'select',
         // here you can fill in the options for the gaps
         _1_: [
           {
-            text: 'knows',
-            // the word(s) the student will see
+            text:'knows',
             correct: true,
             // is this solution correct, false or true
-            feedback: 'Good job! The right answer is <b>knows</b>, because it is a stative verb of mental states. Also, we use Present Simple with stative verbs of <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'
+            feedback: 'Good job! The right answer is <b>knows</b>, \
+            because it is a stative verb of mental states.\
+            Also, we use Present Simple with stative verbs of <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'
           },
           {
             text: 'is knowing',
             correct: false,
-            feedback: 'Oops! The right answer is <b>‘knows’</b>, because it is a stative verb of mental states. Also, we use Present Simple with stative verbs of <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'
+            feedback: 'Oops! The right answer is <b>‘knows’</b>, because it is a stative verb of mental states. \
+            Also, we use Present Simple with stative verbs of <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'
           }
         ],
         _2_: [
