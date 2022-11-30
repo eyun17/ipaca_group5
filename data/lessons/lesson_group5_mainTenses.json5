@@ -1218,7 +1218,7 @@
       show_lesson_text: false,
       question: "Find the appropriate explanation for the usage of Present Perfect and Present Perfect Continuous for every sentence!",
       //write your question here
-      marktext: "<ol>\n<li>While some governments <b>#2#have #2#agreed</b> to tackle the climate crisis, others have avoided making any commitments.</li>\n<li>Evidence shows that the Sun formed about 4.5 billion years ago and  <b>#3#has #3#been #3#shining</b>ever since.</li>\n<li>Studies <b>#4have #4shown</b> that the work of lobbying groups tends to be more negative than positive in nature.\n</li>\n<li>Astronomers <b>#1#have #1#recently #1#discovered</b> several thousand planets around other stars, including numerous multiplanet systems.</li>\n</ol>\n",
+      marktext: "<ol>\n<li>While some governments <b>#2#have #2#agreed</b> to tackle the climate crisis, others have avoided making any commitments.</li>\n<li>Evidence shows that the Sun formed about 4.5 billion years ago and  <b>#3#has #3#been #3#shining</b>ever since.</li>\n<li>Studies <b>#4#have #4#shown</b> that the work of lobbying groups tends to be more negative than positive in nature.\n</li>\n<li>Astronomers <b>#1#have #1#recently #1#discovered</b> several thousand planets around other stars, including numerous multiplanet systems.</li>\n</ol>\n",
       // write the text here, mark the words you want the student to mark with #1# in front of the word
       markers: {
         // here you can write what should be marked
