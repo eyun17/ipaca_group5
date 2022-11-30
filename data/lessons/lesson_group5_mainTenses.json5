@@ -657,7 +657,7 @@
       show_lesson_text: false,
       question: "Find the appropriate explanation for the usage of Past Simple and Past Continuous for every sentence.",
       //write your question here
-      marktext: "<p><ol>\n<li>In 1957 the Soviets <b>#3launched </b> Sputnik 1 into outer space.</li>\n<li>In the early 1980s, Louis Liebenberg <b>#1was #1taking</b> a philosophy of science class at the University of Cape Town.</li>\n<li>At the moment when the volcano erupted, most people <b>#2were #2sleeping</b>.</li>\n<li>The organization <b>#4depended</b> heavily on voluntary help from 2005 to 2007. </li>\n</ol>\n</p> ",
+      marktext: "<p><ol>\n<li>In 1957 the Soviets <b>#3#launched </b> Sputnik 1 into outer space.</li>\n<li>In the early 1980s, Louis Liebenberg <b>#1#was #1#taking</b> a philosophy of science class at the University of Cape Town.</li>\n<li>At the moment when the volcano erupted, most people <b>#2#were #2#sleeping</b>.</li>\n<li>The organization <b>#4#depended</b> heavily on voluntary help from 2005 to 2007. </li>\n</ol>\n</p> ",
       // write the text here, mark the words you want the student to mark with #1# in front of the word
       markers: {
         // here you can write what should be marked
@@ -685,7 +685,7 @@
       show_lesson_text: false,
       question: "Find the appropriate explanation for the usage of Past Simple and Past Continuous for every sentence.",
       //write your question here
-      marktext: "<p><ol>\n<li>In 1913, the Venezuelan government <b>#3contracted</b> with the Royal Dutch Shell Group to extract rich oil reserves.</li>\n<li>Lucas came across Campbell's work while he <b>#2was #2working</b> on Star Wars</li>\n<li>The United States <b>#4wanted</b> to create an international order that was strong enough to promote international economic stability.</li>\n<li>Darwin <b>#1was #1studying</b> to be a medical doctor at the University of Edinburgh for three years.</li>\n</ol>\n</p> ",
+      marktext: "<p><ol>\n<li>In 1913, the Venezuelan government <b>#3#contracted</b> with the Royal Dutch Shell Group to extract rich oil reserves.</li>\n<li>Lucas came across Campbell's work while he <b>#2#was #2#working</b> on Star Wars</li>\n<li>The United States <b>#4#wanted</b> to create an international order that was strong enough to promote international economic stability.</li>\n<li>Darwin <b>#1#was #1#studying</b> to be a medical doctor at the University of Edinburgh for three years.</li>\n</ol>\n</p> ",
       // write the text here, mark the words you want the student to mark with #1# in front of the word
       markers: {
         // here you can write what should be marked
@@ -713,7 +713,7 @@
       show_lesson_text: false,
       // here you have to write your question and your text
       question: "<p>Choose the right option!</p>\
-        <p>The modern telephone is the result of the work of many people. Alexander Graham Bell was, however, the first to patent the telephone, as an \"apparatus for transmitting vocal or other sounds telegraphically\". Above all, Bell _1_ himself the goal of making life easier when he_2_ such a powerful machine.</p>",
+        <p>The modern telephone is the result of the work of many people. Alexander Graham Bell was, however, the first to patent the telephone, as an ´apparatus for transmitting vocal or other sounds telegraphically´. Above all, Bell _1_ himself the goal of making life easier when he_2_ such a powerful machine.</p>",
       gaps: {
         mode: 'select',
         // here you can fill in the options for the gaps
