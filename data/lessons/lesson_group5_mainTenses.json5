@@ -1598,7 +1598,7 @@
       show_lesson_text: false,
       question: "Find the appropriate explanation for the usage of Past Perfect for every sentence.",
       //write your question here
-      marktext: "<ol>\n<li>On November 4, 2013, the company confirmed that they <b>#2had #2hired</b> Nicolas Ghesquière to replace Marc Jacobs as artistic director of women's collections.</li>\n<li>If the company <b>#4had #4had</b> a better web site and support systems, a lot of issues could have been prevented. </li>\n<li>In the 1980s, Mary Leakey discovered a 75-foot trail of footprints made by three bipedal individuals who <b>#1had #1crossed</b> a thick bed of wet volcanic ash.</li>\n<li>By keeping blood sugar levels in a normal range using insulin after surgery , researchers <b>#3had #3hoped</b> to see a reduction in infections and other complications, but but their hopes were dashed.</li>\n<li>By 1890,  sharp-eyed observers <b>#5had #5discovered</b> more than 300 of these minor planets or asteroids. </li>\n</ol>\n",
+      marktext: "<ol>\n<li>On November 4, 2013, the company confirmed that they <b>#2#had #2#hired</b> Nicolas Ghesquière to replace Marc Jacobs as artistic director of women's collections.</li>\n<li>If the company <b>#4#had #4#had</b> a better web site and support systems, a lot of issues could have been prevented. </li>\n<li>In the 1980s, Mary Leakey discovered a 75-foot trail of footprints made by three bipedal individuals who <b>#1#had #1#crossed</b> a thick bed of wet volcanic ash.</li>\n<li>By keeping blood sugar levels in a normal range using insulin after surgery , researchers <b>#3#had #3#hoped</b> to see a reduction in infections and other complications, but but their hopes were dashed.</li>\n<li>By 1890,  sharp-eyed observers <b>#5#had #5#discovered</b> more than 300 of these minor planets or asteroids. </li>\n</ol>\n",
       // write the text here, mark the words you want the student to mark with #1# in front of the word
       markers: {
         // here you can write what should be marked
@@ -2036,7 +2036,7 @@
         primary: false,
         show_lesson_text: false,
         question: "Find the appropriate explanation for the usage of Future Simple for every sentence.",           //write your question here
-        marktext: "<ol>\n<li>If the satellite is high enough to be free of atmospheric friction, it <b>#2will #2remain</b> in orbit forever</li>\n<li>Companies <b>#1will #1begin</b> their employee fundraising campaigns for UWAC in June..</li>\n</ol>\n",  // write the text here, mark the words you want the student to mark with #1# in front of the word
+        marktext: "<ol>\n<li>If the satellite is high enough to be free of atmospheric friction, it <b>#2#will #2#remain</b> in orbit forever</li>\n<li>Companies <b>#1#will #1#begin</b> their employee fundraising campaigns for UWAC in June..</li>\n</ol>\n",  // write the text here, mark the words you want the student to mark with #1# in front of the word
         markers: {
           // here you can write what should be marked
           '1': {
