@@ -20,8 +20,8 @@
       interaction: "MARK",
       primary: false,
       show_lesson_text: false,
-      question: "<p>Find the appropriate explanation for the usage of Present Simple and Present Continuous for every sentence.</p>",
-      marktext: "<p>First, you #5#open a text editor or word processor, #5#create the HTML content and #5#choose the folder in which to save the Web page. <p> The brain #4#weighs about three pounds.<p> Noam Chomsky #6#explains that we're all born with an innate understanding of the way language works. <p> The Alchemist by Paulo Coelho #7#tells the mystical story of Santiago, an Andalusian shepherd boy who #7#yearns to travel in search of a worldly treasure.,<p> As everybody #3#knows, vocabulary is an important part of language, just like bricks in a building.,<p> With the advent of the Internet, the world #1#is #1#shrinking.,<p> William #2#is #2#advertising for a new CEO, after Smith’s sudden resignation.</p> ",
+      question: "Find the appropriate explanation for the usage of Present Simple and Present Continuous for every sentence.",
+      marktext: "First, you #5#open a text editor or word processor, #5#create the HTML content and #5#choose the folder in which to save the Web page. The brain #4#weighs about three pounds.<p> Noam Chomsky #6#explains that we're all born with an innate understanding of the way language works. The Alchemist by Paulo Coelho #7#tells the mystical story of Santiago, an Andalusian shepherd boy who #7#yearns to travel in search of a worldly treasure.,<p> As everybody #3#knows, vocabulary is an important part of language, just like bricks in a building.,With the advent of the Internet, the world #1#is #1#shrinking., William #2#is #2#advertising for a new CEO, after Smith’s sudden resignation.",
       // write the text here, mark the words you want the student to mark with #1# in front of the word
       markers: {
         // here you can write what should be marked
@@ -56,9 +56,9 @@
       interaction: "MARK",
       primary: false,
       show_lesson_text: false,
-      question: "<b>Find the appropriate explanation for the usage of Present Simple and Present Continuous for every sentence.<b>",
+      question: "Find the appropriate explanation for the usage of Present Simple and Present Continuous for every sentence.",
       //write your question here
-      marktext: "<p><ol>\n<li>Everything <b>#1#is #1#speeding #1#up</b>  thanks to our obsession with technology and efficiency.</li>\n<li>Almost 500 million people around the globe <b>#2#speak</b> Spanish.</li>\n<li>Dune by Denis Villeneuve <b>#3#tells</b>  the story of  Paul Atreides, a young man whose destiny is to travel in the Universe.</li>\n<li>Then you <b>#4#wash</b>  the fabric, <b>#4#dye</b>  it and <b>#4#cut</b>  it into patterns.</li>\n<li>She <b>#5#is #5#developing</b>  the commercial side of the organization.</li>\n<li>Brows <b>#6#explains</b>  that survivors of traumatic events  are often haunted by persistent and vivid memories of this experience.</li>\n</p> <li>Our company <b>#7#expects</b>  a rise in both our production and our cash flow.</li>\n</ol>\n",
+      marktext: "Everything #1#is #1#speeding #1# up  thanks to our obsession with technology and efficiency. Almost 500 million people around the globe #2#speak Spanish.Dune by Denis Villeneuve #3#tells the story of  Paul Atreides, a young man whose destiny is to travel in the Universe.Then you #4#wash the fabric, #4#dye it and #4#cut it into patterns.She #5#is #5#developing  the commercial side of the organization. Brows #6#explains that survivors of traumatic events  are often haunted by persistent and vivid memories of this experience. Our company #7#expects a rise in both our production and our cash flow.",
       // write the text here, mark the words you want the student to mark with #1# in front of the word
       markers: {
         // here you can write what should be marked
@@ -94,8 +94,8 @@
       primary: false,
       show_lesson_text: false,
       // here you have to write your question and your text
-      question: "<p>Choose the right option</p>\
-      <p> As everybody _1_  nowadays, the knowledge we _2_ of life before the beginnings of human memory and tradition is derived from the markings and fossils of living things in the stratified rocks.</p>",
+      question: "Choose the right option\
+      As everybody _1_  nowadays, the knowledge we _2_ of life before the beginnings of human memory and tradition is derived from the markings and fossils of living things in the stratified rocks.",
       gaps: {
         mode: 'select',
         // here you can fill in the options for the gaps
@@ -104,27 +104,27 @@
             text:'knows',
             correct: true,
             // is this solution correct, false or true
-            feedback: 'Good job! The right answer is <b>knows</b>, \
+            feedback: 'Good job! The right answer is knows, \
             because it is a stative verb of mental states.\
-            Also, we use Present Simple with stative verbs of <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'
+            Also, we use Present Simple with stative verbs of physical perception (hear, notice, see), mental process (to appreciate, to assume, to believe (= to consider), to know), wish (desire, want, wish), emotions (to detest, to dislike, to hate, to like, to love), relational verbs ( to concern, to consist, to contain, to depend, to deserve), other verbs (to agree, to allow, to appear (= to seem), to astonish, to claim).'
           },
           {
             text: 'is knowing',
             correct: false,
-            feedback: 'Oops! The right answer is <b>‘knows’</b>, because it is a stative verb of mental states. \
-            Also, we use Present Simple with stative verbs of <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'
+            feedback: 'Oops! The right answer is ‘knows’, because it is a stative verb of mental states. \
+            Also, we use Present Simple with stative verbs of physical perception (hear, notice, see), mental process (to appreciate, to assume, to believe (= to consider), to know), wish (desire, want, wish), emotions (to detest, to dislike, to hate, to like, to love), relational verbs( to concern, to consist, to contain, to depend, to deserve), other verbs (to agree, to allow, to appear (= to seem), to astonish, to claim).'
           }
         ],
         _2_: [
           {
             text: 'are possessing',
             correct: false,
-            feedback: 'Oops! The right answer is <b>‘possess’</b>, because it is a relational verb. Also, we use Present Simple with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'
+            feedback: 'Oops! The right answer is ‘possess’, because it is a relational verb. Also, we use Present Simple with stative verbs of: physical perception (hear, notice, see)mental process (to appreciate, to assume, to believe (= to consider), to know), wish (desire, want, wish), emotions (to detest, to dislike, to hate, to like, to love), relational verbs ( to concern, to consist, to contain, to depend, to deserve), other verbs (to agree, to allow, to appear (= to seem), to astonish, to claim).'
           },
           {
             text: 'possess',
             correct: true,
-            feedback: 'Good job! The right answer is <b>‘possess’</b>, because it is a relational verb. Also, we use Present Simple with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'
+            feedback: 'Good job! The right answer is ‘possess’, because it is a relational verb. Also, we use Present Simple with stative verbs of: physical perception (hear, notice, see), mental process (to appreciate, to assume, to believe (= to consider), to know), wish (desire, want, wish), emotions (to detest, to dislike, to hate, to like, to love), relational verbs ( to concern, to consist, to contain, to depend, to deserve), other verbs (to agree, to allow, to appear (= to seem), to astonish, to claim).'
           }
         ]
       }
@@ -138,8 +138,8 @@
       primary: false,
       show_lesson_text: false,
       // here you have to write your question and your text
-      question: "<p>Choose the right option</p> \
-        <p>In the movie Apollo 13, Ed Harris _1_ NASA flight director Gene Kranz as he successfully _2_the crew of a damaged spacecraft to safety. In a famous scene during which Kranz and his staff  _3_ to overcome some extremely daunting challenges, Harris  _4_, “Failure is not an option!”</p>",
+      question: "Choose the right option \
+        In the movie Apollo 13, Ed Harris _1_ NASA flight director Gene Kranz as he successfully _2_the crew of a damaged spacecraft to safety. In a famous scene during which Kranz and his staff  _3_ to overcome some extremely daunting challenges, Harris  _4_, “Failure is not an option!”",
       gaps: {
         mode: 'select',
         // here you can fill in the options for the gaps
@@ -149,48 +149,48 @@
             // the word(s) the student will see
             correct: true,
             // is this solution correct, false or true
-            feedback: 'Good job! The right answer is portrays. We use Present Simple  <b>to describe a plot of the film </b>'
+            feedback: 'Good job! The right answer is portrays. We use Present Simple  to describe a plot of the film.'
           },
           {
             text: 'is portraying',
             correct: false,
-            feedback: 'Oops! The right answer is portrays. We use Present Simple  <b>to describe a plot of the film </b>'
+            feedback: 'Oops! The right answer is portrays. We use Present Simple to describe a plot of the film.'
           }
         ],
         _2_: [
           {
             text: 'is guiding',
             correct: false,
-            feedback: 'Oops! The right answer is guides. We use Present Simple <b> to describe a plot of the film </b>'
+            feedback: 'Oops! The right answer is guides. We use Present Simple to describe a plot of the film.'
           },
           {
             text: 'guides',
             correct: true,
-            feedback: 'Good job! The right answer is guides. We use Present Simple <b>to describe a plot of the film </b>'
+            feedback: 'Good job! The right answer is guides. We use Present Simple to describe a plot of the film.'
           }
         ],
         _3_: [
           {
             text: 'attempt',
             correct: false,
-            feedback: 'Oops! The right answer is are attempting. We use Present Continuous <b>to focus on the action in progress</b>'
+            feedback: 'Oops! The right answer is are attempting. We use Present Continuous to focus on the action in progress.'
           },
           {
             text: 'are attempting',
             correct: true,
-            feedback: 'Good job! The right answer is are attempting. We use Present Continuous <b>to focus on the action in progress</b>'
+            feedback: 'Good job! The right answer is are attempting. We use Present Continuous to focus on the action in progress.'
           }
         ],
         _4_: [
           {
             text: 'shouts',
             correct: true,
-            feedback: 'Good job! The right answer is shouts. We use Present Simple <b> to describe a plot of the film  </b>'
+            feedback: 'Good job! The right answer is shouts. We use Present Simple to describe a plot of the film .'
           },
           {
             text: 'is shouting',
             correct: false,
-            feedback: 'Oops! The right answer is shouts. We use Present Simple <b>to describe a plot of the film  </b>'
+            feedback: 'Oops! The right answer is shouts. We use Present Simple to describe a plot of the film.'
           }
         ]
       }
@@ -204,8 +204,8 @@
       primary: false,
       show_lesson_text: false,
       // here you have to write your question and your text
-      question: "<p>Choose the right option</p>\
-        <p>But as more and more missions take flight, the network _1_ congested. The switchboard is often busy. So, NASA _2_ to lighten the load.</p>",
+      question: "Choose the right option\
+        But as more and more missions take flight, the network _1_ congested. The switchboard is often busy. So, NASA _2_ to lighten the load.",
       gaps: {
         mode: 'select',
         // here you can fill in the options for the gaps
@@ -215,24 +215,24 @@
             // the word(s) the student will see
             correct: false,
             // is this solution correct, false or true
-            feedback: 'Oops! The right answer is is getting. We use Present Continuous  <b>for changing or developing situations </b>'
+            feedback: 'Oops! The right answer is is getting. We use Present Continuous for changing or developing situations.'
           },
           {
             text: 'is getting',
             correct: true,
-            feedback: 'Good job! The right answer is is getting. We use Present Continuous <b> for changing or developing situations </b>'
+            feedback: 'Good job! The right answer is is getting. We use Present Continuous for changing or developing situations.'
           }
         ],
         _2_: [
           {
             text: 'is working',
             correct: true,
-            feedback: 'Good job! The right answer is "is working". We use Present Continuous <b> to expresses an action going on at the present period </b>'
+            feedback: 'Good job! The right answer is "is working". We use Present Continuous to expresses an action going on at the present period.'
           },
           {
             text: 'works',
             correct: false,
-            feedback: 'Oops! The right answer is "is working". We use Present Continuous  <b>to expresses an action going on at the present period </b>'
+            feedback: 'Oops! The right answer is "is working". We use Present Continuous to expresses an action going on at the present period.'
           }
         ]
       }
@@ -246,8 +246,8 @@
       primary: false,
       show_lesson_text: false,
       // here you have to write your question and your text
-      question: "<p> Choose the right option</p>\
-        <p> Healthcare _1_ healthcare is in need of change. The population ageing, the increase in chronic and heart diseases and the increase in population size _2_ the current hospital-centric healthcare.\n</p>",
+      question: "Choose the right option!\
+        Healthcare _1_ healthcare is in need of change. The population ageing, the increase in chronic and heart diseases and the increase in population size _2_ the current hospital-centric healthcare.",
       gaps: {
         mode: 'select',
         // here you can fill in the options for the gaps
@@ -257,25 +257,25 @@
             // the word(s) the student will see
             correct: false,
             // is this solution correct, false or true
-            feedback: 'Oops! The right answer is ‘is changing’, because we use Present Continuous  <b>for changing and developing situations. </b>'
+            feedback: 'Oops! The right answer is ‘is changing’, because we use Present Continuous for changing and developing situations.'
             // feedback you want to give to the user
           },
           {
             text: 'is changing',
             correct: true,
-            feedback: 'Good job! The right answer is ‘is changing’, because we use Present Continuous <b> for changing and developing situations. </b>,'
+            feedback: 'Good job! The right answer is ‘is changing’, because we use Present Continuous for changing and developing situations.,'
           }
         ],
         _2_: [
           {
             text: 'is overwhelming,',
             correct: true,
-            feedback: 'Good job! The right answer is ‘is overwhelming’, because we use Present Continuous  <b>or temporary situations and trends in society or the world around us. </b>,'
+            feedback: 'Good job! The right answer is ‘is overwhelming’, because we use Present Continuous or temporary situations and trends in society or the world around us.,'
           },
           {
             text: 'overwhelms',
             correct: false,
-            feedback: 'Oops! The right answer is ‘is overwhelming’, because we use Present Continuous <b> for temporary situation and trends in society or the world around us. </b>,'
+            feedback: 'Oops! The right answer is ‘is overwhelming’, because we use Present Continuous for temporary situation and trends in society or the world around us.,'
           }
         ]
       }
@@ -289,10 +289,10 @@
       primary: false,
       show_lesson_text: false,
       // here you have to write your question and your text
-      question: "<p> Choose the right option </p>\
-        <p> Sometimes called rainforests of the sea, shallow coral reefs _1_ some of Earth's most diverse ecosystems.\
+      question: "Choose the right option!\
+         Sometimes called rainforests of the sea, shallow coral reefs _1_ some of Earth's most diverse ecosystems.\
          Now, they _2_ less than 0.1% of the world's ocean area and _3_ a home for at least 25% of all marine species,\
-         including fish, mollusks, worms, crustaceans, echinoderms, sponges, tunicates and other cnidarians. </p>",
+         including fish, mollusks, worms, crustaceans, echinoderms, sponges, tunicates and other cnidarians.",
       gaps: {
         mode: 'select',
         // here you can fill in the options for the gaps
@@ -302,37 +302,37 @@
             // the word(s) the student will see
             correct: false,
             // is this solution correct, false or true
-            feedback: 'Oops! The right answer is ‘form’, because we use Present Simple <b> for factual description. </b>'
+            feedback: 'Oops! The right answer is ‘form’, because we use Present Simple for factual description.'
             // feedback you want to give to the user
           },
           {
             text: 'form',
             correct: true,
-            feedback: 'Good job! The right answer is ‘form’, because we use Present Simple <b> for factual description. </b>'
+            feedback: 'Good job! The right answer is ‘form’, because we use Present Simple for factual description.'
           }
         ],
         _2_: [
           {
             text: 'are occupying',
             correct: true,
-            feedback: 'Good job! The right answer is ‘are occupying’, because we use Present Continuous <b>for events or actions that are happening at the moment. </b>'
+            feedback: 'Good job! The right answer is ‘are occupying’, because we use Present Continuous for events or actions that are happening at the moment.'
           },
           {
             text: 'occupy',
             correct: false,
-            feedback: 'Oops! The right answer is ‘are occupying’, because we use Present Continuous  <b>for events or actions that are happening at the moment. </b>,'
+            feedback: 'Oops! The right answer is ‘are occupying’, because we use Present Continuous for events or actions that are happening at the moment.,'
           }
         ],
         _3_: [
           {
             text: 'are providing',
             correct: false,
-            feedback: 'Oops! The right answer is ‘provide’, because we use Present Simple  <b>for factual description. </b>'
+            feedback: 'Oops! The right answer is ‘provide’, because we use Present Simple for factual description.'
           },
           {
             text: 'provide',
             correct: true,
-            feedback: 'Good job! The right answer is ‘provide’, because we use Present Simple  <b>for factual description. </b>'
+            feedback: 'Good job! The right answer is ‘provide’, because we use Present Simple for factual description.'
           }
         ]
       }
@@ -353,18 +353,18 @@
           // this is the text the student will see
           correct: true,
           // is it correct (false, true)
-          feedback: "Good job! The right answer is ‘is looking for’. We use Present Continuous for <b> actions that are happening at the moment </b>"
+          feedback: "Good job! The right answer is ‘is looking for’. We use Present Continuous for actions that are happening at the moment."
           // what feedback do you want to give the student
         },
         {
           text: "looks for",
           correct: false,
-          feedback: "Oops! The right answer is ‘is looking for’. We use Present Continuous for  <b>actions that are happening at the moment </b>"
+          feedback: "Oops! The right answer is ‘is looking for’. We use Present Continuous for actions that are happening at the moment."
         },
         {
           text: "are looking for",
           correct: false,
-          feedback: "Oops! The right answer is ‘is looking for’. We use Present Continuous for  <b>actions that are happening at the moment </b>"
+          feedback: "Oops! The right answer is ‘is looking for’. We use Present Continuous for actions that are happening at the moment."
         }
       ]
     },
@@ -384,18 +384,18 @@
           // this is the text the student will see
           correct: false,
           // is it correct (false, true)
-          feedback: "Oops! The right answer is ‘make, apply, dry’. We use Present Simple to <b>describe processes and give instructions</b>"
+          feedback: "Oops! The right answer is ‘make, apply, dry’. We use Present Simple to describe processes and give instructions."
           // what feedback do you want to give the student
         },
         {
           text: "is making, is applying, is drying",
           correct: false,
-          feedback: "Oops! The right answer is ‘make, apply, dry’. We use Present Simple to <b>describe processes and give instructions</b>"
+          feedback: "Oops! The right answer is ‘make, apply, dry’. We use Present Simple to describe processes and give instructions."
         },
         {
           text: "make, apply, dry",
           correct: true,
-          feedback: "Good job! The right answer is ‘make, apply, dry’. We use Present Simple to <b>describe processes and give instructions</b>"
+          feedback: "Good job! The right answer is ‘make, apply, dry’. We use Present Simple to describe processes and give instructions."
         }
       ]
     },
@@ -415,18 +415,18 @@
           // this is the text the student will see
           correct: false,
           // is it correct (false, true)
-          feedback: "Oops! The right answer is ‘notes’. We use Present Simple to summarize or report the main arguments of other academics"
+          feedback: "Oops! The right answer is ‘notes’. We use Present Simple to summarize or report the main arguments of other academics."
           // what feedback do you want to give the student
         },
         {
           text: "notes",
           correct: true,
-          feedback: "Good job! The right answer is ‘notes’. We use Present Simple to summarize or report the main arguments of other academics"
+          feedback: "Good job! The right answer is ‘notes’. We use Present Simple to summarize or report the main arguments of other academics."
         },
         {
           text: "are noting",
           correct: false,
-          feedback: "Oops! The right answer is ‘notes’. We use Present Simple to summarize or report the main arguments of other academics"
+          feedback: "Oops! The right answer is ‘notes’. We use Present Simple to summarize or report the main arguments of other academics."
         }
       ]
     },
@@ -446,18 +446,18 @@
           // this is the text the student will see
           correct: false,
           // is it correct (false, true)
-          feedback: "Oops! The right answer is ‘wants’, because it is a stative verb. Also, we use Present Simple with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i> (to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> ,<b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i> ( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>\n"
+          feedback: "Oops! The right answer is ‘wants’, because it is a stative verb. Also, we use Present Simple with stative verbs of: physical perception (hear, notice, see), mental process (to appreciate, to assume, to believe (= to consider), to know), wish (desire, want, wish), emotions (to detest, to dislike, to hate, to like, to love), relational verbs ( to concern, to consist, to contain, to depend, to deserve), other verbs (to agree, to allow, to appear (= to seem), to astonish, to claim)."
           // what feedback do you want to give the student
         },
         {
           text: "wants",
           correct: true,
-          feedback: "Good job! The right answer is ‘wants’, because it is a stative verb. Also, we use Present Simple with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i>, <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i> ( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>\n"
+          feedback: "Good job! The right answer is ‘wants’, because it is a stative verb. Also, we use Present Simple with stative verbs of: physical perception (hear, notice, see), mental process (to appreciate, to assume, to believe (= to consider), to know), wish (desire, want, wish), emotions (to detest, to dislike, to hate, to like, to love), relational verbs ( to concern, to consist, to contain, to depend, to deserve), other verbs (to agree, to allow, to appear (= to seem), to astonish, to claim)."
         },
         {
           text: "are wanting",
           correct: false,
-          feedback: "Good job! The right answer is ‘wants’, because it is a stative verb. Also, we use Present Simple with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i>, <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i> (to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>\n"
+          feedback: "Good job! The right answer is ‘wants’, because it is a stative verb. Also, we use Present Simple with stative verbs of: physical perception (hear, notice, see), mental process (to appreciate, to assume, to believe (= to consider), to know), wish (desire, want, wish), emotions (to detest, to dislike, to hate, to like, to love), relational verbs (to concern, to consist, to contain, to depend, to deserve), other verbs (to agree, to allow, to appear (= to seem), to astonish, to claim)."
         }
       ]
     },
@@ -508,18 +508,18 @@
           // this is the text the student will see
           correct: true,
           // is it correct (false, true)
-          feedback: "Good job! The right answer is ‘are changing’. We use Present Continuous for <b>temporary situations and trends in society or the world around us.</b>"
+          feedback: "Good job! The right answer is ‘are changing’. We use Present Continuous for temporary situations and trends in society or the world around us."
           // what feedback do you want to give the student
         },
         {
           text: "changes",
           correct: false,
-          feedback: "Oops! The right answer is ‘are changing’. We use Present Continuous for <b>temporary situations and trends in society or the world around us.</b>"
+          feedback: "Oops! The right answer is ‘are changing’. We use Present Continuous for <b>temporary situations and trends in society or the world around us."
         },
         {
           text: "is changing",
           correct: false,
-          feedback: "Oops! The right answer is ‘are changing’. We use Present Continuous for<b>temporary situations and trends in society or the world around us.</b>"
+          feedback: "Oops! The right answer is ‘are changing’. We use Present Continuous for<b>temporary situations and trends in society or the world around us."
         }
       ]
     },
@@ -539,18 +539,18 @@
           // this is the text the student will see
           correct: true,
           // is it correct (false, true)
-          feedback: "Good job! The right answer is ‘pass through’. We use Present Simple for <b>factual description.</b>"
+          feedback: "Good job! The right answer is ‘pass through’. We use Present Simple for <b>factual description."
           // what feedback do you want to give the student
         },
         {
           text: "is passing through",
           correct: false,
-          feedback: "Oops! The right answer is ‘pass through’. We use Present Simple for <b>factual description.<b>"
+          feedback: "Oops! The right answer is ‘pass through’. We use Present Simple for <b>factual description."
         },
         {
           text: "are passing through",
           correct: false,
-          feedback: "Oops! The right answer is ‘pass through’. We use Present Simple for<b>factual description.</b>"
+          feedback: "Oops! The right answer is ‘pass through’. We use Present Simple for<b>factual description."
         }
       ]
     },
@@ -570,18 +570,18 @@
           // this is the text the student will see
           correct: true,
           // is it correct (false, true)
-          feedback: "Good job! The right answer is ‘have’, because it is a stative verb. Also, we use Present Simple with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>"
+          feedback: "Good job! The right answer is ‘have’, because it is a stative verb. Also, we use Present Simple with stative verbs of: physical perception (hear, notice, see), mental process (to appreciate, to assume, to believe (= to consider), to know), (desire, want, wish), emotions (to detest, to dislike, to hate, to like, to love), relational verbs ( to concern, to consist, to contain, to depend, to deserve), other verbs (to agree, to allow, to appear (= to seem), to astonish, to claim)."
           // what feedback do you want to give the student
         },
         {
           text: "are having",
           correct: false,
-          feedback: "Oops! The right answer is ‘have’, because it is a stative verb. Also, we use Present Simple with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>"
+          feedback: "Oops! The right answer is ‘have’, because it is a stative verb. Also, we use Present Simple with stative verbs of: physical perception (hear, notice, see), mental process (to appreciate, to assume, to believe (= to consider), to know), wish (desire, want, wish), emotions (to detest, to dislike, to hate, to like, to love), relational verbs ( to concern, to consist, to contain, to depend, to deserve), other verbs (to agree, to allow, to appear (= to seem), to astonish, to claim)."
         },
         {
           text: "is having",
           correct: false,
-          feedback: "Oops! The right answer is ‘have’, because it is a stative verb. Also, we use Present Simple with stative verbs of: <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>\n"
+          feedback: "Oops! The right answer is ‘have’, because it is a stative verb. Also, we use Present Simple with stative verbs of: physical perception (hear, notice, see), mental process (to appreciate, to assume, to believe (= to consider), to know), wish(desire, want, wish), emotions (to detest, to dislike, to hate, to like, to love), relational verbs ( to concern, to consist, to contain, to depend, to deserve), other verbs (to agree, to allow, to appear (= to seem), to astonish, to claim)."
         }
       ]
     },
@@ -601,18 +601,18 @@
           // this is the text the student will see
           correct: true,
           // is it correct (false, true)
-          feedback: "Good job! The right answer is ‘have’. We use Present Simple for <b>factual description</b>."
+          feedback: "Good job! The right answer is ‘have’. We use Present Simple for <b>factual description."
           // what feedback do you want to give the student
         },
         {
           text: "develop",
           correct: false,
-          feedback: "Oops! The right answer is ‘are developing’. We use Present Continuous for <b>events or actions that are happening at the moment<b>."
+          feedback: "Oops! The right answer is ‘are developing’. We use Present Continuous for events or actions that are happening at the moment."
         },
         {
           text: "develops",
           correct: false,
-          feedback: "Oops! The right answer is ‘are developing’. We use Present Continuous for <b> events or actions that are happening at the moment</b>."
+          feedback: "Oops! The right answer is ‘are developing’. We use Present Continuous for events or actions that are happening at the moment."
         }
       ]
     },
@@ -632,18 +632,18 @@
           // this is the text the student will see
           correct: false,
           // is it correct (false, true)
-          feedback: "Oops! The right answer is ‘explains’. We use Present Simple <b>to summarize or report the main arguments of other academics</b>."
+          feedback: "Oops! The right answer is ‘explains’. We use Present Simple to summarize or report the main arguments of other academics."
           // what feedback do you want to give the student
         },
         {
           text: "are explaining",
           correct: false,
-          feedback: "Oops! The right answer is ‘explains’. We use Present Simple <b>to summarize or report the main arguments of other academics</b>."
+          feedback: "Oops! The right answer is ‘explains’. We use Present Simple to summarize or report the main arguments of other academics."
         },
         {
           text: "explains",
           correct: true,
-          feedback: "Good job! The right answer is ‘explains’. We use Present Simple <b>to summarize or report the main arguments of other academics</b>"
+          feedback: "Good job! The right answer is ‘explains’. We use Present Simple to summarize or report the main arguments of other academics."
         }
       ]
     },
@@ -657,7 +657,7 @@
       show_lesson_text: false,
       question: "Find the appropriate explanation for the usage of Past Simple and Past Continuous for every sentence.",
       //write your question here
-      marktext: "<p><ol>\n<li>In 1957 the Soviets <b>#3#launched </b> Sputnik 1 into outer space.</li>\n<li>In the early 1980s, Louis Liebenberg <b>#1#was #1#taking</b> a philosophy of science class at the University of Cape Town.</li>\n<li>At the moment when the volcano erupted, most people <b>#2#were #2#sleeping</b>.</li>\n<li>The organization <b>#4#depended</b> heavily on voluntary help from 2005 to 2007. </li>\n</ol>\n</p> ",
+      marktext: "In 1957 the Soviets #3#launched Sputnik 1 into outer space.\ In the early 1980s, Louis Liebenberg <b>#1#was #1#taking a philosophy of science class at the University of Cape Town.\ At the moment when the volcano erupted, most people #2#were #2#sleeping. \ The organization #4#depended heavily on voluntary help from 2005 to 2007. ",
       // write the text here, mark the words you want the student to mark with #1# in front of the word
       markers: {
         // here you can write what should be marked
@@ -685,7 +685,7 @@
       show_lesson_text: false,
       question: "Find the appropriate explanation for the usage of Past Simple and Past Continuous for every sentence.",
       //write your question here
-      marktext: "<p><ol>\n<li>In 1913, the Venezuelan government <b>#3#contracted</b> with the Royal Dutch Shell Group to extract rich oil reserves.</li>\n<li>Lucas came across Campbell's work while he <b>#2#was #2#working</b> on Star Wars</li>\n<li>The United States <b>#4#wanted</b> to create an international order that was strong enough to promote international economic stability.</li>\n<li>Darwin <b>#1#was #1#studying</b> to be a medical doctor at the University of Edinburgh for three years.</li>\n</ol>\n</p> ",
+      marktext: "In 1913, the Venezuelan government #3#contracted with the Royal Dutch Shell Group to extract rich oil reserves. \ Lucas came across Campbell's work while he #2#was #2#working on Star Wars. \ The United States #4#wanted to create an international order that was strong enough to promote international economic stability. \ Darwin #1#was #1#studying to be a medical doctor at the University of Edinburgh for three years.",
       // write the text here, mark the words you want the student to mark with #1# in front of the word
       markers: {
         // here you can write what should be marked
@@ -712,8 +712,8 @@
       primary: false,
       show_lesson_text: false,
       // here you have to write your question and your text
-      question: "<p>Choose the right option!</p>\
-        <p>The modern telephone is the result of the work of many people. Alexander Graham Bell was, however, the first to patent the telephone, as an ´apparatus for transmitting vocal or other sounds telegraphically´. Above all, Bell _1_ himself the goal of making life easier when he_2_ such a powerful machine.</p>",
+      question: "Choose the right option!\
+        The modern telephone is the result of the work of many people. Alexander Graham Bell was, however, the first to patent the telephone, as an ´apparatus for transmitting vocal or other sounds telegraphically´. Above all, Bell _1_ himself the goal of making life easier when he_2_ such a powerful machine.",
       gaps: {
         mode: 'select',
         // here you can fill in the options for the gaps
@@ -723,25 +723,25 @@
             // the word(s) the student will see
             correct: false,
             // is this solution correct, false or true
-            feedback: 'Oops! The right answer is <b>‘set’</b>, because we use Past Simple for a single action which took place in the past.'
+            feedback: 'Oops! The right answer is ‘set’, because we use Past Simple for a single action which took place in the past.'
             // feedback you want to give to the user
           },
           {
             text: 'set',
             correct: true,
-            feedback: 'Good job! The right answer is <b>‘set’</b>, because use Past Simple for a single action which took place in the past.'
+            feedback: 'Good job! The right answer is ‘set’, because use Past Simple for a single action which took place in the past.'
           }
         ],
         _2_: [
           {
             text: 'was creating',
             correct: true,
-            feedback: 'Good job! The right answer is <b>‘was creating’.</b>, because we use Past Continuous for events which were in progress in the past.'
+            feedback: 'Good job! The right answer is ‘was creating’, because we use Past Continuous for events which were in progress in the past.'
           },
           {
             text: 'created',
             correct: false,
-            feedback: 'Oops! The right answer is <b>‘was creating’.</b>, because we use Past Continuous for events which were in progress in the past.'
+            feedback: 'Oops! The right answer is ‘was creating’, because we use Past Continuous for events which were in progress in the past.'
           }
         ]
       }
@@ -755,8 +755,8 @@
       primary: false,
       show_lesson_text: false,
       // here you have to write your question and your text
-      question: "<p>Choose the right option!</p>\
-        <p>Christopher Columbus was an Italian explorer and navigator who _1_ four voyages across the Atlantic Ocean that were sponsored by the Catholic Monarchs of Spain. Thanks to this, the first contact of Europeans with the Caribbean, Central America, and South America _2_ place.</p>",
+      question: "Choose the right option!\
+        Christopher Columbus was an Italian explorer and navigator who _1_ four voyages across the Atlantic Ocean that were sponsored by the Catholic Monarchs of Spain. Thanks to this, the first contact of Europeans with the Caribbean, Central America, and South America _2_ place.",
       gaps: {
         mode: 'select',
         // here you can fill in the options for the gaps
@@ -766,13 +766,13 @@
             // the word(s) the student will see
             correct: false,
             // is this solution correct, false or true
-            feedback: 'Oops! The right answer is <b>‘completed’</b>, because we use Past Simple for a single action which took place in the past.'
+            feedback: 'Oops! The right answer is ‘completed’, because we use Past Simple for a single action which took place in the past.'
             // feedback you want to give to the user
           },
           {
             text: 'completed',
             correct: true,
-            feedback: 'Good job! The right answer is <b>‘completed’</b>, because we use Past Simple for a single action which took place in the past.'
+            feedback: 'Good job! The right answer is ‘completed’, because we use Past Simple for a single action which took place in the past.'
           }
         ],
         _2_: [
@@ -784,7 +784,7 @@
           {
             text: 'was taking',
             correct: false,
-            feedback: 'Oops! The right answer is <b>‘took’.</b>, because we use Past Simple for a single action which took place in the past.'
+            feedback: 'Oops! The right answer is ‘took’, because we use Past Simple for a single action which took place in the past.'
           }
         ]
       }
@@ -798,8 +798,8 @@
       primary: false,
       show_lesson_text: false,
       // here you have to write your question and your text
-      question: "<p>Choose the right option!</p>\
-          <p>At the dawn of the 1920s, the world _1_ from the First World War. The conflict, which _2_ just over a year before the new decade began, had a fundamental and irreversible effect on society, culture, and fashion.</p>",
+      question: "Choose the right option!\
+          At the dawn of the 1920s, the world _1_ from the First World War. The conflict, which _2_ just over a year before the new decade began, had a fundamental and irreversible effect on society, culture, and fashion.",
       gaps: {
         mode: 'select',
         // here you can fill in the options for the gaps
@@ -809,25 +809,25 @@
             // the word(s) the student will see
             correct: false,
             // is this solution correct, false or true
-            feedback: 'Oops! The right answer is <b>‘was recovering’</b>, because we use Past Continuous for events which were in progress in the past.'
+            feedback: 'Oops! The right answer is ‘was recovering’, because we use Past Continuous for events which were in progress in the past.'
             // feedback you want to give to the user
           },
           {
             text: 'was recovering',
             correct: true,
-            feedback: 'Good job! The right answer is<b>‘was recovering’</b>, because we use Past Continuous for event which was in progress in the past.'
+            feedback: 'Good job! The right answer is ‘was recovering’, because we use Past Continuous for event which was in progress in the past.'
           }
         ],
         _2_: [
           {
             text: 'ended',
             correct: true,
-            feedback: 'Good job! The right answer is <b>‘ended’</b>, because we use Past Simple for a single action which took place in the past.'
+            feedback: 'Good job! The right answer is ‘ended’, because we use Past Simple for a single action which took place in the past.'
           },
           {
             text: 'was ending',
             correct: false,
-            feedback: 'Oops! The right answer is <b>‘ended’</b>, because we use Past Simple for a single action which took place in the past.'
+            feedback: 'Oops! The right answer is ‘ended’, because we use Past Simple for a single action which took place in the past.'
           }
         ]
       }
@@ -848,23 +848,23 @@
           // this is the text the student will see
           correct: false,
           // is it correct (false, true)
-          feedback: "Oops! The right answer is ‘began’. We use Past Simple for  <b>actions which happened at a specific time in the past </b>."
+          feedback: "Oops! The right answer is ‘began’. We use Past Simple for actions which happened at a specific time in the past."
           // what feedback do you want to give the student
         },
         {
           text: "began",
           correct: false,
-          feedback: "Oops! The right answer is ‘began’. We use Past Simple for  <b>actions which happened at a specific time in the past </b>."
+          feedback: "Oops! The right answer is ‘began’. We use Past Simple for actions which happened at a specific time in the past."
         },
         {
           text: "began",
           correct: true,
-          feedback: "Good job! The right answer is ‘began’. We use Past Simple for  <b>actions which happened at a specific time in the past </b>."
+          feedback: "Good job! The right answer is ‘began’. We use Past Simple for actions which happened at a specific time in the past."
         },
         {
           text: "had begun",
           correct: false,
-          feedback: "Oops! The right answer is ‘began’. We use Past Simple for  <b>actions which happened at a specific time in the past </b>."
+          feedback: "Oops! The right answer is ‘began’. We use Past Simple for actions which happened at a specific time in the past."
         }
       ]
     },
@@ -884,18 +884,18 @@
           // this is the text the student will see
           correct: true,
           // is it correct (false, true)
-          feedback: "Good job! The right answer is ‘was working’. We use Past Continuous for  <b>past action which was in progress when another action interrupted it</b>."
+          feedback: "Good job! The right answer is ‘was working’. We use Past Continuous for past action which was in progress when another action interrupted it."
           // what feedback do you want to give the student
         },
         {
           text: "worked",
           correct: false,
-          feedback: "Oops The right answer is ‘was working’. We use Past Continuous for  <b>past action which was in progress when another action interrupted it</b>."
+          feedback: "Oops The right answer is ‘was working’. We use Past Continuous for past action which was in progress when another action interrupted it."
         },
         {
           text: "had worked",
           correct: false,
-          feedback: "Oops! The right answer is ‘was working’. We use Past Continuous for  <b>past action which was in progress when another action interrupted it</b>."
+          feedback: "Oops! The right answer is ‘was working’. We use Past Continuous for past action which was in progress when another action interrupted it."
         }
       ]
     },
@@ -915,18 +915,18 @@
           // this is the text the student will see
           correct: false,
           // is it correct (false, true)
-          feedback: "Oops! The right answer is ‘believed’, because it is a stative verb of mental states. Also , we use Past Simple for  <b> with stative verbs of physical perception, mental states, emotions, possession and others to express an action going on at a given past moment</b>."
+          feedback: "Oops! The right answer is ‘believed’, because it is a stative verb of mental states. Also, we use Past Simple for with stative verbs of physical perception, mental states, emotions, possession and others to express an action going on at a given past moment."
           // what feedback do you want to give the student
         },
         {
           text: "believed",
           correct: true,
-          feedback: "Good job! The right answer is ‘believed’, because it is a stative verb of mental states. Also , we use Past Simple for  <b> with stative verbs of physical perception, mental states, emotions, possession and others to express an action going on at a given past moment</b>."
+          feedback: "Good job! The right answer is ‘believed’, because it is a stative verb of mental states. Also , we use Past Simple for with stative verbs of physical perception, mental states, emotions, possession and others to express an action going on at a given past moment."
         },
         {
           text: "was believing",
           correct: false,
-          feedback: "Oops! The right answer is ‘believed’, because it is a stative verb of mental states. Also , we use Past Simple for  <b> with stative verbs of physical perception, mental states, emotions, possession and others to express an action going on at a given past moment</b>."
+          feedback: "Oops! The right answer is ‘believed’, because it is a stative verb of mental states. Also, we use Past Simple for with stative verbs of physical perception, mental states, emotions, possession and others to express an action going on at a given past moment."
         }
       ]
     },
@@ -946,18 +946,18 @@
           // this is the text the student will see
           correct: false,
           // is it correct (false, true)
-          feedback: "Oops! The right answer is ‘was working’. We use Past Continuous  for  <b>events which were in progress in the past</b>."
+          feedback: "Oops! The right answer is ‘was working’. We use Past Continuous  for events which were in progress in the past."
           // what feedback do you want to give the student
         },
         {
           text: "had worked",
           correct: false,
-          feedback: "Oops! The right answer is ‘was working’. We use Past Continuous  for  <b>events which were in progress in the past</b>."
+          feedback: "Oops! The right answer is ‘was working’. We use Past Continuous for events which were in progress in the past."
         },
         {
           text: "was working",
           correct: true,
-          feedback: "Good job! The right answer is ‘was working’. We use Past Continuous  for  <b>events which were in progress in the past</b>."
+          feedback: "Good job! The right answer is ‘was working’. We use Past Continuous for events which were in progress in the past."
         }
       ]
     },
@@ -969,7 +969,7 @@
       interaction: "MC",
       primary: false,
       show_lesson_text: false,
-      question: "Choose all the correct options.\nWe use <b>Present Simple</b> in the following cases:",
+      question: "Choose all the correct options.\n We use Present Simple in the following cases:",
       // write your text or question here
       choices: [
         {
@@ -1020,7 +1020,7 @@
       interaction: "MC",
       primary: false,
       show_lesson_text: false,
-      question: "Choose all the correct options.\nWe use <b>Present Continuous</b> in the following cases:\n",
+      question: "Choose all the correct options.\nWe use Present Continuous in the following cases:\n",
       // write your text or question here
       choices: [
         {
@@ -1071,7 +1071,7 @@
       interaction: "MC",
       primary: false,
       show_lesson_text: false,
-      question: "Choose all the correct options.\nWe use <b>Past Simple</b>in the following cases:",
+      question: "Choose all the correct options.\nWe use Past Simple in the following cases:",
       // write your text or question here
       choices: [
         {
@@ -1107,7 +1107,7 @@
       interaction: "MC",
       primary: false,
       show_lesson_text: false,
-      question: "Choose all the correct options.\nWe use <b>Past Continuous</b>in the following cases:",
+      question: "Choose all the correct options.\nWe use Past Continuous in the following cases:",
       // write your text or question here
       choices: [
         {
@@ -1145,8 +1145,8 @@
       primary: false,
       show_lesson_text: false,
       // here you have to write your question and your text
-      question: "<p> Choose the right option!</p>\
-        <p> People _1_ the mechanisms of inheritance, or genetics, at the time Charles Darwin and Alfred Russel Wallace _2_ their idea of natural selection. This lack of knowledge was a stumbling block to understanding many aspects of evolution.</p>",
+      question: "Choose the right option!\
+        People _1_ the mechanisms of inheritance, or genetics, at the time Charles Darwin and Alfred Russel Wallace _2_ their idea of natural selection. This lack of knowledge was a stumbling block to understanding many aspects of evolution.",
       gaps: {
         mode: 'select',
         // here you can fill in the options for the gaps
@@ -1156,25 +1156,25 @@
             // the word(s) the student will see
             correct: true,
             // is this solution correct, false or true
-            feedback: 'Good job! The right answer is <b>‘ did not understand’</b>, because ‘understand’ is a stative verb and it denotes mental process. Also, we use Past Simple with stative verbs of: <b>physical perception</b><i>(hear, notice, see)</i>, <b>mentalprocess</b><i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b> <i>(desire, want, wish)</i>, <b>emotions</b> <i>(todetest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b><i>(toconcern, to consist, to contain, to depend, to deserve)</i>,<b>other verbs</b> <i>(toagree, to allow, to appear (= to seem), to astonish, to claim).</i>'
+            feedback: 'Good job! The right answer is ‘did not understand’, because ‘understand’ is a stative verb and it denotes mental process. Also, we use Past Simple with stative verbs of: <b>physical perception</b><i>(hear, notice, see), mentalprocess (to appreciate, to assume, to believe (= to consider), to know), wish (desire, want, wish), emotions (todetest, to dislike, to hate, to like, to love), relational verbs (toconcern, to consist, to contain, to depend, to deserve), other verbs (toagree, to allow, to appear (= to seem), to astonish, to claim).'
             // feedback you want to give to the user
           },
           {
             text: 'were not understanding',
             correct: false,
-            feedback: 'Oops! The right answer is <b>‘ did not understand’</b>, because ‘understand’ is a stative verb and it denotes mental process. Also, we use Past Simple with stative verbs of: <b>physical perception</b><i>(hear, notice, see)</i>, <b>mentalprocess</b><i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b> <i>(desire, want, wish)</i>, <b>emotions</b> <i>(todetest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b><i>(toconcern, to consist, to contain, to depend, to deserve)</i>,<b>other verbs</b> <i>(toagree, to allow, to appear (= to seem), to astonish, to claim).</i>'
+            feedback: 'Oops! The right answer is ‘did not understand’, because ‘understand’ is a stative verb and it denotes mental process. Also, we use Past Simple with stative verbs of: physical perception (hear, notice, see), mental process (to appreciate, to assume, to believe (= to consider), to know) wish (desire, want, wish), emotions (todetest, to dislike, to hate, to like, to love), relational verbs (toconcern, to consist, to contain, to depend, to deserve), other verbs (toagree, to allow, to appear (= to seem), to astonish, to claim).'
           }
         ],
         _2_: [
           {
             text: 'were developing',
             correct: true,
-            feedback: 'Good job! The right answer is ‘were developing’. We use Past Continuous <b> to describe a past action which was in progress. </b>'
+            feedback: 'Good job! The right answer is ‘were developing’. We use Past Continuous to describe a past action which was in progress.'
           },
           {
             text: 'developed',
             correct: false,
-            feedback: 'Oops! The right answer is ‘were developing’. We use Past Continuous <b> to describe a past action which was in progress. </b>'
+            feedback: 'Oops! The right answer is ‘were developing’. We use Past Continuous to describe a past action which was in progress.'
           }
         ]
       }
@@ -1190,7 +1190,7 @@
       show_lesson_text: false,
       question: "Find the appropriate explanation for the usage of Present Perfect and Present Perfect Continuous for every sentence!",
       //write your question here
-      marktext: "<p><ol>\n<li>More recently, NASA <b>#1#has #1#constructed</b> a much larger 2.5-meter telescope.</li>\n<li> Studies <b>#4#have #4#found</b> that alterations in question wording, also known as question wording effects, change how people respond to polls and surveys.</li>\n<li>Life arose early in Earth’s history, and living organisms <b>#3#have #3#been #3#interacting</b> with their environment for billions of years.</li>\n<li>Many people <b>#2#have #2#believed</b> that the seasons were the result of the changing distance between Earth and the Sun.</li>\n</ol>\n</p> ",
+      marktext: "More recently, NASA #1#has #1#constructed a much larger 2.5-meter telescope. \ Studies #4#have #4#found that alterations in question wording, also known as question wording effects, change how people respond to polls and surveys.\ Life arose early in Earth’s history, and living organisms #3#have #3#been #3#interacting with their environment for billions of years.\ Many people #2#have #2#believed that the seasons were the result of the changing distance between Earth and the Sun.",
       // write the text here, mark the words you want the student to mark with #1# in front of the word
       markers: {
         // here you can write what should be marked
@@ -1218,7 +1218,7 @@
       show_lesson_text: false,
       question: "Find the appropriate explanation for the usage of Present Perfect and Present Perfect Continuous for every sentence!",
       //write your question here
-      marktext: "<ol>\n<li>While some governments <b>#2#have #2#agreed</b> to tackle the climate crisis, others have avoided making any commitments.</li>\n<li>Evidence shows that the Sun formed about 4.5 billion years ago and  <b>#3#has #3#been #3#shining</b>ever since.</li>\n<li>Studies <b>#4#have #4#shown</b> that the work of lobbying groups tends to be more negative than positive in nature.\n</li>\n<li>Astronomers <b>#1#have #1#recently #1#discovered</b> several thousand planets around other stars, including numerous multiplanet systems.</li>\n</ol>\n",
+      marktext: "While some governments #2#have #2#agreed to tackle the climate crisis, others have avoided making any commitments.\ Evidence shows that the Sun formed about 4.5 billion years ago and  #3#has #3#been #3#shining ever since. \ Studies #4#have #4#shown that the work of lobbying groups tends to be more negative than positive in nature. \ Astronomers #1#have #1#recently #1#discovered several thousand planets around other stars, including numerous multiplanet systems.",
       // write the text here, mark the words you want the student to mark with #1# in front of the word
       markers: {
         // here you can write what should be marked
@@ -1244,7 +1244,7 @@
       interaction: "MC",
       primary: false,
       show_lesson_text: false,
-      question: "Choose all the correct options.\nWe use <b>Present Perfect</b>in the following cases:\n",
+      question: "Choose all the correct options.\nWe use Present Perfect</b>in the following cases:\n",
       // write your text or question here
       choices: [
         {
@@ -1295,17 +1295,17 @@
         {
           text: "have shown",
           correct: true,
-          feedback: "Good job! The right answer is ‘have shown’, because we use Present Perfect <b> to describe  past events that have a connection with the present (already, recently, never, lately, etc.) </b>"
+          feedback: "Good job! The right answer is ‘have shown’, because we use Present Perfect to describe  past events that have a connection with the present (already, recently, never, lately, etc.)"
         },
         {
           text: "are showing",
           correct: false,
-          feedback: "Oops! The right answer is ‘have shown’, because we use Present Perfect <b> to describe  past events that have a connection with the present (already, recently, never, lately, etc.) </b>"
+          feedback: "Oops! The right answer is ‘have shown’, because we use Present Perfect to describe  past events that have a connection with the present (already, recently, never, lately, etc.)."
         },
         {
           text: "showed",
           correct: false,
-          feedback: "Oops! The right answer is ‘have shown’, because we use Present Perfect <b> to describe  past events that have a connection with the present (already, recently, never, lately, etc.) </b>"
+          feedback: "Oops! The right answer is ‘have shown’, because we use Present Perfect to describe  past events that have a connection with the present (already, recently, never, lately, etc.)."
         }
       ]
     },
@@ -1325,18 +1325,18 @@
           // this is the text the student will see
           correct: false,
           // is it correct (false, true)
-          feedback: "Oops! The right answer is ‘has been producing’, because we use Present Perfect Continuous <b> to highlight the length of the activity (for, since, so far, up until now, all year, etc.) </b>"
+          feedback: "Oops! The right answer is ‘has been producing’, because we use Present Perfect Continuous to highlight the length of the activity (for, since, so far, up until now, all year, etc.)."
           // what feedback do you want to give the student
         },
         {
           text: "has been producint",
           correct: true,
-          feedback: "Good job! The right answer is ‘has been producing’, because we use Present Perfect Continuous <b> to highlight the length of the activity (for, since, so far, up until now, all year, etc.) </b>"
+          feedback: "Good job! The right answer is ‘has been producing’, because we use Present Perfect Continuous to highlight the length of the activity (for, since, so far, up until now, all year, etc.)"
         },
         {
           text: "produced",
           correct: false,
-          feedback: "Oops! The right answer is ‘has been producing’, because we use Present Perfect Continuous <b> to highlight the length of the activity (for, since, so far, up until now, all year, etc.) </b>"
+          feedback: "Oops! The right answer is ‘has been producing’, because we use Present Perfect Continuous to highlight the length of the activity (for, since, so far, up until now, all year, etc.)."
         }
       ]
     },
@@ -1356,18 +1356,18 @@
           // this is the text the student will see
           correct: true,
           // is it correct (false, true)
-          feedback: "Good job! The right answer is ‘have already slowed’, because we use Present Perfect <b> to talk about past events that have a connection with the present (already, recently, never, lately, etc.) </b>"
+          feedback: "Good job! The right answer is ‘have already slowed’, because we use Present Perfect to talk about past events that have a connection with the present (already, recently, never, lately, etc.)."
           // what feedback do you want to give the student
         },
         {
           text: "are already slowing",
           correct: false,
-          feedback: "Oops! The right answer is ‘have already slowed’, because we use Present Perfect <b> to talk about past events that have a connection with the present (already, recently, never, lately, etc.) </b>"
+          feedback: "Oops! The right answer is ‘have already slowed’, because we use Present Perfect to talk about past events that have a connection with the present (already, recently, never, lately, etc.)."
         },
         {
           text: "slowed",
           correct: false,
-          feedback: "Oops! The right answer is ‘have already slowed’, because we use Present Perfect <b> to talk about past events that have a connection with the present (already, recently, never, lately, etc.) </b>"
+          feedback: "Oops! The right answer is ‘have already slowed’, because we use Present Perfect to talk about past events that have a connection with the present (already, recently, never, lately, etc.)."
         }
       ]
     },
@@ -1385,20 +1385,20 @@
         {
           text: "have had",
           correct: true,
-          feedback: "Good job! The right answer is ‘have had’, because ‘to have’ is a stative verb. Also, we use Present Perfect with stative verbs of <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b> <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (=to seem), to astonish, to claim).</i>"
+          feedback: "Good job! The right answer is ‘have had’, because ‘to have’ is a stative verb. Also, we use Present Perfect with stative verbs of physical perception (hear, notice, see), mental process (to appreciate, to assume, to believe (= to consider), to know), wish (desire, want, wish), emotions (to detest, to dislike, to hate, to like, to love), relational verbs ( to concern, to consist, to contain, to depend, to deserve), other verbs (to agree, to allow, to appear (=to seem), to astonish, to claim)."
         },
         {
           text: "have been having",
           // this is the text the student will see
           correct: false,
           // is it correct (false, true)
-          feedback: "Oops! The right answer is ‘have had’, because ‘to have’ is a stative verb. Also, we use Present Perfect with stative verbs of <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b> <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (=to seem), to astonish, to claim).</i>"
+          feedback: "Oops! The right answer is ‘have had’, because ‘to have’ is a stative verb. Also, we use Present Perfect with stative verbs of physical perception (hear, notice, see), mental process (to appreciate, to assume, to believe (= to consider), to know), wish (desire, want, wish), emotions (to detest, to dislike, to hate, to like, to love), relational verbs ( to concern, to consist, to contain, to depend, to deserve), other verbs (to agree, to allow, to appear (=to seem), to astonish, to claim)."
           // what feedback do you want to give the student
         },
         {
           text: "has had",
           correct: false,
-          feedback: "Oops! The right answer is ‘have had’, because ‘to have’ is a stative verb. Also, we use Present Perfect with stative verbs of <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b> <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (=to seem), to astonish, to claim).</i>"
+          feedback: "Oops! The right answer is ‘have had’, because ‘to have’ is a stative verb. Also, we use Present Perfect with stative verbs of physical perception (hear, notice, see), mental process (to appreciate, to assume, to believe (= to consider), to know), wish (desire, want, wish), emotions (to detest, to dislike, to hate, to like, to love), relational verbs ( to concern, to consist, to contain, to depend, to deserve), other verbs (to agree, to allow, to appear (=to seem), to astonish, to claim)."
         }
       ]
     },
@@ -1412,8 +1412,8 @@
       primary: false,
       show_lesson_text: false,
       // here you have to write your question and your text
-      question: "<p> Choose the right option!</p>\
-        <p>  Politics _1_ as long as humans _2_ scarcity, _3_ different beliefs and preferences, and _4_ to resolve these differences while allocating scarce resources.</p>",
+      question: "Choose the right option!\
+        <p>  Politics _1_ as long as humans _2_ scarcity, _3_ different beliefs and preferences, and _4_ to resolve these differences while allocating scarce resources.",
       gaps: {
         mode: 'select',
         // here you can fill in the options for the gaps
@@ -1423,49 +1423,49 @@
             // the word(s) the student will see
             correct: true,
             // is this solution correct, false or true
-            feedback: 'Good job! The right answer is <b>  ‘has existed’<b>. We use Present Perfect to describe past events that have a connection with the presen.'
+            feedback: 'Good job! The right answer is ‘has existed’. We use Present Perfect to describe past events that have a connection with the present.'
             // feedback you want to give to the user
           },
           {
             text: 'existed',
             correct: false,
-            feedback: 'Oops! The right answer is <b> ‘has existed’<b>. We use Present Perfect to describe past events that have a connection with the present'
+            feedback: 'Oops! The right answer is ‘has existed’. We use Present Perfect to describe past events that have a connection with the present.'
           }
         ],
         _2_: [
           {
             text: 'have faced',
             correct: true,
-            feedback: 'Good job! The right answer is <b> ‘has faced’<b>. We use Present Perfect to describe past events that have a connection with the present.'
+            feedback: 'Good job! The right answer is ‘has faced’. We use Present Perfect to describe past events that have a connection with the present.'
           },
           {
             text: 'faced',
             correct: false,
-            feedback: 'Oops! The right answer is <b> ‘has faced’<b>. We use Present Perfect to describe past events that have a connection with the present.'
+            feedback: 'Oops! The right answer is ‘has faced´. We use Present Perfect to describe past events that have a connection with the present.'
           }
         ],
         _3_: [
           {
             text: 'have had',
             correct: true,
-            feedback: 'Good job! The right answer is <b> ‘have had’<b>. We use Present Perfect to describe past events that have a connection with the present.'
+            feedback: 'Good job! The right answer is ‘have had’. We use Present Perfect to describe past events that have a connection with the present.'
           },
           {
             text: 'had',
             correct: false,
-            feedback: 'Oops! The right answer is <b> ‘have had’<b>. We use Present Perfect to describe past events that have a connection with the present.'
+            feedback: 'Oops! The right answer is ‘have had’. We use Present Perfect to describe past events that have a connection with the present.'
           }
         ],
         _4_: [
           {
             text: 'have had',
             correct: true,
-            feedback: 'Good job! The right answer is <b> ‘have had’<b>. We use Present Perfect to describe past events that have a connection with the present.'
+            feedback: 'Good job! The right answer is ‘have had’. We use Present Perfect to describe past events that have a connection with the present.'
           },
           {
             text: 'had',
             correct: false,
-            feedback: 'Oops! The right answer is <b> ‘have had’<b>. We use Present Perfect to describe past events that have a connection with the present.'
+            feedback: 'Oops! The right answer is ‘have had’. We use Present Perfect to describe past events that have a connection with the present.'
           }
         ]
       }
@@ -1479,8 +1479,8 @@
       primary: false,
       show_lesson_text: false,
       // here you have to write your question and your text
-      question: "<p> Choose the right option!</p>\
-        <p> Philosophers around the world and throughout history— including Buddha, Plato, and Confucius— _1_  systems of thought to address the social problems of their age. Three major philosophical movements _2_ to address the challenges of the modern era.</p>",
+      question: "Choose the right option!\
+        Philosophers around the world and throughout history— including Buddha, Plato, and Confucius— _1_  systems of thought to address the social problems of their age. Three major philosophical movements _2_ to address the challenges of the modern era.",
       gaps: {
         mode: 'select',
         // here you can fill in the options for the gaps
@@ -1490,25 +1490,25 @@
             // the word(s) the student will see
             correct: true,
             // is this solution correct, false or true
-            feedback: 'Good job! The right answer is <b>‘have proposed’<b>. We use Present Perfect describe past events that have a connection with the present.'
+            feedback: 'Good job! The right answer is ‘have proposed’. We use Present Perfect describe past events that have a connection with the present.'
             // feedback you want to give to the user
           },
           {
             text: 'proposed',
             correct: false,
-            feedback: 'Oops! The right answer is <b>‘have proposed’<b>. We use Present Perfect describe past events that have a connection with the present.'
+            feedback: 'Oops! The right answer is ‘have proposed’. We use Present Perfect describe past events that have a connection with the present.'
           }
         ],
         _2_: [
           {
             text: 'arose',
             correct: true,
-            feedback: 'Good job! The right answer is <b>‘arose’<b>. We use Past Simple to describe action in the past, which was not in progress.'
+            feedback: 'Good job! The right answer is ‘arose’. We use Past Simple to describe action in the past, which was not in progress.'
           },
           {
             text: 'were arising',
             correct: false,
-            feedback: 'Oops! The right answer is <b>‘arose’<b>. We use Past Simple to describe action in the past, which was not in progress.'
+            feedback: 'Oops! The right answer is <b>‘arose’. We use Past Simple to describe action in the past, which was not in progress.'
           }
         ]
       }
@@ -1522,8 +1522,8 @@
       primary: false,
       show_lesson_text: false,
       // here you have to write your question and your text
-      question: "<p> Choose the right option!</p>\
-        <p> Over long periods of time, the interaction between humans and their tools can even reshape our DNA. Over the millions of years that we_1_hand tools, there_2_an evolutionary advantage to having nimble and dexterous fingers.</p>",
+      question: "Choose the right option!\
+        Over long periods of time, the interaction between humans and their tools can even reshape our DNA. Over the millions of years that we_1_hand tools, there_2_an evolutionary advantage to having nimble and dexterous fingers.",
       gaps: {
         mode: 'select',
         // here you can fill in the options for the gaps
@@ -1533,25 +1533,25 @@
             // the word(s) the student will see
             correct: true,
             // is this solution correct, false or true
-            feedback: 'Good job! The right answer is <b>‘have been using’<b>. We use Present Perfect Continuous to highlight the length of the activity (for, since, so far, up until now, all year, etc.).'
+            feedback: 'Good job! The right answer is ‘have been using’. We use Present Perfect Continuous to highlight the length of the activity (for, since, so far, up until now, all year, etc.).'
             // feedback you want to give to the user
           },
           {
             text: 'were using',
             correct: false,
-            feedback: 'Oops! The right answer is<b>‘have been using’<b>. We use Present Perfect Continuous to highlight the length of the activity (for, since, so far, up until now, all year, etc.).'
+            feedback: 'Oops! The right answer is ‘have been using’. We use Present Perfect Continuous to highlight the length of the activity (for, since, so far, up until now, all year, etc.).'
           }
         ],
         _2_: [
           {
             text: 'has been',
             correct: true,
-            feedback: 'Good job! The right answer is <b>‘has been’<b>. We use Present Perfect to make a connection between the past and the present.'
+            feedback: 'Good job! The right answer is ‘has been’. We use Present Perfect to make a connection between the past and the present.'
           },
           {
             text: 'was',
             correct: false,
-            feedback: 'Oops! The right answer is <b>‘has been’<b>. We use Present Perfect to make a connection between the past and the present.'
+            feedback: 'Oops! The right answer is ‘has been’. We use Present Perfect to make a connection between the past and the present.'
           }
         ]
       }
@@ -1567,7 +1567,7 @@
       show_lesson_text: false,
       question: "Find the appropriate explanation for the usage of Past Perfect for every sentence.",
       //write your question here
-      marktext: "<p><ol>\n<li>By May 2020, nearly 50 million Americans <b>#5#had #5#reported</b> losing their jobs due to the pandemic.</li>\n<li> Scientist <b>#3#had #3#hoped</b> to complete their study by 2017, but but they did not receive proper funding.</li>\n<li>In 1843, John Couch Adams, a young Englishman who <b>#1#had #1#just #1completed</b> his studies at Cambridge, began a detailed mathematical analysis of the irregularities in the motion of Uranus</li>\n<li>If the country <b>#4#had #4#suffered</b> a depression, then GDP could have easily fallen by 25-50% for a period of several years.</li>\n<li>The company admitted that there <b>#2#had #2#been</b> a delay in installing new screening equipment at the plant.</li>\n</ol>\n</p> ",
+      marktext: "By May 2020, nearly 50 million Americans #5#had #5#reported losing their jobs due to the pandemic.\ Scientist #3#had #3#hoped to complete their study by 2017, but but they did not receive proper funding.\ In 1843, John Couch Adams, a young Englishman who #1#had #1#just #1#completed his studies at Cambridge, began a detailed mathematical analysis of the irregularities in the motion of Uranus. \ If the country #4#had #4#suffered a depression, then GDP could have easily fallen by 25-50% for a period of several years.\ The company admitted that there #2#had #2#been a delay in installing new screening equipment at the plant.",
       // write the text here, mark the words you want the student to mark with #1# in front of the word
       markers: {
         // here you can write what should be marked
@@ -1575,7 +1575,7 @@
           description: 'in relative clauses, where the past perfect makes it clear that something happened before something else happened in the past'
         },
         '2': {
-          description: 'after past simple forms of verbs that are connected with speaking or thinking such as <i> admit, agree, believe, claim, confirm, deny, know, realize </i>'
+          description: 'after past simple forms of verbs that are connected with speaking or thinking such as admit, agree, believe, claim, confirm, deny, know, realize'
         },
         '3': {
           description: 'past situations where plans did not succeed'
@@ -1584,7 +1584,7 @@
           description: 'in third conditional sentences'
         },
         '5': {
-          description: 'an action accomplished (completed) before  a given past moment or before another action in the past (by, before, etc.)'
+          description: 'an action accomplished (completed) before a given past moment or before another action in the past (by, before, etc.)'
         }
       },
     },
@@ -1598,7 +1598,7 @@
       show_lesson_text: false,
       question: "Find the appropriate explanation for the usage of Past Perfect for every sentence.",
       //write your question here
-      marktext: "<ol>\n<li>On November 4, 2013, the company confirmed that they <b>#2#had #2#hired</b> Nicolas Ghesquière to replace Marc Jacobs as artistic director of women's collections.</li>\n<li>If the company <b>#4#had #4#had</b> a better web site and support systems, a lot of issues could have been prevented. </li>\n<li>In the 1980s, Mary Leakey discovered a 75-foot trail of footprints made by three bipedal individuals who <b>#1#had #1#crossed</b> a thick bed of wet volcanic ash.</li>\n<li>By keeping blood sugar levels in a normal range using insulin after surgery , researchers <b>#3#had #3#hoped</b> to see a reduction in infections and other complications, but but their hopes were dashed.</li>\n<li>By 1890,  sharp-eyed observers <b>#5#had #5#discovered</b> more than 300 of these minor planets or asteroids. </li>\n</ol>\n",
+      marktext: "On November 4, 2013, the company confirmed that they #2#had #2#hired Nicolas Ghesquière to replace Marc Jacobs as artistic director of women's collections.\ If the company #4#had #4#had a better web site and support systems, a lot of issues could have been prevented. \ In the 1980s, Mary Leakey discovered a 75-foot trail of footprints made by three bipedal individuals who #1#had #1#crossed a thick bed of wet volcanic ash. \ By keeping blood sugar levels in a normal range using insulin after surgery , researchers #3#had #3#hoped to see a reduction in infections and other complications, but but their hopes were dashed. \ By 1890,  sharp-eyed observers #5#had #5#discovered more than 300 of these minor planets or asteroids.",
       // write the text here, mark the words you want the student to mark with #1# in front of the word
       markers: {
         // here you can write what should be marked
@@ -1627,7 +1627,7 @@
       interaction: "MC",
       primary: false,
       show_lesson_text: false,
-      question: "Choose all the correct options.\nWe use <b>Past Perfect</b> in the following cases:",
+      question: "Choose all the correct options.\nWe use Past Perfect in the following cases:",
       // write your text or question here
       choices: [
         {
@@ -1644,7 +1644,7 @@
           feedback: "Oops! In this case we use Past Simple"
         },
         {
-          text: "after past forms of the verbs that are connected with speaking or thinking such as <i> admit, agree, believe, claim, confirm, deny, know, realize </i>",
+          text: "after past forms of the verbs that are connected with speaking or thinking such as admit, agree, believe, claim, confirm, deny, know, realize",
           correct: true,
           feedback: "Good job!"
         },
@@ -1693,18 +1693,18 @@
           // this is the text the student will see
           correct: false,
           // is it correct (false, true)
-          feedback: "Oops! The rights answer is ‘had emerged’. We use Past Perfect to <b>express an action accomplished (completed) before agivenpastmomentor beforeanother action in the past (by, before, etc.)</b>"
+          feedback: "Oops! The rights answer is ‘had emerged’. We use Past Perfect to express an action accomplished (completed) before a given past moment or before another action in the past (by, before, etc.)"
           // what feedback do you want to give the student
         },
         {
           text: "emerged",
           correct: false,
-          feedback: "Oops! The rights answer is ‘had emerged’. We use Past Perfect to <b>express an action accomplished (completed) before agivenpastmomentor beforeanother action in the past (by, before, etc.)</b>"
+          feedback: "Oops! The rights answer is ‘had emerged’. We use Past Perfect to express an action accomplished (completed) before agivenpastmomentor beforeanother action in the past (by, before, etc.)"
         },
         {
           text: "had emerged",
           correct: true,
-          feedback: "Well done! The rights answer is ‘had emerged’. We use Past Perfect to <b>express an action accomplished (completed) before agivenpastmomentor beforeanother action in the past (by, before, etc.)</b>"
+          feedback: "Well done! The rights answer is ‘had emerged’. We use Past Perfect to express an action accomplished (completed) before a given past moment or before another action in the past (by, before, etc.)"
         }
       ],
     },
@@ -1725,18 +1725,18 @@
           // this is the text the student will see
           correct: true,
           // is it correct (false, true)
-          feedback: "Well done! The rights answer is ‘had wanted’. We use Past Perfect <b> to describe past situations where plans did not succeed.</b>"
+          feedback: "Well done! The rights answer is ‘had wanted’. We use Past Perfect <b> to describe past situations where plans did not succeed."
           // what feedback do you want to give the student
         },
         {
           text: "wanted",
           correct: false,
-          feedback: "Oops! The rights answer is ‘had wanted’. We use Past Perfect <b> to describe past situations where plans did not succeed.</b>"
+          feedback: "Oops! The rights answer is ‘had wanted’. We use Past Perfect to describe past situations where plans did not succeed."
         },
         {
           text: "have wanted",
           correct: false,
-          feedback: "Oops! The rights answer is ‘had wanted’. We use Past Perfect <b> to describe past situations where plans did not succeed.</b>"
+          feedback: "Oops! The rights answer is ‘had wanted’. We use Past Perfect to describe past situations where plans did not succeed."
         }
       ],
     },
@@ -1757,18 +1757,18 @@
           // this is the text the student will see
           correct: false,
           // is it correct (false, true)
-          feedback: "Oops! The rights answer is ‘had emerged’. We use Past Perfect <b>in relative clauses.</b>"
+          feedback: "Oops! The rights answer is ‘had emerged’. We use Past Perfect <b>in relative clauses."
           // what feedback do you want to give the student
         },
         {
           text: "had emerged",
           correct: true,
-          feedback: "Well done! The rights answer is ‘had emerged’. We use Past Perfect <b>in relative clauses.</b>"
+          feedback: "Well done! The rights answer is ‘had emerged’. We use Past Perfect <b>in relative clauses."
         },
         {
           text: "has emerged",
           correct: false,
-          feedback: "Oops! The rights answer is ‘had emerged’. We use Past Perfect <b>in relative clauses.</b>\n"
+          feedback: "Oops! The rights answer is ‘had emerged’. We use Past Perfect <b>in relative clauses."
         }
       ],
     },
@@ -1789,18 +1789,18 @@
           // this is the text the student will see
           correct: false,
           // is it correct (false, true)
-          feedback: "Oops! The rights answer is ‘had lived’. We use Past Perfect <b> after past simple forms of verbs that are connected with speaking or thinking such as admit, agree, believe, claim, confirm, deny, know, realize.</b>"
+          feedback: "Oops! The rights answer is ‘had lived’. We use Past Perfect after past simple forms of verbs that are connected with speaking or thinking such as admit, agree, believe, claim, confirm, deny, know, realize."
           // what feedback do you want to give the student
         },
         {
           text: "had lived",
           correct: true,
-          feedback: "Well done! The rights answer is ‘had lived’. We use Past Perfect <b> after past simple forms of verbs that are connected with speaking or thinking such as admit, agree, believe, claim, confirm, deny, know, realize.</b>"
+          feedback: "Well done! The rights answer is ‘had lived’. We use Past Perfect after past simple forms of verbs that are connected with speaking or thinking such as admit, agree, believe, claim, confirm, deny, know, realize."
         },
         {
           text: "was living",
           correct: false,
-          feedback: "Oops! The rights answer is ‘had lived’. We use Past Perfect <b> after past simple forms of verbs that are connected with speaking or thinking such as admit, agree, believe, claim, confirm, deny, know, realize.</b>"
+          feedback: "Oops! The rights answer is ‘had lived’. We use Past Perfect after past simple forms of verbs that are connected with speaking or thinking such as admit, agree, believe, claim, confirm, deny, know, realize."
         }
       ],
     },
@@ -1821,18 +1821,18 @@
           // this is the text the student will see
           correct: true,
           // is it correct (false, true)
-          feedback: "Well done! The rights answer is ‘had looked’.We use Past Perfect <b>in third conditional sentences. </b><i>If + past perfect, would/wouldn't have + past participle</i>"
+          feedback: "Well done! The rights answer is ‘had looked’.We use Past Perfect in third conditional sentences. If + past perfect, would/wouldn't have + past participle"
           // what feedback do you want to give the student
         },
         {
           text: "have been looking",
           correct: false,
-          feedback: "Oops! The rights answer is ‘had looked’.We use Past Perfect <b>in third conditional sentences. </b><i>If + past perfect , would/wouldn't have + past participle</i>"
+          feedback: "Oops! The rights answer is ‘had looked’.We use Past Perfect in third conditional sentences. If + past perfect , would/wouldn't have + past participle"
         },
         {
           text: "have looked",
           correct: false,
-          feedback: "Oops! The rights answer is ‘had looked’.We use Past Perfect <b>in third conditional sentences. </b><i>If + past perfect , would/wouldn't have + past participle</i>"
+          feedback: "Oops! The rights answer is ‘had looked’.We use Past Perfect in third conditional sentences. If + past perfect , would/wouldn't have + past participle"
         }
       ],
     },
@@ -1846,8 +1846,8 @@
         primary: false,
         show_lesson_text: false,
         // here you have to write your question and your text
-        question: "<p>Choose the right option!</p>\
-        <p> The conservation movement_1_ in the 19th century as people in Europe and America _2_ to realize human settlement and the exploitation of the world’s natural resources _3_to the destruction or endangerment of numerous animals, plants, and significant environments. ",
+        question: "Choose the right option!\
+         The conservation movement_1_ in the 19th century as people in Europe and America _2_ to realize human settlement and the exploitation of the world’s natural resources _3_to the destruction or endangerment of numerous animals, plants, and significant environments. ",
         gaps: {
           mode: 'select',
           // here you can fill in the options for the gaps
@@ -1855,36 +1855,36 @@
             {
               text: 'began',     // the word(s) the student will see
               correct: true ,    // is this solution correct, false or true
-              feedback: 'Good job! The right answer is ‘began’. We use Past Simple <b>to describe an action which happened at a specific time in the past. </b>'  // feedback you want to give to the user
+              feedback: 'Good job! The right answer is ‘began’. We use Past Simple <b>to describe an action which happened at a specific time in the past.'  // feedback you want to give to the user
             },
             {
               text: 'have begun',
               correct: false ,
-              feedback: 'Oops! The right answer is ‘began’. We use Past Simple <b>to describe an action which happened at a specific time in the past. </b>'
+              feedback: 'Oops! The right answer is ‘began’. We use Past Simple to describe an action which happened at a specific time in the past.'
             },
           ],
           _2_ : [
             {
               text: 'began',
               correct: true ,
-              feedback: 'Good job! The right answer is ‘began’. We use Past Simple <b> to describe an action which happened at a specific time in the past. </b>'
+              feedback: 'Good job! The right answer is ‘began’. We use Past Simple to describe an action which happened at a specific time in the past.'
             },
             {
               text: 'have begun',
               correct: false ,
-              feedback: 'Oops! The right answer is ‘began’. We use Past Simple <b> to describe an action which happened at a specific time in the past. </b>'
+              feedback: 'Oops! The right answer is ‘began’. We use Past Simple <b> to describe an action which happened at a specific time in the past.'
             },
           ],
           _3_ : [
             {
               text: 'had led',
               correct: true ,
-              feedback: 'Good job! The right answer is ‘had led’. We use Past Perfect <b> after past simple forms of verbs that are connected with speaking or thinking such as admit, agree, believe, claim, confirm, deny, know, realize. </b>'
+              feedback: 'Good job! The right answer is ‘had led’. We use Past Perfect after past simple forms of verbs that are connected with speaking or thinking such as admit, agree, believe, claim, confirm, deny, know, realize.'
             },
             {
               text: 'led',
               correct: false ,
-              feedback: 'Oops! The right answer is ‘had led’. We use Past Perfect <b> after past simple forms of verbs that are connected with speaking or thinking such as admit, agree, believe, claim, confirm, deny, know, realize. </b>'
+              feedback: 'Oops! The right answer is ‘had led’. We use Past Perfect after past simple forms of verbs that are connected with speaking or thinking such as admit, agree, believe, claim, confirm, deny, know, realize.'
             },
           ]
         },
@@ -1898,8 +1898,8 @@
         primary: false,
         show_lesson_text: false,
         // here you have to write your question and your text
-        question: "<p>Choose the right option!</p>\
-        <p>In the 19th century, some American researchers _1_ the skulls of various ethnic groups, arguing that people who _2_ to the United States from northern Europe_3_ larger skulls and_4_ therefore intellectually superior.</p>",
+        question: "Choose the right option!\
+        In the 19th century, some American researchers _1_ the skulls of various ethnic groups, arguing that people who _2_ to the United States from northern Europe_3_ larger skulls and_4_ therefore intellectually superior.",
         gaps: {
           mode: 'select',
           // here you can fill in the options for the gaps
@@ -1907,48 +1907,48 @@
             {
               text: 'measured',     // the word(s) the student will see
               correct: true ,    // is this solution correct, false or true
-              feedback: 'Good job! The right answer is ‘measured’. We use Past Simple <b>to describe an action which happened at a specific time in the past.</b>'  // feedback you want to give to the user
+              feedback: 'Good job! The right answer is ‘measured’. We use Past Simple to describe an action which happened at a specific time in the past.'  // feedback you want to give to the user
             },
             {
               text: 'have measured',
               correct: false ,
-              feedback: 'Oops! The right answer is ‘measured’. We use Past Simple <b>to describe an action which happened at a specific time in the past.</b>'
+              feedback: 'Oops! The right answer is ‘measured’. We use Past Simple to describe an action which happened at a specific time in the past.'
             },
           ],
           _2_ : [
             {
               text: 'had immigrated',
               correct: true ,
-              feedback: 'Good job! The right answer is ‘had immigrated’. We use Past Perfect<b> in relative clauses. </b>,'
+              feedback: 'Good job! The right answer is ‘had immigrated’. We use Past Perfect in relative clauses.,'
             },
             {
               text: 'immigrated',
               correct: false ,
-              feedback: 'Oops! The right answer is ‘had immigrated’. We use Past Perfect<b> in relative clauses. </b>'
+              feedback: 'Oops! The right answer is ‘had immigrated’. We use Past Perfect in relative clauses.'
             },
           ],
           _3_ : [
             {
               text: 'had',
               correct: true ,
-              feedback: 'Good job! The right answer is ‘had’. We use Past Simple <b> to describe an action which happened in the past and has no connection with the present.</b>'
+              feedback: 'Good job! The right answer is ‘had’. We use Past Simple to describe an action which happened in the past and has no connection with the present.'
             },
             {
               text: 'have been',
               correct: false ,
-              feedback: 'Oops! The right answer is ‘had’. We use Past Simple <b> to describe an action which happened in the past and has no connection with the present.</b>'
+              feedback: 'Oops! The right answer is ‘had’. We use Past Simple to describe an action which happened in the past and has no connection with the present.'
             },
           ],
           _4_ : [
             {
               text: 'were',
               correct: true ,
-              feedback: 'Good job! The right answer is ‘were’. We use Past Simple <b> to describe an action which happened in the past and has no connection with the present.</b>'
+              feedback: 'Good job! The right answer is ‘were’. We use Past Simple  to describe an action which happened in the past and has no connection with the present.'
             },
             {
               text: 'have been',
               correct: false ,
-              feedback: 'Oops! The right answer is ‘were’. We use Past Simple <b> to describe an action which happened in the past and has no connection with the present.</b>'
+              feedback: 'Oops! The right answer is ‘were’. We use Past Simple to describe an action which happened in the past and has no connection with the present.'
             },
           ]
         },
@@ -1962,8 +1962,8 @@
         primary: false,
         show_lesson_text: false,
         // here you have to write your question and your text
-        question: "<p> Choose the right option! </p>\
-        <p>Two researchers at the University of Utah _1_ in 1989 that they_2_ a way to achieve nuclear fusion (the process that powers the stars) at room temperature, other scientists at more than 25 laboratories around the United States_3_ to duplicate “cold fusion” within a few weeks—without success.</p>",
+        question: "Choose the right option!\
+        Two researchers at the University of Utah _1_ in 1989 that they_2_ a way to achieve nuclear fusion (the process that powers the stars) at room temperature, other scientists at more than 25 laboratories around the United States_3_ to duplicate “cold fusion” within a few weeks—without success.",
         gaps: {
           mode: 'select',
           // here you can fill in the options for the gaps
@@ -1971,36 +1971,36 @@
             {
               text: 'announced',     // the word(s) the student will see
               correct: true ,    // is this solution correct, false or true
-              feedback: 'Good job! The right answer is ‘announced’. We use Past Simple <b> to describe an action which happened at a specific time in the past.</b>'  // feedback you want to give to the user
+              feedback: 'Good job! The right answer is ‘announced’. We use Past Simple to describe an action which happened at a specific time in the past.'  // feedback you want to give to the user
             },
             {
               text: 'had announced',
               correct: false ,
-              feedback: 'Oops! The right answer is ‘announced’. We use Past Simple <b> to describe an action which happened at a specific time in the past.</b>'
+              feedback: 'Oops! The right answer is ‘announced’. We use Past Simple to describe an action which happened at a specific time in the past.'
             },
           ],
           _2_ : [
             {
               text: 'had discovered',
               correct: true ,
-              feedback: 'Good job! The right answer  is ‘had discovered’. We use Past Perfect <b>after past simple forms of verbs that are connected with speaking or thinking such as admit, agree, believe, claim, confirm, deny, know, realize</b>'
+              feedback: 'Good job! The right answer  is ‘had discovered’. We use Past Perfect after past simple forms of verbs that are connected with speaking or thinking such as admit, agree, believe, claim, confirm, deny, know, realize'
             },
             {
               text: 'discovered',
               correct: false ,
-              feedback: 'Oops! The right answer is ‘had discovered’. We use Past Perfect <b>after past simple forms of verbs that are connected with speaking or thinking such as admit, agree, believe, claim, confirm, deny, know, realize</b>'
+              feedback: 'Oops! The right answer is ‘had discovered’. We use Past Perfect after past simple forms of verbs that are connected with speaking or thinking such as admit, agree, believe, claim, confirm, deny, know, realize'
             },
           ],
           _3_ : [
             {
               text: 'attempted',
               correct: true,
-              feedback: 'Good job! The right answer is ‘attempted’. We use Past Simple <b>to describe an action which happened in the past and wasn’t in progress.</b>'
+              feedback: 'Good job! The right answer is ‘attempted’. We use Past Simple to describe an action which happened in the past and wasn’t in progress.'
             },
             {
               text: 'were attempting',
               correct: false,
-              feedback: 'Oops! The right answer is ‘attempted’. We use Past Simple <b>to describe an action which happened in the past and wasn’t in progress.</b>'
+              feedback: 'Oops! The right answer is ‘attempted’. We use Past Simple to describe an action which happened in the past and wasn’t in progress.'
             },
           ]
         },
@@ -2016,7 +2016,7 @@
         primary: false,
         show_lesson_text: false,
         question: "Find the appropriate explanation for the usage of Future Simple for every sentence.",           //write your question here
-        marktext: "<p><ol>\n<li>A hypothesis is a testable prediction about how the world <b>#1#will #1#behave</b> if our idea is correct.</li>\n<li> As more and more people live longer lives, the number of people of advanced age <b>#2#will #2#continue </b> to increase.</li>\n</ol>\n</p> ",  // write the text here, mark the words you want the student to mark with #1# in front of the word
+        marktext: "A hypothesis is a testable prediction about how the world #1#will #1#behave if our idea is correct. As more and more people live longer lives, the number of people of advanced age #2#will #2#continue to increase.",  // write the text here, mark the words you want the student to mark with #1# in front of the word
         markers: {
           // here you can write what should be marked
           '1': {
@@ -2036,7 +2036,7 @@
         primary: false,
         show_lesson_text: false,
         question: "Find the appropriate explanation for the usage of Future Simple for every sentence.",           //write your question here
-        marktext: "<ol>\n<li>If the satellite is high enough to be free of atmospheric friction, it <b>#2#will #2#remain</b> in orbit forever</li>\n<li>Companies <b>#1#will #1#begin</b> their employee fundraising campaigns for UWAC in June..</li>\n</ol>\n",  // write the text here, mark the words you want the student to mark with #1# in front of the word
+        marktext: "If the satellite is high enough to be free of atmospheric friction, it #2#will #2#remain in orbit forever \ Companies #1#will #1#begin their employee fundraising campaigns for UWAC in June.",  // write the text here, mark the words you want the student to mark with #1# in front of the word
         markers: {
           // here you can write what should be marked
           '1': {
@@ -2061,15 +2061,15 @@
         choices: [
            {text: "will permit", // this is the text the student will see
             correct: true , // is it correct (false, true)
-            feedback: "Good job! The right answer is ‘will permit’. We use Future Simple  <b>in the first conditionals</b> <i>If + present simple, will/won't + verb.</i>" // what feedback do you want to give the student
+            feedback: "Good job! The right answer is ‘will permit’. We use Future Simple in the first conditionals If + present simple, will/won't + verb." // what feedback do you want to give the student
             },
             { text: "is permitting",
             correct: false ,
-            feedback: "Oops! The right answer is ‘will permit’. We use Future Simple  <b>in the first conditionals</b> <i>If + present simple, will/won't + verb.</i>"
+            feedback: "Oops! The right answer is ‘will permit’. We use Future Simple in the first conditionals If + present simple, will/won't + verb."
             },
             { text: "has permitted",
             correct: false ,
-            feedback: "Oops! The right answer is ‘will permit’. We use Future Simple  <b>in the first conditionals</b> <i>If + present simple, will/won't + verb.</i>"
+            feedback: "Oops! The right answer is ‘will permit’. We use Future Simple in the first conditionals If + present simple, will/won't + verb."
             }
         ],
       },
@@ -2086,15 +2086,15 @@
         choices: [
            {text: "is hosting", // this is the text the student will see
             correct: false , // is it correct (false, true)
-            feedback: "Oops! The right answer is ‘will host’. We use Future Simple to  <b>describe future action</b>" // what feedback do you want to give the student
+            feedback: "Oops! The right answer is ‘will host’. We use Future Simple to  <b>describe future action" // what feedback do you want to give the student
             },
             { text: "will host",
             correct: true ,
-            feedback: "Good job! The right answer is ‘will host’. We use Future Simple to  <b>describe future action</b>"
+            feedback: "Good job! The right answer is ‘will host’. We use Future Simple to describe future action"
             },
             { text: "has hosted",
             correct: false ,
-            feedback: "Oops! The right answer is ‘will host’. We use Future Simple to  <b>describe future action</b>"
+            feedback: "Oops! The right answer is ‘will host’. We use Future Simple to  <b>describe future action"
             }
         ],
       },
@@ -2111,15 +2111,15 @@
         choices: [
            {text: "will die", // this is the text the student will see
             correct: true , // is it correct (false, true)
-            feedback: "Good job! The right answer is ‘will die’.We use Future Simple to  <b>describe future action</b>" // what feedback do you want to give the student
+            feedback: "Good job! The right answer is ‘will die’.We use Future Simple to describe future action" // what feedback do you want to give the student
             },
             { text: "are dying",
             correct: false ,
-            feedback: "Good job! The right answer is ‘will die’.We use Future Simple to  <b>describe future action</b>"
+            feedback: "Good job! The right answer is ‘will die’.We use Future Simple to describe future action"
             },
             { text: "has died",
             correct: false ,
-            feedback: "Good job! The right answer is ‘will die’.We use Future Simple to  <b>describe future action</b>"
+            feedback: "Good job! The right answer is ‘will die’.We use Future Simple to describe future action"
             }
         ],
       },
@@ -2136,15 +2136,15 @@
         choices: [
            {text: "is loosing", // this is the text the student will see
             correct: false , // is it correct (false, true)
-            feedback: "Oops! The right answer is ‘will lose’. We use Future Simple  <b>in the first conditionals</b> <i>If + present simple, will/won't + verb.</i>\n" // what feedback do you want to give the student
+            feedback: "Oops! The right answer is ‘will lose’. We use Future Simple in the first conditionals If + present simple, will/won't + verb." // what feedback do you want to give the student
             },
             { text: "will lose",
             correct: true ,
-            feedback: "Good job! We use Future Simple  <b>in the first conditionals</b> <i>If + present simple, will/won't + verb.</i>"
+            feedback: "Good job! We use Future Simple in the first conditionals If + present simple, will/won't + verb."
             },
             { text: "has lost",
             correct: false ,
-            feedback: "Oops! The right answer is ‘will lose’. We use Future Simple  <b>in the first conditionals</b> <i>If + present simple, will/won't + verb.</i>\n"
+            feedback: "Oops! The right answer is ‘will lose’. We use Future Simple in the first conditionals If + present simple, will/won't + verb."
             }
         ],
       },
@@ -2158,8 +2158,8 @@
         primary: false,
         show_lesson_text: false,
         // here you have to write your question and your text
-        question: "<p>  Choose the right option! </p>\
-        <p> Researchers who work with asteroid orbits_1_ that for smaller (and therefore fainter) asteroids we_2_, we_3_ about a 5-second warning, in other words, we _4_ it until it enters the atmosphere. </p>",
+        question: "Choose the right option!\
+        Researchers who work with asteroid orbits_1_ that for smaller (and therefore fainter) asteroids we_2_, we_3_ about a 5-second warning, in other words, we _4_ it until it enters the atmosphere.",
         gaps: {
           mode: 'select',
           // here you can fill in the options for the gaps
@@ -2167,48 +2167,48 @@
             {
               text: 'are claiming',     // the word(s) the student will see
               correct: false ,    // is this solution correct, false or true
-              feedback: 'Oops! The right answer is ‘claim’. We use Present Simple with stative verbs of <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'  // feedback you want to give to the user
+              feedback: 'Oops! The right answer is ‘claim’. We use Present Simple with stative verbs of physical perception (hear, notice, see), mental process (to appreciate, to assume, to believe (= to consider), to know), wish (desire, want, wish), emotions (to detest, to dislike, to hate, to like, to love), relational verbs ( to concern, to consist, to contain, to depend, to deserve), other verbs (to agree, to allow, to appear (= to seem), to astonish, to claim).'  // feedback you want to give to the user
             },
             {
               text: 'claim',
               correct: true ,
-              feedback: 'Good job! The right answer is ‘claim’. We use Present Simple with stative verbs of <b>physical perception</b> <i>(hear, notice, see)</i>, <b>mental process</b> <i>(to appreciate, to assume, to believe (= to consider), to know)</i>, <b>wish</b>  <i>(desire, want, wish)</i> , <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relational verbs</b> <i>( to concern, to consist, to contain, to depend, to deserve)</i>, <b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'
+              feedback: 'Good job! The right answer is ‘claim’. We use Present Simple with stative verbs of physical perception (hear, notice, see), mental process (to appreciate, to assume, to believe (= to consider), to know), wish (desire, want, wish), emotions (to detest, to dislike, to hate, to like, to love), relational verbs ( to concern, to consist, to contain, to depend, to deserve), other verbs (to agree, to allow, to appear (= to seem), to astonish, to claim).'
             },
           ],
           _2_ : [
             {
               text: 'are not tracking',
               correct: true ,
-              feedback: 'Good job! The right answer is ‘are not tracking’. We use Present Continuous to <b>to express an action going on at the present period.</b>'
+              feedback: 'Good job! The right answer is ‘are not tracking’. We use Present Continuous to express an action going on at the present period.'
             },
             {
               text: 'were not tracking',
               correct: false ,
-              feedback: 'Oops! The right answer is ‘are not tracking’. We use Present Continuous to <b>to express an action going on at the present period.</b>'
+              feedback: 'Oops! The right answer is ‘are not tracking’. We use Present Continuous to <b>to express an action going on at the present period.'
             },
           ],
           _3_ : [
             {
               text: 'will have',
               correct: true ,
-              feedback: 'Good job! The right answer is ‘will have’. We use Future Simple <b>to describe future  action. </b>'
+              feedback: 'Good job! The right answer is ‘will have’. We use Future Simple to describe future  action.'
             },
             {
               text: 'have ',
               correct: false ,
-              feedback: 'Oops! The right answer is ‘will have’. We use Future Simple <b>to describe future  action. </b> '
+              feedback: 'Oops! The right answer is ‘will have’. We use Future Simple to describe future  action.'
             },
           ],
           _4_ : [
             {
               text: 'won`t see',
               correct: true ,
-              feedback: 'Good job! The right answer is ‘won`t see’. We use Future Simple <b>to describe future  action. </b>'
+              feedback: 'Good job! The right answer is ‘won`t see’. We use Future Simple <b>to describe future  action.'
             },
             {
               text: 'don`t see',
               correct: false ,
-              feedback: 'Oops! The right answer is ‘won`t see’. We use Future Simple <b>to describe future  action. </b> '
+              feedback: 'Oops! The right answer is ‘won`t see’. We use Future Simple <b>to describe future  action.'
             }
           ]
         },
@@ -2223,8 +2223,8 @@
         primary: false,
         show_lesson_text: false,
         // here you have to write your question and your text
-        question: "<p>Choose the right option!</p>\
-        <p> Humans _1_ their food for over two million years.  Up until just 12,000 years ago, all humans everywhere _2_ basically the same way. In the popular imagination we _3_ hunters. But the evidence _4_ that we _5_ the vast majority of our calories from foraging: gathering fruits, nuts, tubers, and other foods.</p>",
+        question: "Choose the right option!\
+        Humans _1_ their food for over two million years.  Up until just 12,000 years ago, all humans everywhere _2_ basically the same way. In the popular imagination we _3_ hunters. But the evidence _4_ that we _5_ the vast majority of our calories from foraging: gathering fruits, nuts, tubers, and other foods.",
         gaps: {
           mode: 'select',
           // here you can fill in the options for the gaps
@@ -2324,8 +2324,8 @@
         primary: false,
         show_lesson_text: false,
         // here you have to write your question and your text
-        question: "<p>Choose the right option!</p>\
-        <p>All life on Earth is related. Evolutionary theory _1_ that humans, beetles, plants, and bacteria all _2_ a common ancestor, but that millions of years of evolution _3_  each of these organisms into the forms we _4_ today. Scientists _5_ evolution a key concept to understanding life.</p>",
+        question: "Choose the right option!\
+        All life on Earth is related. Evolutionary theory _1_ that humans, beetles, plants, and bacteria all _2_ a common ancestor, but that millions of years of evolution _3_  each of these organisms into the forms we _4_ today. Scientists _5_ evolution a key concept to understanding life.",
         gaps: {
           mode: 'select',
           // here you can fill in the options for the gaps
@@ -2384,34 +2384,34 @@
             {
               text: 'see',
               correct: true ,
-              feedback: 'Good job! The right answer is ´see’, because it is a stative verb, and it denotes mental process. Also, we use Present Simple with stative verbs of: <b>physicalperception</b><i>(hear, notice, see)</i>, <b>mental process</b><i>(to appreciate,to assume, to believe (= to consider), to know)</i>, <b>wish</b> <i>(desire, want, wish)</i>, <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relationalverbs</b><i>(to concern, to consist, to contain, to depend, to deserve)</i>,<b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'
+              feedback: 'Good job! The right answer is ´see’, because it is a stative verb, and it denotes mental process. Also, we use Present Simple with stative verbs of: physical perception (hear, notice, see), mental process (to appreciate,to assume, to believe (= to consider), to know), wish (desire, want, wish), emotions (to detest, to dislike, to hate, to like, to love), relational verbs (to concern, to consist, to contain, to depend, to deserve), other verbs (to agree, to allow, to appear (= to seem), to astonish, to claim).'
             },
             {
               text: 'are seeing',
               correct: false ,
-              feedback: 'Oops! The right answer is ´see’, because it is a stative verb, and it denotes mental process. Also, we use Present Simple with stative verbs of: <b>physicalperception</b><i>(hear, notice, see)</i>, <b>mental process</b><i>(to appreciate,to assume, to believe (= to consider), to know)</i>, <b>wish</b> <i>(desire, want, wish)</i>, <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relationalverbs</b><i>(to concern, to consist, to contain, to depend, to deserve)</i>,<b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'
+              feedback: 'Oops! The right answer is ´see’, because it is a stative verb, and it denotes mental process. Also, we use Present Simple with stative verbs of: <b>physical perception  (hear, notice, see), mental process (to appreciate,to assume, to believe (= to consider), to know), wish (desire, want, wish), emotions (to detest, to dislike, to hate, to like, to love), relational verbs(to concern, to consist, to contain, to depend, to deserve), other verbs (to agree, to allow, to appear (= to seem), to astonish, to claim).'
             },
             {
               text: 'will see',
               correct: false,
-              feedback: 'Oops! The right answer is ´see´, because it is a stative verb, and it denotes mental process. Also, we use Present Simple with stative verbs of: <b>physicalperception</b><i>(hear, notice, see)</i>, <b>mental process</b><i>(to appreciate,to assume, to believe (= to consider), to know)</i>, <b>wish</b> <i>(desire, want, wish)</i>, <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>, <b>relationalverbs</b><i>(to concern, to consist, to contain, to depend, to deserve)</i>,<b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'
+              feedback: 'Oops! The right answer is ´see´, because it is a stative verb, and it denotes mental process. Also, we use Present Simple with stative verbs of: physical perception (hear, notice, see), mental process (to appreciate,to assume, to believe (= to consider), to know), wish (desire, want, wish), emotions (to detest, to dislike, to hate, to like, to love), relational verbs(to concern, to consist, to contain, to depend, to deserve), other verbs (to agree, to allow, to appear (= to seem), to astonish, to claim).'
             }
           ],
           _5_ : [
             {
               text: 'are considering',
               correct: false ,
-              feedback: 'Oops! The right answer is ´consider’, because it is a stative verb, and it denotes mental process. Also, we use Present Simple with stative verbs of: <b>physicalperception</b><i>(hear, notice, see)</i>, <b>mental process</b><i>(to appreciate,to assume, to believe (= to consider), to know)</i>, <b>wish</b> <i>(desire,want, wish)</i>, <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>,<b>relational verbs</b><i>(to concern, to consist, to contain, to depend, to deserve)</i>,<b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'
+              feedback: 'Oops! The right answer is ´consider’, because it is a stative verb, and it denotes mental process. Also, we use Present Simple with stative verbs of: physical perception (hear, notice, see)</i>, mental process (to appreciate,to assume, to believe (= to consider), to know),  wish (desire,want, wish), emotions (to detest, to dislike, to hate, to like, to love), relational verbs (to concern, to consist, to contain, to depend, to deserve), other verbs (to agree, to allow, to appear (= to seem), to astonish, to claim).'
             },
             {
               text: 'considered',
               correct: false ,
-              feedback: 'Oops! The right answer is ´consider’, because it is a stative verb, and it denotes mental process. Also, we use Present Simple with stative verbs of: <b>physicalperception</b><i>(hear, notice, see)</i>, <b>mental process</b><i>(to appreciate,to assume, to believe (= to consider), to know)</i>, <b>wish</b> <i>(desire,want, wish)</i>, <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>,<b>relational verbs</b><i>(to concern, to consist, to contain, to depend, to deserve)</i>,<b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'
+              feedback: 'Oops! The right answer is ´consider’, because it is a stative verb, and it denotes mental process. Also, we use Present Simple with stative verbs of: physical perception (hear, notice, see), mental processv(to appreciate,to assume, to believe (= to consider), to know), wish (desire,want, wish), emotions (to detest, to dislike, to hate, to like, to love), relational verbs (to concern, to consist, to contain, to depend, to deserve), other verbs (to agree, to allow, to appear (= to seem), to astonish, to claim).'
             },
             {
               text: 'consider',
               correct: true ,
-              feedback: 'Good job! The right answer is ´consider’, because it is a stative verb, and it denotes mental process. Also, we use Present Simple with stative verbs of: <b>physicalperception</b><i>(hear, notice, see)</i>, <b>mental process</b><i>(to appreciate,to assume, to believe (= to consider), to know)</i>, <b>wish</b> <i>(desire,want, wish)</i>, <b>emotions</b> <i>(to detest, to dislike, to hate, to like, to love)</i>,<b>relational verbs</b><i>(to concern, to consist, to contain, to depend, to deserve)</i>,<b>other verbs</b> <i>(to agree, to allow, to appear (= to seem), to astonish, to claim).</i>'
+              feedback: 'Good job! The right answer is ´consider’, because it is a stative verb, and it denotes mental process. Also, we use Present Simple with stative verbs of: physical perception (hear, notice, see), mental process (to appreciate,to assume, to believe (= to consider), to know), wish (desire,want, wish), emotions(to detest, to dislike, to hate, to like, to love), relational verbs (to concern, to consist, to contain, to depend, to deserve), other verbs (to agree, to allow, to appear (= to seem), to astonish, to claim).'
             },
           ]
         },
@@ -2425,8 +2425,8 @@
         primary: false,
         show_lesson_text: false,
         // here you have to write your question and your text
-        question: "<p>Choose the correct answer!</p>\
-        <p>In 2020, the COVID-19 pandemic _1_  across the globe. By August 2021, nearly 210 million people _2_  with the corona-virus and more than 4 million _3_. Medical researchers  _4_ the long-term effects of this illness on the lungs and brains of people who _5_. Some _6_ psychological effects as well, such as increased risks for depression, anxiety, and schizophrenia.</p>",
+        question: "Choose the correct answer!\
+        <p>In 2020, the COVID-19 pandemic _1_  across the globe. By August 2021, nearly 210 million people _2_  with the corona-virus and more than 4 million _3_. Medical researchers  _4_ the long-term effects of this illness on the lungs and brains of people who _5_. Some _6_ psychological effects as well, such as increased risks for depression, anxiety, and schizophrenia.",
         gaps: {
           mode: 'select',
           // here you can fill in the options for the gaps
@@ -2434,102 +2434,102 @@
             {
               text: 'swept',     // the word(s) the student will see
               correct: true ,    // is this solution correct, false or true
-              feedback: 'Great! The right answer is ‘swept’. We use Past Simple <b>to describe an action which happened in the past.</b>'  // feedback you want to give to the user
+              feedback: 'Great! The right answer is ‘swept’. We use Past Simple to describe an action which happened in the past.'  // feedback you want to give to the user
             },
             {
               text: 'have swept',
               correct: false ,
-              feedback: 'Oops! The right answer is ‘swept’. We use Past Simple <b>to describe an action which happened in the past.</b>'
+              feedback: 'Oops! The right answer is ‘swept’. We use Past Simple to describe an action which happened in the past.'
             },
             {
               text: 'had swept',
               correct: false,
-              feedback: 'Oops! The right answer is ‘swept’. We use Past Simple <b>to describe an action which happened in the past.</b>'
+              feedback: 'Oops! The right answer is ‘swept’. We use Past Simple to describe an action which happened in the past.'
             },
           ],
           _2_ : [
             {
               text: 'have fallen sick',
               correct: false ,
-              feedback: 'Oops! The right answer is ‘had fallen sick’. We use Past Perfect <b>to express an action accomplished (completed) before  a given past moment or  before another action in the past (by, before, etc.)</b>'
+              feedback: 'Oops! The right answer is ‘had fallen sick’. We use Past Perfect to express an action accomplished (completed) before  a given past moment or  before another action in the past (by, before, etc.)'
             },
             {
               text: 'were sick',
               correct: false ,
-              feedback: 'Oops! The right answer is ‘had fallen sick’. We use Past Perfect <b>to express an action accomplished (completed) before  a given past moment or  before another action in the past (by, before, etc.)</b>'
+              feedback: 'Oops! The right answer is ‘had fallen sick’. We use Past Perfect to express an action accomplished (completed) before  a given past moment or  before another action in the past (by, before, etc.)'
             },
             {
               text: 'had fallen sick',
               correct: true ,
-              feedback: 'Great! The right answer is ‘had fallen sick’. We use Past Perfect <b>to express an action accomplished (completed) before  a given past moment or  before another action in the past (by, before, etc.)</b>'
+              feedback: 'Great! The right answer is ‘had fallen sick’. We use Past Perfect to express an action accomplished (completed) before  a given past moment or  before another action in the past (by, before, etc.)'
             },
           ],
           _3_ : [
             {
               text: 'were dying',
               correct: false,
-              feedback: 'Oops! The right answer is ‘had died’. We use Past Perfect <b>to express an action accomplished (completed) before  a given past moment or  before another action in the past (by, before, etc.)</b>'
+              feedback: 'Oops! The right answer is ‘had died’. We use Past Perfect to express an action accomplished (completed) before  a given past moment or  before another action in the past (by, before, etc.)'
             },
             {
               text: 'died',
               correct: false ,
-              feedback: 'Oops! The right answer is ‘had died’. We use Past Perfect <b>to express an action accomplished (completed) before  a given past moment or  before another action in the past (by, before, etc.)</b>'
+              feedback: 'Oops! The right answer is ‘had died’. We use Past Perfect to express an action accomplished (completed) before  a given past moment or  before another action in the past (by, before, etc.)'
             },
             {
               text: 'had died',
               correct: true ,
-              feedback: 'Great! The right answer is ‘had died’. We use Past Perfect <b>to express an action accomplished (completed) before  a given past moment or  before another action in the past (by, before, etc.)</b>'
+              feedback: 'Great! The right answer is ‘had died’. We use Past Perfect to express an action accomplished (completed) before  a given past moment or  before another action in the past (by, before, etc.)'
             },
           ],
            _4_ : [
             {
               text: 'were still studying',
               correct: false ,
-              feedback: 'Oops! The right answer is ‘are still studying’. We use Present Continuous <b>to express an action going on at the present period.</b>'
+              feedback: 'Oops! The right answer is ‘are still studying’. We use Present Continuous to express an action going on at the present period.'
             },
             {
               text: 'are still studying',
               correct: true ,
-              feedback: 'Great! The right answer is ‘are still studying’. We use Present Continuous <b>to express an action going on at the present period.</b>'
+              feedback: 'Great! The right answer is ‘are still studying’. We use Present Continuous to express an action going on at the present period.'
             },
             {
               text: 'still study',
               correct: false ,
-              feedback: 'Oops! The right answer is ‘are still studying’. We use Present Continuous <b>to express an action going on at the present period.</b>'
+              feedback: 'Oops! The right answer is ‘are still studying’. We use Present Continuous to express an action going on at the present period.'
             }
           ],
           _5_ : [
             {
               text: 'had recovered',
               correct: false ,
-              feedback: 'Oops! The right answer is ‘have recovered’. We use Present Perfect <b>to describe  past events that have a connection with the present.</b>'
+              feedback: 'Oops! The right answer is ‘have recovered’. We use Present Perfect to describe  past events that have a connection with the present.'
             },
             {
               text: 'were recovering',
               correct: false ,
-              feedback: 'Oops! The right answer is ‘have recovered’. We use Present Perfect <b>to describe  past events that have a connection with the present.</b>'
+              feedback: 'Oops! The right answer is ‘have recovered’. We use Present Perfect to describe  past events that have a connection with the present.'
             },
             {
               text: 'have recovered',
               correct: true ,
-              feedback: 'Great! The right answer is ‘have recovered’. We use Present Perfect <b>to describe  past events that have a connection with the present.</b>'
+              feedback: 'Great! The right answer is ‘have recovered’. We use Present Perfect to describe  past events that have a connection with the present.'
             },
           ],
           _6_ : [
             {
               text: 'had discovered',
               correct: false ,
-              feedback: 'Oops! The right answer is ‘have discovered’. We use Present Perfect <b>to describe  past events that have a connection with the present.</b>'
+              feedback: 'Oops! The right answer is ‘have discovered’. We use Present Perfect to describe  past events that have a connection with the present.'
             },
             {
               text: 'have discovered',
               correct: true ,
-              feedback: 'Great! The right answer is ‘have discovered’. We use Present Perfect <b>to describe  past events that have a connection with the present.</b>'
+              feedback: 'Great! The right answer is ‘have discovered’. We use Present Perfect to describe  past events that have a connection with the present.'
             },
             {
               text: 'discovered',
               correct: false ,
-              feedback: 'Oops! The right answer is ‘have discovered’. We use Present Perfect <b>to describe  past events that have a connection with the present.</b>'
+              feedback: 'Oops! The right answer is ‘have discovered’. We use Present Perfect to describe  past events that have a connection with the present.'
             },
           ],
         },
