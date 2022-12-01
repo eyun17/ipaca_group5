@@ -11,7 +11,7 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import *
-from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel, LearnerKnowledgeLevel, DifficultyFeedback
+from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel, LearnerKnowledgeLevel, DifficultyFeedback, RedoThisTask
 from .its.tutormodel import Tutormodel, NoTaskAvailableError
 from .its.learnermodel import Learnermodel
 
@@ -23,11 +23,19 @@ class SignUpView(SuccessMessageMixin, generic.CreateView):
     success_message = "User was created successfully. You may now log in."
 
 @login_required
+
 def practice(request):
     """Display a task for practicing."""
-
     context = {'mode': 'solve'}
     # start a lesson
+
+    # is there a task to be redone:
+    
+    try:
+        redo = RedoThisTask.objects.get(user=request.user, redo=True).redo
+    except (RedoThisTask.DoesNotExist, ValueError):
+        redo = False
+    
     if request.method == 'POST' and 'start' in request.POST:
         if not 'current_lesson_todo' in request.session:  # if there's no todo, we have a corrupt state -> show start screen
             return redirect('myhome')
@@ -63,6 +71,7 @@ def practice(request):
 
         return redirect('myhome')
 
+
     # analyze a solution
     elif request.method == 'POST':
         try:
@@ -77,40 +86,58 @@ def practice(request):
         context.update(learnermodel_context)
         if analysis.get('solved', False):  # we solved a task, so we remove its type from the session todo list
             context['solved'] = True
-
-        
             if 'current_lesson_todo' in request.session and len(request.session['current_lesson_todo']) > 0:
                 request.session['current_lesson_todo'].pop(0)
             request.session.modified = True
+            
+            # if existing delete the task from redo
+            
+            try:
+                RedoThisTask.objects.get(user=request.user, task=task).delete()
+            except:
+                pass
+           
         else:
             context['solved'] = False
-
+            
+            # save this task for redo
+            try:
+                rtt = RedoThisTask.objects.get(user=request.user, task=task)
+                rtt.redo = True
+                rtt.save()
+            except (RedoThisTask.DoesNotExist, ValueError):
+                RedoThisTask.objects.create(user=request.user, task=task, redo=True)
+            
+            
         lesson = task.lesson
         context['state'] = context['mode']
 
-    elif 'redo' in request.GET:  # show a task again
+    elif redo:  # show a task again
+        print("in redo")
+        # get task id:
+        task_id = RedoThisTask.objects.get(user=request.user, redo=True).task.id
         try:
-            task = Task.objects.get(pk=int(request.GET['redo']))
+            task = Task.objects.get(id = task_id)
+            print("task", task)
         except KeyError:
             return HttpResponseBadRequest("Error: No such ID")
         lesson = task.lesson
-        context['state'] = context['mode']
 
     else:  # fetch new task and show it
         tutor = Tutormodel(request.user)
-        print(request.user)
-        print(request.session.get('current_lesson'))
-        
-
         try:
             (state, lesson, task) = tutor.next_task(request)
         except NoTaskAvailableError:
             return HttpResponseServerError("Error: No task available!")
         context['state'] = state
 
+    
     context['task'] = task
-    context['lesson'] = lesson
+    context['lesson'] = lesson   
+    
+
     # Pass all information to template and display page
+    
     return render(request, 'learning_environment/task.html', context=context)
 
 

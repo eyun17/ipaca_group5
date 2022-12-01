@@ -56,7 +56,7 @@ class Tutormodel:
             request.session['current_lesson_todo'] = ['WRAPUP']
             request.session.modified = True
         
-        empty_count=0
+        empty_count=0 # TODO: empty count not working, bc not global -> is reassignt each time when calling the function
         # TODO: get the knowledge level of the learner
         # pick a task according to knowledge level -> difficulty level of task
         while 1:
@@ -65,11 +65,11 @@ class Tutormodel:
             if next_type == 'START':
                 request.session['current_lesson_todo'] = order1[:]
                 request.session.modified = True
-                print(request.session['current_lesson_todo'])
                 return next_type, lesson, None
 
             elif next_type == 'WRAPUP':
                 return next_type, lesson, None
+
             else:  
                 possible_tasks = Task.objects.filter(lesson=lesson, type=next_type)
                 task_list = []
@@ -79,10 +79,10 @@ class Tutormodel:
 
                     # was task successfully done
                     try:
-                        DifficultyFeedback.objects.get(user = self.learner, task=task, redo_count=0)
                         success = True
-                    except (DifficultyFeedback.DoesNotExist, ValueError):
+                        DifficultyFeedback.objects.get(user = self.learner, task=task)
                         success = False
+                    except (DifficultyFeedback.DoesNotExist, ValueError):
 
                     if (difficulty == lkl.level) and not(success):
                         task_list.append(task)
@@ -108,7 +108,7 @@ class Tutormodel:
 
 
                 task = task_list[random.randint(0, cnt-1)]
-                print(task)
+    
                
                 return next_type, lesson, task
 

@@ -297,7 +297,7 @@ class TaskDifficulty(models.Model):
                 if diff < 0 and nr_redo == 0:
                     change += diff
 
-                if diff == 0 and nr_redo > 0:
+                if diff == 0 and nr_redo > 2:
                     change += 1
                     
             new_difficulty = int(curr_difficulty + change/len(knowlege))
@@ -336,4 +336,10 @@ class DifficultyFeedback(models.Model):
     redo_count = models.IntegerField(default=0)
     ita_feedback = models.IntegerField(default=1)
 
+
+# this might be really not elegant but I have to solve the redo problem somehow
+class RedoThisTask(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    task = models.ForeignKey(Task, on_delete=models.CASCADE)
+    redo = models.BooleanField(default=False)
 

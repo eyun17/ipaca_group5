@@ -60,7 +60,6 @@ class Learnermodel:
                 if lkl.score == 5:
                     lkl.level+=1
                     lkl.score=0
-                print("increasing of score")
                 lkl.save()
             
 
@@ -74,7 +73,6 @@ class Learnermodel:
                 lkl=LearnerKnowledgeLevel.objects.get(user=self.learner, lesson=lesson)
             except LearnerKnowledgeLevel.DoesNotExist:
                 LearnerKnowledgeLevel.objects.create(user=self.learner, lesson=lesson, level=1, score=0)
-                print("new lkl created")
                 lkl=LearnerKnowledgeLevel(user=self.learner, lesson=lesson)
 
             try:
