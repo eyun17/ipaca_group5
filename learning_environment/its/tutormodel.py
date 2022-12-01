@@ -79,10 +79,10 @@ class Tutormodel:
 
                     # was task successfully done
                     try:
-                        success = True
                         DifficultyFeedback.objects.get(user = self.learner, task=task)
-                        success = False
+                        success = True
                     except (DifficultyFeedback.DoesNotExist, ValueError):
+                        success = False
 
                     if (difficulty == lkl.level) and not(success):
                         task_list.append(task)
