@@ -5,7 +5,7 @@ The tutor model is able to determine appropriate actions for a given learner. (E
 """
 
 import random
-from learning_environment.models import Lesson, Task, ProfileSeriesLevel, TaskDifficulty, LearnerKnowledgeLevel
+from learning_environment.models import Lesson, Task, ProfileSeriesLevel, TaskDifficulty, LearnerKnowledgeLevel, DifficultyFeedback
 
 
 class NoTaskAvailableError(Exception):
@@ -56,7 +56,7 @@ class Tutormodel:
             request.session['current_lesson_todo'] = ['WRAPUP']
             request.session.modified = True
         
-        empty_count=0
+        empty_count=0 # TODO: empty count not working, bc not global -> is reassignt each time when calling the function
         # TODO: get the knowledge level of the learner
         # pick a task according to knowledge level -> difficulty level of task
         while 1:
@@ -65,28 +65,34 @@ class Tutormodel:
             if next_type == 'START':
                 request.session['current_lesson_todo'] = order1[:]
                 request.session.modified = True
-                print(request.session['current_lesson_todo'])
                 return next_type, lesson, None
 
             elif next_type == 'WRAPUP':
                 return next_type, lesson, None
+
             else:  
                 possible_tasks = Task.objects.filter(lesson=lesson, type=next_type)
                 task_list = []
-                print(possible_tasks)
+                
                 for task in possible_tasks:
                     difficulty = TaskDifficulty.objects.get(task=task.id).level
-                    print("d", difficulty)
-                    print("k", lkl.level)
-                    if difficulty == lkl.level:
-                        print("in task_list.append")
+
+                    # was task successfully done
+                    try:
+                        DifficultyFeedback.objects.get(user = self.learner, task=task)
+                        success = True
+                    except (DifficultyFeedback.DoesNotExist, ValueError):
+                        success = False
+
+                    if (difficulty == lkl.level) and not(success):
                         task_list.append(task)
+
+
                 request.session['current_lesson_todo'].extend(order1)
                 request.session.modified = True
-                print(task_list)
+                
                 cnt = len(task_list)
                 if cnt == 0:
-                    print("in cnt==0")
                     empty_count+=1
                     request.session['current_lesson_todo'].pop(0) 
                     request.session['current_lesson_todo'].extend(order1) 
@@ -97,8 +103,12 @@ class Tutormodel:
 
                     request.session.modified = True
                     continue  # next state
+
+                # check whether the task has already been successfully done:
+
+
                 task = task_list[random.randint(0, cnt-1)]
-                print(task)
+    
                
                 return next_type, lesson, task
 

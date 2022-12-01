@@ -26,11 +26,11 @@ class SignUpView(SuccessMessageMixin, generic.CreateView):
 
 def practice(request):
     """Display a task for practicing."""
-
     context = {'mode': 'solve'}
     # start a lesson
 
     # is there a task to be redone:
+    
     try:
         redo = RedoThisTask.objects.get(user=request.user, redo=True).redo
     except (RedoThisTask.DoesNotExist, ValueError):
@@ -91,14 +91,15 @@ def practice(request):
             request.session.modified = True
             
             # if existing delete the task from redo
+            
             try:
                 RedoThisTask.objects.get(user=request.user, task=task).delete()
             except:
                 pass
-            
+           
         else:
             context['solved'] = False
-
+            
             # save this task for redo
             try:
                 rtt = RedoThisTask.objects.get(user=request.user, task=task)
@@ -106,16 +107,17 @@ def practice(request):
                 rtt.save()
             except (RedoThisTask.DoesNotExist, ValueError):
                 RedoThisTask.objects.create(user=request.user, task=task, redo=True)
-
+            
             
         lesson = task.lesson
         context['state'] = context['mode']
 
     elif redo:  # show a task again
+        print("in redo")
         # get task id:
         task_id = RedoThisTask.objects.get(user=request.user, redo=True).task.id
         try:
-            task = Task.objects.get(id=task_id)
+            task = Task.objects.get(id = task_id)
             print("task", task)
         except KeyError:
             return HttpResponseBadRequest("Error: No such ID")
@@ -132,10 +134,10 @@ def practice(request):
     
     context['task'] = task
     context['lesson'] = lesson   
-    print("task, lesson", (task,lesson)) 
+    
 
     # Pass all information to template and display page
-    print("give to render",context)
+    
     return render(request, 'learning_environment/task.html', context=context)
 
 
