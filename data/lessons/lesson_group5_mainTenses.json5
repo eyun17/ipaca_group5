@@ -56,8 +56,7 @@
       interaction: "MARK",
       primary: false,
       show_lesson_text: false,
-      question: "Find the appropriate explanation for the usage of Present Simple and Present Continuous for every sentence." ,
-                <br> Resource: <p><a style="text-decoration: none;" href="://press.rebus.community/blueprint2/chapter/55-words-of-wisdom-failure-is-not-an-httpsoption/ "target="_blank">Source</a></p> ,
+      question: "Find the appropriate explanation for the usage of Present Simple and Present Continuous for every sentence. <br> Source: href=\"://press.rebus.community/blueprint2/chapter/55-words-of-wisdom-failure-is-not-an-httpsoption/ \"target=\"_blank\">" ,
       //write your question here
       marktext: "Everything #1#is #1#speeding #1# up  thanks to our obsession with technology and efficiency. Almost 500 million people around the globe #2#speak Spanish.Dune by Denis Villeneuve #3#tells the story of  Paul Atreides, a young man whose destiny is to travel in the Universe.Then you #4#wash the fabric, #4#dye it and #4#cut it into patterns.She #5#is #5#developing  the commercial side of the organization. Brows #6#explains that survivors of traumatic events  are often haunted by persistent and vivid memories of this experience. Our company #7#expects a rise in both our production and our cash flow.",
       // write the text here, mark the words you want the student to mark with #1# in front of the word
