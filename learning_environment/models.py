@@ -7,6 +7,8 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 import json5
 import random
+import numpy as np
+import pandas as pd
 
 
 class User(AbstractUser):
@@ -256,6 +258,8 @@ class TaskDifficulty(models.Model):
 
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
     level = models.IntegerField(choices=DifficultyLevels.choices)
+    next_tasks = models.CharField()
+    
 
     @classmethod
     def update_task_difficulty(cls, task):
@@ -308,6 +312,25 @@ class TaskDifficulty(models.Model):
         # delete all existing rows in Difficulty feedback
         #DifficultyFeedback.objects.filter(task=task).delete()
         return True
+    
+    @classmethod
+    def update_next_task(cls, task, ita_list:list):
+
+        # get TaskDifficulty for the task:
+        td = TaskDifficulty.objects.get(task=task)
+        
+        next_tasks = ""
+
+        # make a string out of the ita_list 
+        for task in range(len(ita_list)):
+            next_tasks += str(ita_list[task])
+            next_tasks += ","
+        
+        # save the string as td.next_tasks
+        td.next_tasks = next_tasks
+        td.save()
+
+        return True
 
 
 
@@ -332,9 +355,29 @@ class LearnerKnowledgeLevel(models.Model):
 class DifficultyFeedback(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
-    knowledge = models.IntegerField(default=0)       # TODO: get knowledge level here!!!
+    difficulty = models.IntegerField(default=1)
+    knowledge = models.IntegerField(default=1)       
     redo_count = models.IntegerField(default=0)
     ita_feedback = models.IntegerField(default=1)
+
+    @classmethod
+    def prepare_ita_data(cls, user):
+        # get the data of the user
+
+        # fuer ita: datasets -> by user and task difficulty -> tasks and ita_feedback
+        try:
+            DifficultyFeedback.objects.get(user=user)
+        except ValueError:
+            print("User ", user, " is invalid!")
+            return
+        
+        df = pd.DataFrame(list(DifficultyFeedback.objects.filter(user=user).values("task", "difficulty", "ita_feedback")))
+        level_1 = df[df["difficulty"] == 1].iloc[:, ["task", "ita_feedback"]]
+        level_2 = df[df["difficulty"] == 2].iloc[:, ["task", "ita_feedback"]]
+        level_3 = df[df["difficulty"] == 3].iloc[:, ["task", "ita_feedback"]]
+        level_4 = df[df["difficulty"] == 4].iloc[:, ["task", "ita_feedback"]]
+
+        return level_1, level_2, level_3, level_4
 
 
 # this might be really not elegant but I have to solve the redo problem somehow

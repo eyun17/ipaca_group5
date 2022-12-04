@@ -5,7 +5,7 @@ The learner model maintains a model about a given learner's competencies.
 """
 
 from .tasks import TaskTypeFactory
-from learning_environment.models import Solution, LearnerKnowledgeLevel, DifficultyFeedback
+from learning_environment.models import Solution, LearnerKnowledgeLevel, TaskDifficulty, DifficultyFeedback
 
 class Learnermodel:
 
@@ -51,7 +51,7 @@ class Learnermodel:
             try:
                 redo_count = DifficultyFeedback.objects.get(user=self.learner, task=task).redo_count
             except (DifficultyFeedback.DoesNotExist, ValueError):
-                DifficultyFeedback.objects.create(user=self.learner, task=task, knowledge=knowledge, redo_count=0, ita_feedback=1)
+                DifficultyFeedback.objects.create(user=self.learner, task=task, difficulty=TaskDifficulty.objects.get(task=task).level, knowledge=knowledge, redo_count=0, ita_feedback=1)
                 redo_count=0
 
            
@@ -81,7 +81,7 @@ class Learnermodel:
                 df.ita_feedback=0
                 df.save()
             except (DifficultyFeedback.DoesNotExist, ValueError):
-                DifficultyFeedback.objects.create(user=self.learner, task=task, knowledge=lkl.level, redo_count=1, ita_feedback=0)
+                DifficultyFeedback.objects.create(user=self.learner, task=task, difficulty=TaskDifficulty.objects.get(task=task).level, knowledge=lkl.level, redo_count=1, ita_feedback=0)
 
             
             
