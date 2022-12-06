@@ -56,8 +56,7 @@ class Tutormodel:
             request.session['current_lesson_todo'] = ['WRAPUP']
             request.session.modified = True
         
-        empty_count=0 # TODO: empty count not working, bc not global -> is reassignt each time when calling the function
-        # TODO: get the knowledge level of the learner
+        
         # pick a task according to knowledge level -> difficulty level of task
         while 1:
             next_type = request.session['current_lesson_todo'][0]
@@ -93,23 +92,13 @@ class Tutormodel:
                 
                 cnt = len(task_list)
                 if cnt == 0:
-                    empty_count+=1
                     request.session['current_lesson_todo'].pop(0) 
-                    request.session['current_lesson_todo'].extend(order1) 
-
-                    # if the knowledge level is at mastery or there are no more tasks available do wrapup
-                    if lkl.level==5 or empty_count==3:
-                        request.session['current_lesson_todo'] = ['WRAPUP']
-
+                    request.session['current_lesson_todo'].extend['R','GS','R', 'WRAPUP']
                     request.session.modified = True
                     continue  # next state
 
-                # check whether the task has already been successfully done:
-
-
                 task = task_list[random.randint(0, cnt-1)]
     
-               
                 return next_type, lesson, task
 
         
