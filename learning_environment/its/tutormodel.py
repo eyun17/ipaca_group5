@@ -5,8 +5,8 @@ The tutor model is able to determine appropriate actions for a given learner. (E
 """
 
 import random
-from learning_environment.models import Lesson, Task, ProfileSeriesLevel, TaskDifficulty, LearnerKnowledgeLevel, DifficultyFeedback
-
+from learning_environment.models import Lesson, Task, ProfileSeriesLevel, TaskDifficulty, LearnerKnowledgeLevel, DifficultyFeedback, Counter, RedoThisTask
+from django.http import HttpResponseBadRequest
 
 class NoTaskAvailableError(Exception):
     pass
@@ -24,11 +24,13 @@ class Tutormodel:
         Returns tuple:
         (STATE, lesson, task)
         """
+        
 
         # TODO: other order
         # we have to change the order, if not we only do one task per lesson an then the wrapup
         order = ['START', 'R', 'GS', 'V', 'WRAPUP']
         order1 =['R', 'GS', 'V']
+        order2 = ['R','GS','R', 'WRAPUP']
         # determine the current lesson series
         series = request.session.get('lesson_series', 'General')
 
@@ -45,6 +47,29 @@ class Tutormodel:
             request.session['current_lesson_todo'] = order[:]
             request.session.modified = True
 
+        # when there is a task for this lesson in redo, redo the task
+        try:
+            redo = RedoThisTask.objects.get(user=request.user, lesson=lesson, redo=True).redo
+        except (RedoThisTask.DoesNotExist, ValueError):
+            redo = False
+        
+        if redo:
+            task_id = RedoThisTask.objects.get(user=request.user, lesson=lesson, redo=True).task.id
+            try:
+                task = Task.objects.get(id = task_id)
+                print("task", task)
+            except KeyError:
+                return HttpResponseBadRequest("Error: No such ID")
+            lesson = task.lesson
+            state = task.type
+            return state, lesson, task
+
+        try:
+            count = Counter.objects.get(user=request.user, lesson=lesson)
+        except (Counter.DoesNotExist, ValueError):
+            Counter.objects.create(user=request.user, lesson=lesson, counter=0)
+            count = Counter.objects.get(user=request.user, lesson=lesson)
+
         try: 
             lkl = LearnerKnowledgeLevel.objects.get(user=request.user, lesson=lesson)
         except ValueError:
@@ -52,7 +77,7 @@ class Tutormodel:
             lkl = LearnerKnowledgeLevel.objects.get(user=request.user, lesson=lesson)
 
         # when master
-        if lkl.level == 5:
+        if lkl.level == 5 or count.counter == 3:
             request.session['current_lesson_todo'] = ['WRAPUP']
             request.session.modified = True
         
@@ -93,10 +118,15 @@ class Tutormodel:
                 cnt = len(task_list)
                 if cnt == 0:
                     request.session['current_lesson_todo'].pop(0) 
-                    request.session['current_lesson_todo'].extend['R','GS','R', 'WRAPUP']
+                    request.session['current_lesson_todo'].extend(order1)
                     request.session.modified = True
+                    count.counter += 1
+                    count.save()
                     continue  # next state
-
+                    
+                # if the task list is not empty reset the counter
+                count.counter = 0
+                count.save()
                 task = task_list[random.randint(0, cnt-1)]
     
                 return next_type, lesson, task

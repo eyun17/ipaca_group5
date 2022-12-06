@@ -28,7 +28,7 @@ class Command(BaseCommand):
                 TaskDifficulty.update_task_difficulty(task=task)
                 nr_updates+=1
             except ValueError:
-                print("other thing went wrong!")
+                pass
 
         DifficultyFeedback.objects.all().delete()   
         

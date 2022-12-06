@@ -258,7 +258,6 @@ class TaskDifficulty(models.Model):
 
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
     level = models.IntegerField(choices=DifficultyLevels.choices)
-    next_tasks = models.CharField()
     
 
     @classmethod
@@ -301,12 +300,18 @@ class TaskDifficulty(models.Model):
                 if diff < 0 and nr_redo == 0:
                     change += diff
 
-                if diff == 0 and nr_redo > 2:
+                if diff == 0 and nr_redo > 1:
                     change += 1
+                
+                if diff == 0 and nr_redo > 3:
+                    change += 2
                     
             new_difficulty = int(curr_difficulty + change/len(knowlege))
             curr_difficulty = new_difficulty
-
+            if curr_difficulty < 1:
+                curr_difficulty = 1
+            if curr_difficulty > 4:
+                curr_difficulty = 4
         td.level = curr_difficulty
         td.save()
         # delete all existing rows in Difficulty feedback
@@ -383,6 +388,11 @@ class DifficultyFeedback(models.Model):
 # this might be really not elegant but I have to solve the redo problem somehow
 class RedoThisTask(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, default=None)
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
     redo = models.BooleanField(default=False)
 
+class Counter(models.Model):
+    counter = models.IntegerField(default=0)
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
