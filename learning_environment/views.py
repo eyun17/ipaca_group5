@@ -30,12 +30,6 @@ def practice(request):
     # start a lesson
 
     # is there a task to be redone:
-    
-    try:
-        redo = RedoThisTask.objects.get(user=request.user, redo=True).redo
-    except (RedoThisTask.DoesNotExist, ValueError):
-        redo = False
-    
     if request.method == 'POST' and 'start' in request.POST:
         if not 'current_lesson_todo' in request.session:  # if there's no todo, we have a corrupt state -> show start screen
             return redirect('myhome')
@@ -93,7 +87,7 @@ def practice(request):
             # if existing delete the task from redo
             
             try:
-                RedoThisTask.objects.get(user=request.user, task=task).delete()
+                RedoThisTask.objects.get(user=request.user, lesson=task.lesson, task=task).delete()
             except:
                 pass
            
@@ -102,27 +96,17 @@ def practice(request):
             
             # save this task for redo
             try:
-                rtt = RedoThisTask.objects.get(user=request.user, task=task)
+                rtt = RedoThisTask.objects.get(user=request.user, lesson=task.lesson, task=task)
                 rtt.redo = True
                 rtt.save()
             except (RedoThisTask.DoesNotExist, ValueError):
-                RedoThisTask.objects.create(user=request.user, task=task, redo=True)
+                RedoThisTask.objects.create(user=request.user, lesson=task.lesson, task=task, redo=True)
             
             
         lesson = task.lesson
         context['state'] = context['mode']
 
-    elif redo:  # show a task again
-        print("in redo")
-        # get task id:
-        task_id = RedoThisTask.objects.get(user=request.user, redo=True).task.id
-        try:
-            task = Task.objects.get(id = task_id)
-            print("task", task)
-        except KeyError:
-            return HttpResponseBadRequest("Error: No such ID")
-        lesson = task.lesson
-
+    
     else:  # fetch new task and show it
         tutor = Tutormodel(request.user)
         try:

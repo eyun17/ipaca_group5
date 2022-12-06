@@ -40,8 +40,6 @@ class Learnermodel:
             context['msg'] = "Congratulation! That's correct!"
             
             # update score and/or level
-           
-        
             try:
                 lkl= LearnerKnowledgeLevel.objects.get(user=self.learner, lesson=lesson)
                 knowledge=lkl.level
@@ -54,16 +52,13 @@ class Learnermodel:
                 DifficultyFeedback.objects.create(user=self.learner, task=task, difficulty=TaskDifficulty.objects.get(task=task).level, knowledge=knowledge, redo_count=0, ita_feedback=1)
                 redo_count=0
 
-           
             if redo_count==0:
                 lkl.score+=1
                 if lkl.score == 5:
                     lkl.level+=1
                     lkl.score=0
                 lkl.save()
-            
 
-             #check whether task has alredy been redone
             
         else:
             context['msg'] = "Oh no, that's not correct."
