@@ -977,6 +977,71 @@
             }
           ],
         },
-    } // end of the last task
+    },
+
+//Future simple passive 7
+    {
+        name: "Future simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        The plane _______________.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "will not delayed", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "will not been delayed", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "will not be delayed", correct: true, feedback: "Great!" },
+          { text: "would not been delayed", correct: false, feedback: "NO, think about the future simple passive form." }
+        ],
+    },
+//Future simple passive 8
+    {
+        name: "Future simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        _____ the house _______________?",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Will…cleaned", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "Will…clean", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "Would…be cleaned", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "Will…be cleaned", correct: true, feedback: "Great!" }
+        ],
+    },
+//Future simple passive 9
+    {
+        name: "Future simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        The result _____________ next week.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "will be done", correct: true, feedback: "Great!" },
+          { text: "will  done", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "would be done", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "would done", correct: false, feedback: "NO, think about the future simple passive form." }
+        ],
+    },
+//Future simple passive 10
+    {
+        name: "Future simple passive",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Choose the right answer for the blank. \
+        Your order ______________ in two days.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "will made", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "will be make", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "would be made", correct: false, feedback: "NO, think about the future simple passive form." },
+          { text: "will be made", correct: true, feedback: "Great!" }
+        ],
+    }, // end of the last task
   ] // end of task list bracket
 } // end of lesson
