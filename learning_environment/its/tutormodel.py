@@ -77,7 +77,7 @@ class Tutormodel:
             lkl = LearnerKnowledgeLevel.objects.get(user=request.user, lesson=lesson)
 
         # when master
-        if lkl.level == 5 or count.counter == 3:
+        if lkl.level == 5 or count.counter >= 3:
             request.session['current_lesson_todo'] = ['WRAPUP']
             request.session.modified = True
         
@@ -121,6 +121,9 @@ class Tutormodel:
                     request.session['current_lesson_todo'].extend(order1)
                     request.session.modified = True
                     count.counter += 1
+                    if count.counter >= 3:
+                        request.session['current_lesson_todo'] = ['WRAPUP']
+                        request.session.modified = True
                     count.save()
                     continue  # next state
                     
