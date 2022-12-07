@@ -320,24 +320,24 @@
             {
               text: 'is known',
               correct: false,
-              feedback: 'well-done!'
+              feedback: 'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form'
             },
             {
               text: 'was knew',
               correct: true,
-              feedback:'Oh no! The form of the Present Simple Passive is am/is/are +Ved/3 form'
+              feedback:'Well done!'
             },
           ],
           _2_: [
             {
               text: 'will be finished',
               correct: false,
-              feedback: 'well-done!'
+              feedback: 'Oh no! The form of the Future Simple Passive is will be+Ved/3 form'
             },
             {
               text: 'Will finish',
               correct: true,
-              feedback: 'Oh no! The form of the Future Simple Passive is will be+Ved/3 form'
+              feedback: 'Well done!'
             },
             {
               text: 'Will finished',
@@ -354,7 +354,7 @@
             {
               text: 'Was purchased',
               correct: true,
-              feedback:'Well-done,'
+              feedback:'Well done!'
             },
             {
               text: 'Will be purchased',
