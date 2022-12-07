@@ -22,8 +22,8 @@
       The Swiss invented the watch.\n The watch was invented by the Swiss. \
       <p>Do the sentences mean the same thing</p>?",
         choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
-          { text: "yes", correct: false, feedback: "Oh no! The sentences don’t mean the same thing." },
-          { text: "no", correct: true, feedback: "Well-done!" },
+          { text: "yes", correct: true, feedback: "Oh no! The sentences don’t mean the same thing." },
+          { text: "no", correct: false, feedback: "Well-done!" },
         ],
     },
 //Theoretical tasks 2 ,
@@ -372,7 +372,7 @@
         primary: true,
         show_lesson_text: false,
         question: "<p>Another field of biological study, neurobiology, studies the biology of the nervous system, \
-        and although it _1_ a branch of biology, it _2_ are also recognized as an interdisciplinary field of study known as neuroscience.</p>",
+        and although it _1_ a branch of biology, it _2_ as an interdisciplinary field of study known as neuroscience.</p>",
         gaps: {
           mode: 'select',
           _1_: [

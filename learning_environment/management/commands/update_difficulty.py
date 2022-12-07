@@ -19,7 +19,6 @@ class Command(BaseCommand):
         try:
             tasks_to_update = DifficultyFeedback.objects.values_list("task", flat=True)
         except (DifficultyFeedback.DoesNotExist, ValueError):
-            print("something went wrong!")
             tasks_to_update=[]
         
         # update all tasks

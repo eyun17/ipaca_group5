@@ -276,8 +276,7 @@ class TaskDifficulty(models.Model):
             knowlege=[]
             redo_count=[]
         
-        print("knowledge", knowlege)
-        print("redo_count", redo_count)
+        
         # calculate feedback
 
         if feedback:
