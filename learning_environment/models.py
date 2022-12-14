@@ -299,11 +299,9 @@ class TaskDifficulty(models.Model):
                 if diff < 0 and nr_redo == 0:
                     change += diff
 
-                if diff == 0 and nr_redo > 1:
+                if diff == 0 and nr_redo > 2:
                     change += 1
-                
-                if diff == 0 and nr_redo > 3:
-                    change += 2
+
                     
             new_difficulty = int(curr_difficulty + change/len(knowlege))
             curr_difficulty = new_difficulty
@@ -376,12 +374,9 @@ class DifficultyFeedback(models.Model):
             return
         
         df = pd.DataFrame(list(DifficultyFeedback.objects.filter(user=user).values("task", "difficulty", "ita_feedback")))
-        level_1 = df[df["difficulty"] == 1].iloc[:, ["task", "ita_feedback"]]
-        level_2 = df[df["difficulty"] == 2].iloc[:, ["task", "ita_feedback"]]
-        level_3 = df[df["difficulty"] == 3].iloc[:, ["task", "ita_feedback"]]
-        level_4 = df[df["difficulty"] == 4].iloc[:, ["task", "ita_feedback"]]
+        ita_data = df[df["difficulty"] == 1].iloc[:, ["user", "task", "ita_feedback"]]
 
-        return level_1, level_2, level_3, level_4
+        return ita_data
 
 
 # this might be really not elegant but I have to solve the redo problem somehow
