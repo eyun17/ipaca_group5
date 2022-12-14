@@ -258,6 +258,7 @@ class TaskDifficulty(models.Model):
 
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
     level = models.IntegerField(choices=DifficultyLevels.choices)
+    next_task = models.CharField(max_length=1000, default="")
     
 
     @classmethod
