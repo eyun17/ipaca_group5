@@ -5,7 +5,7 @@ The tutor model is able to determine appropriate actions for a given learner. (E
 """
 
 import random
-from learning_environment.models import Lesson, Task, ProfileSeriesLevel, TaskDifficulty, LearnerKnowledgeLevel, DifficultyFeedback, Counter, RedoThisTask
+from learning_environment.models import Lesson, Task, ProfileSeriesLevel, TaskDifficulty, LearnerKnowledgeLevel, DifficultyFeedback, Counter, NextTask
 from django.http import HttpResponseBadRequest
 
 class NoTaskAvailableError(Exception):
@@ -49,15 +49,16 @@ class Tutormodel:
 
         # when there is a task for this lesson in redo, redo the task
         try:
-            redo = RedoThisTask.objects.get(user=request.user, lesson=lesson, redo=True).redo
-        except (RedoThisTask.DoesNotExist, ValueError):
+            redo = NextTask.objects.get(user=request.user, lesson=lesson).redo
+            str_next_task = NextTask.objects.get(user=request.user, lesson=lesson).next_task
+        except (NextTask.DoesNotExist, ValueError):
             redo = False
+            str_next_task = ""
         
         if redo:
-            task_id = RedoThisTask.objects.get(user=request.user, lesson=lesson, redo=True).task.id
+            task_id = NextTask.objects.get(user=request.user, lesson=lesson, redo=True).task.id
             try:
                 task = Task.objects.get(id = task_id)
-                print("task", task)
             except KeyError:
                 return HttpResponseBadRequest("Error: No such ID")
             lesson = task.lesson
@@ -81,7 +82,45 @@ class Tutormodel:
             request.session['current_lesson_todo'] = ['WRAPUP']
             request.session.modified = True
         
-        
+        if str_next_task is not "":
+            lst_next_task = [int(nt_id) for nt_id in str_next_task.split(",")]
+            higher = []
+            lower = []
+            equal = []
+
+            if len(lst_next_task) == 1:
+                try:
+                    task = Task.objects.get(id = entry)
+                except KeyError:
+                    return HttpResponseBadRequest("Error: No such ID")
+                
+                return(task.type, task.lesson, task)
+
+            for entry in range(len(lst_next_task)):
+                try:
+                    task = Task.objects.get(id = entry)
+                except KeyError:
+                    return HttpResponseBadRequest("Error: No such ID")
+
+                difficulty = TaskDifficulty.objects.get(task=task.id).level
+
+                if lkl.level == difficulty:
+                    equal.append(task)
+                
+                elif lkl.level > difficulty:
+                    higher.append(task)
+                
+                else:
+                    lower.append(task)
+            
+            list_all = [equal, lower, higher]
+            choice = random.choices(list_all, weights=(85, 10, 5), k=1)[0]
+            cnt = len(choice)
+            task = choice[random.randint(0, cnt-1)]
+
+            return (task.type, task.lesson, task)
+
+
         # pick a task according to knowledge level -> difficulty level of task
         while 1:
             next_type = request.session['current_lesson_todo'][0]

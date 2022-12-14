@@ -11,7 +11,7 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import *
-from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel, LearnerKnowledgeLevel, DifficultyFeedback, RedoThisTask
+from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel, LearnerKnowledgeLevel, DifficultyFeedback, NextTask
 from .its.tutormodel import Tutormodel, NoTaskAvailableError
 from .its.learnermodel import Learnermodel
 
@@ -87,7 +87,7 @@ def practice(request):
             # if existing delete the task from redo
             
             try:
-                RedoThisTask.objects.get(user=request.user, lesson=task.lesson, task=task).delete()
+                NextTask.objects.get(user=request.user, lesson=task.lesson, task=task).delete()
             except:
                 pass
            
@@ -96,11 +96,11 @@ def practice(request):
             
             # save this task for redo
             try:
-                rtt = RedoThisTask.objects.get(user=request.user, lesson=task.lesson, task=task)
-                rtt.redo = True
-                rtt.save()
-            except (RedoThisTask.DoesNotExist, ValueError):
-                RedoThisTask.objects.create(user=request.user, lesson=task.lesson, task=task, redo=True)
+                nt = NextTask.objects.get(user=request.user, lesson=task.lesson, task=task)
+                nt.redo = True
+                nt.save()
+            except (NextTask.DoesNotExist, ValueError):
+                NextTask.objects.create(user=request.user, lesson=task.lesson, task=task, redo=True)
             
             
         lesson = task.lesson

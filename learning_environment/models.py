@@ -380,10 +380,11 @@ class DifficultyFeedback(models.Model):
 
 
 # this might be really not elegant but I have to solve the redo problem somehow
-class RedoThisTask(models.Model):
+class NextTask(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, default=None)
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
+    next_task = models.CharField(max_length=1000, default="")
     redo = models.BooleanField(default=False)
 
 class Counter(models.Model):
